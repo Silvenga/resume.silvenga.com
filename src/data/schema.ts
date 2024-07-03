@@ -45,6 +45,9 @@ export const technologyKinds = new Set([
     "os",
     "platform",
     "cloud",
+    "language",
+    "testing",
+    "networking",
 ]);
 
 export const TechnologySchema = z.string().min(1).transform(x => {
@@ -59,11 +62,14 @@ export const TechnologySchema = z.string().min(1).transform(x => {
 
 export type Technology = z.infer<typeof TechnologySchema>;
 
+export const TechnologySchemaWithKind = TechnologySchema
+    .refine(x => !!x.kind, x => ({ message: `Technology '${x.name}' must have a kind` }));
+
 export const TechnologiesSchema = z.object({
-    frontend: z.array(TechnologySchema),
-    backend: z.array(TechnologySchema),
-    database: z.array(TechnologySchema),
-    infrastructure: z.array(TechnologySchema),
+    frontend: z.array(TechnologySchemaWithKind),
+    backend: z.array(TechnologySchemaWithKind),
+    database: z.array(TechnologySchemaWithKind),
+    infrastructure: z.array(TechnologySchemaWithKind),
     methodologies: z.array(TechnologySchema),
     testing: z.array(TechnologySchema),
 }).partial();

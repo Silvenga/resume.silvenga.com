@@ -1,4 +1,4 @@
-import { LinkSchema, PastYearSchema, TechnologySchema, TimeRangeSchema, YearSchema } from "../../src/data/schema";
+import { LinkSchema, PastYearSchema, TechnologySchema, TechnologySchemaWithKind, TimeRangeSchema, YearSchema } from "../../src/data/schema";
 
 describe("TechnologySchema", () => {
     test("When parsing an empty string, then parse should fail", () => {
@@ -22,6 +22,13 @@ describe("TechnologySchema", () => {
         const result = TechnologySchema.parse(inputFake);
         expect(result.kind).toBeUndefined();
         expect(result.name).toBe("not a kind/some db");
+    });
+});
+
+describe("TechnologySchemaWithKind", () => {
+    test("When parsing input without a kind, then parse should fail", () => {
+        const inputFake = "not a kind/some db";
+        expect(() => TechnologySchemaWithKind.parse(inputFake)).toThrow();
     });
 });
 
