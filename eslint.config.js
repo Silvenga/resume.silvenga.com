@@ -19,7 +19,8 @@ export default typeScriptEslint.config(
         quotes: "double",
         commaDangle: "only-multiline",
         semi: true,
-        indent: 4
+        indent: 4,
+        arrowParens: false
     }),
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
@@ -44,6 +45,7 @@ export default typeScriptEslint.config(
         rules: {
             "default-case": "warn",
             "require-await": "warn",
+            "@stylistic/arrow-parens": "off" // No idea why customize isn't customizing this one...
         }
     },
 );

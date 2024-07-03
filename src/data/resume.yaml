@@ -1,0 +1,335 @@
+# yaml-language-server: $schema=https://gist.githubusercontent.com/sargunv/c2ca41a08391cd06feaad97aece309e4/raw/empty-json-schema.json
+# ^ Avoid incorrect match from the yaml language server.
+# https://github.com/redhat-developer/vscode-yaml/issues/245#issuecomment-1337963293
+
+subject:
+  givenName: Mark
+  familyName: Lopez
+  emailAddress: mark.lopez@silvenga.com
+  location: Dallas-DFW Metroplex, Texas
+  links:
+    linkedin: https://www.linkedin.com/in/silvenga/
+    blog: https://silvenga.com/
+    github: https://github.com/Silvenga
+
+workHistory:
+  - label: Co-Owner
+    entity: Q6 Technologies, LLC
+    timeRange:
+      fromYear: 2021
+      toYear: now
+    description: |
+      Specializing in consulting and bespoke software development, through this role at Q6, I've worked with dozens of technologies encompassing the full stack - from fault tolerant distributed computing of 10's-of-thousands of transactions a minute to solving layer 3 performance across high latency WAN connections with TCP stack optimizations and profiling.
+    technologies:
+      frontend:
+        - language/TypeScript
+        - language/SASS
+        - runtime/ParcelJS
+        - runtime/Webpack
+        - framework/TailwindCSS
+      backend:
+        - language/C# (11)
+        -
+        - runtime/.NET (6-8)
+        - framework/ASP.NET Core
+        - framework/Orleans
+        - testing/XUnit
+        - framework/WiX (Windows Installer)
+      database:
+        - db/Microsoft SQL Server
+        - db/Postgres
+        - db/Timescale
+        - db/ElasticSearch
+        - db/InfluxDB
+        - db/Redis
+      infrastructure:
+        - service/Hashicorp Terraform
+        - service/Hashicorp Consul
+        - service/Hashicorp Vault
+        - service/SaltStack
+        - service/Ceph
+        - service/Icinga 2
+        - service/Telegraf
+        - service/SNMP
+        - service/GitHub
+        - service/Syncthing
+        - cloud/Azure
+        - cloud/BunnyCDN
+        - cloud/MailGun
+        - cloud/Digital Ocean
+        - cloud/Baremetal/Colo
+        - cloud/Twilio
+        - cloud/Stripe
+        - os/Windows Server
+        - os/NixOS
+        - os/Ubuntu
+        - os/Debian
+        - os/Flatcar Linux
+        - platform/Linux Containers
+        - platform/Kubernetes
+        - platform/Hyper-V
+        - platform/KVM/Libvirt
+        - networking/OSPF
+        - networking/Wireguard
+        - networking/Vyos
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+      testing:
+        - Unit Tests
+
+  - label: Sr. Software Engineer
+    entity: GMR Protection Resources, Inc
+    timeRange:
+      fromYear: 2023
+      toYear: 2024
+    description: |
+      - Hired to improve engineering-wide processes by applying DevOps philosophies.
+      - Completed a full-stack development effort comprising of multiple databases, multiple networks, across 5 microservices. The first public facing product from GMR. Mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, administration portal, search engine with custom search grammar. The development work was completed 8-months ahead of schedule. Targeted avg. response time under 20ms.
+    technologies:
+      frontend:
+        - framework/ReactJS
+        - language/TypeScript
+        - language/SASS
+        - runtime/ParcelJS
+        - library/D3
+      backend:
+        - language/C# (11)
+        - runtime/.NET (6)
+        - framework/ASP.NET Core
+        - library/Hangfire
+        - testing/XUnit
+      database:
+        - db/Microsoft SQL Server
+      infrastructure:
+        - service/Terraform
+        - service/Azure DevOps
+        - service/GitHub Enterprise
+        - service/Sentry
+        - cloud/Azure
+        - os/Windows Server
+        - os/NixOS
+        - platform/Linux Containers
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+      testing:
+        - Unit Tests
+
+  - label: Sr. Software Engineer
+    entity: Signify Health
+    timeRange:
+      fromYear: 2023
+      toYear: 2023
+    description: |
+      Hired to improve the process problems plaguing the engineering department. I trained and mentored two engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
+    technologies:
+      backend:
+        - language/C# (11)
+        - runtime/.NET (5-7)
+        - runtime/.NET Framework (4.X)
+        - framework/ASP.NET Core
+        - framework/ASP.NET Web API 2
+        - testing/XUnit
+      database:
+        - db/Microsoft SQL Server
+        - db/Apache Kafka
+      infrastructure:
+        - service/Terraform
+        - cloud/Azure
+        - os/Windows Server
+        - platform/Linux Containers
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+      testing:
+        - Unit Tests
+        - Integration Tests
+
+  - label: Senior Software Engineer, .NET Agent Security Team
+    entity: Contrast Security
+    timeRange:
+      fromYear: 2018
+      toYear: 2023
+    description: |
+      Worked on a fully remote/distributed engineering team of seven to build the .NET Contrast Agent. The .NET Contrast Agent uses binary instrumentation to track runtime objects in realtime, and uses this information to discover data flow paths to detect vulnerabilities with industry leading precision. The agent extends this realtime analysis to production environments to block attacks without requiring code modifications by developers.
+
+      - Low-level IL manipulation and generation - including assembly metadata.
+      - Low-level analysis of hot paths for even the smallest allocation - to optimize for low latency GC.
+      - Low-level internals of the CLR and CoreCLR, for both .NET Framework (3.5-4.8) and .NET (Core 2.1-3.1, 6, 7).
+      - Reverse engineering of .NET assemblies for evaluation of possible vulnerable paths and low-level IL hooks.
+      - Architected and helped implement automatic injection of .NET/Java/NodeJS/PHP agents into existing Kubernetes workloads with a Kubernetes operator. The operator was designed to operate in large Kubernetes of over 10,000 pods though the use of techniques such as back pressure control, event stream compression, etc. This Kubernetes operator is now Open Source.
+      - Architected and helped implement a cross-platform/cross-language IPC communication channel to be used across Contrast agents.
+      - Architected and helped implement a cross-platform .NET UI to aid in diagnostic and value worth tasks.
+      - Architected and helped implement a telemetry aggregation and error reporting service to aid agent developers in building better and more robust agents. This service is currently used by all Contrast agents. The entirety of this service was designed, implemented, and deployed by the .NET agent team - including concerns such as high availability, horizontal scaling, infrastructure security, abuse detection and mitigation, time series based reporting, etc.Worked on a fully remote/distributed engineering team of seven to build the .NET Contrast Agent. The .NET Contrast Agent uses binary instrumentation to track runtime objects in realtime, and uses this information to discover data flow paths to detect vulnerabilities with industry leading precision. The agent extends this realtime analysis to production environments to block attacks without requiring code modifications by developers. - Low-level IL manipulation and generation - including assembly metadata. - Low-level analysis of hot paths for even the smallest allocation - to optimize for low latency GC. - Low-level internals of the CLR and CoreCLR, for both .NET Framework (3.5-4.8) and .NET (Core 2.1-3.1, 6, 7). - Reverse engineering of .NET assemblies for evaluation of possible vulnerable paths and low-level IL hooks. - Architected and helped implement automatic injection of .NET/Java/NodeJS/PHP agents into existing Kubernetes workloads with a Kubernetes operator. The operator was designed to operate in large Kubernetes of over 10,000 pods though the use of techniques such as back pressure control, event stream compression, etc. This Kubernetes operator is now Open Source. - Architected and helped implement a cross-platform/cross-language IPC communication channel to be used across Contrast agents. - Architected and helped implement a cross-platform .NET UI to aid in diagnostic and value worth tasks. - Architected and helped implement a telemetry aggregation and error reporting service to aid agent developers in building better and more robust agents. This service is currently used by all Contrast agents. The entirety of this service was designed, implemented, and deployed by the .NET agent team - including concerns such as high availability, horizontal scaling, infrastructure security, abuse detection and mitigation, time series based reporting, etc.
+    technologies:
+      frontend:
+        - framework/ReactJS
+        - language/TypeScript
+        - runtime/ParcelJS
+      backend:
+        - language/C# (8-11)
+        - runtime/.NET Core (2.X, 3.X)
+        - runtime/.NET (5-7)
+        - runtime/.NET Framework (2.X, 3.X, 4.X)
+        - runtime/.NET Blazor (WebAssembly)
+        - framework/ASP.NET Core
+        - framework/ASP.NET Web API 2
+        - framework/ASP.NET MVC
+        - framework/WinForms
+        - framework/ASP.NET Web Forms
+        - framework/WiX (Windows Installer)
+        - library/ANTLR
+        - library/SignalR
+        - testing/XUnit
+        - testing/NUnit
+      database:
+        - db/Microsoft SQL Server
+        - db/Timescale
+        - db/Postgres
+        - db/Sqlite
+      infrastructure:
+        - service/Azure DevOps
+        - service/Sentry
+        - cloud/Azure
+        - cloud/Amazon Web Services (AWS)
+        - os/Windows Server
+        - os/Ubuntu
+        - platform/Linux Containers
+        - platform/Windows Containers
+        - platform/Kubernetes
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+      testing:
+        - Unit Tests
+        - Integration Tests
+        - End-To-End Tests
+
+  - label: Software Architect
+    entity: Axxess
+    timeRange:
+      fromYear: 2017
+      toYear: 2018
+    description: |
+      Architected, prototyped, and implemented multiple successful products and systems.
+      Implemented companywide CICD - with significant improvements in deployment speed and safety.
+      Began the journey to unit testing - significantly reducing client risk while improving deployment times.
+      Planned the upgrades, issue mitigation, and interactions between multiple legacy systems.
+    technologies:
+      frontend:
+        - framework/ReactJS
+        - language/TypeScript
+        - language/JavaScript (ES6)
+        - runtime/Webpack
+      backend:
+        - language/C# (7.X)
+        - runtime/.NET Core (2.X)
+        - runtime/.NET Framework (4.X)
+        - framework/ASP.NET Core
+        - framework/ASP.NET Web API 2
+        - library/SignalR
+        - library/Hangfire
+        - protocol/OpenID Connect (OIDC)
+        - testing/XUnit
+      database:
+        - db/Microsoft SQL Server
+        - db/MySQL
+        - db/MongoDB
+        - db/ElasticSearch
+        - db/Redis
+        - db/InfluxDB
+      infrastructure:
+        - service/Octopus Deploy
+        - service/JetBrains TeamCity
+        - service/Hashicorp Consul
+        - cloud/Amazon Web Services (AWS)
+        - os/Windows Server
+        - os/CentOS
+        - platform/SaltStack
+        - platform/Hyper-V
+        - platform/Docker/Containers
+        - platform/Kubernetes
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+
+  - label: Software Engineer, RCM Team
+    entity: Axxess
+    timeRange:
+      fromYear: 2015
+      toYear: 2017
+    description: |
+      Worked on an engineering team of five to implement the new AxxessDDE system - a powerful, yet user friendly gateway to the heavily used Medicare DDE system.
+
+      Created AxxessBlackScreen, a modern HTML5 web emulator for the 3270 terminal standard.
+
+      Worked on an engineering team of five to implement a fully distributed and fault-tolerant system to interact with Medicare and other private insurance providers in a currently unreleased product.
+    technologies:
+      frontend:
+        - framework/ReactJS
+        - framework/Aurelia
+        - language/TypeScript
+        - language/JavaScript (ES6)
+        - language/Less
+        - library/BootStrap
+        - runtime/Webpack
+      backend:
+        - language/C# (4-6)
+        - runtime/.NET Framework (4.X)
+        - framework/ASP.NET/Web API
+        - library/SignalR
+        - library/Hangfire
+      database:
+        - db/MySQL
+        - db/MongoDB
+        - db/Redis
+      infrastructure:
+        - cloud/Amazon Web Services (AWS)
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+
+  - label: Contract Software Developer
+    entity: MaritzCX
+    timeRange:
+      fromYear: 2014
+      toYear: 2015
+    description: |
+      Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
+    technologies:
+      - .NET Framework (4.X)
+      - Windows Server
+      - Microsoft SQL Server
+      - Bootstrap
+      - JavaScript (ES4)
+    methodologies:
+      - Scrum/Agile
+
+  - label: Contract Software Developer
+    entity: Rubio's Restaurants, Inc.
+    timeRange:
+      fromYear: 2014
+      toYear: 2014
+    description: |
+      Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
+    technologies:
+      - .NET Framework (4.X)
+      - Windows Server
+      - Microsoft SQL Server
+    methodologies:
+      - Scrum/Agile
+
+education:
+  - label: Neumont University
+    degree: Bachelor of Science (BSc), Computer Science
+    timeRange:
+      fromYear: 2012
+      toYear: 2015
+    grade: "3.93 (summa cum laude)"
+
+talks:
+  - label: MVP MIX
+    link: https://www.mvpmix.com/
+    description: Gave a talk on the OIDC protocol.
+    year: 2017
