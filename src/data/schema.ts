@@ -16,6 +16,8 @@ export const TimeRangeSchema = z.object({
 
 export type TimeRange = z.infer<typeof TimeRangeSchema>;
 
+export const LinkSchema = z.string().startsWith("https://", "Links must start with https://");
+
 // Subject
 
 export const SubjectSchema = z.object({
@@ -25,7 +27,7 @@ export const SubjectSchema = z.object({
     location: z.string(),
     links: z.record(
         z.string(),
-        z.string()
+        LinkSchema
     ),
 });
 
@@ -103,7 +105,7 @@ export const EducationSchema = z.array(
 
 export const TalkSchema = z.object({
     label: z.string(),
-    link: z.string(),
+    link: LinkSchema,
     Description: z.string(),
     year: PastYearSchema,
 });

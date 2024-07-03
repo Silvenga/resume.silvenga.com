@@ -1,4 +1,4 @@
-import { PastYearSchema, TechnologySchema, TimeRangeSchema, YearSchema } from "../../src/data/schema";
+import { LinkSchema, PastYearSchema, TechnologySchema, TimeRangeSchema, YearSchema } from "../../src/data/schema";
 
 describe("TechnologySchema", () => {
     test("When parsing an empty string, then parse should fail", () => {
@@ -53,5 +53,12 @@ describe("TimeRangeSchema", () => {
             toYear: "now",
         };
         expect(() => TimeRangeSchema.parse(inputFake)).not.toThrow();
+    });
+});
+
+describe("LinkSchema", () => {
+    test("When parsing a link without valid schema, then parse should fail", () => {
+        const inputFake = "ftp://example.com";
+        expect(() => LinkSchema.parse(inputFake)).toThrow();
     });
 });
