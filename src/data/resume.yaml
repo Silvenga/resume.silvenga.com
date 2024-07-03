@@ -29,7 +29,6 @@ workHistory:
         - framework/TailwindCSS
       backend:
         - language/C# (11)
-        -
         - runtime/.NET (6-8)
         - framework/ASP.NET Core
         - framework/Orleans
@@ -286,6 +285,7 @@ workHistory:
         - db/Redis
       infrastructure:
         - cloud/Amazon Web Services (AWS)
+        - os/Windows Server
       methodologies:
         - DevOps
         - Scrum/Agile
@@ -298,13 +298,18 @@ workHistory:
     description: |
       Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
     technologies:
-      - .NET Framework (4.X)
-      - Windows Server
-      - Microsoft SQL Server
-      - Bootstrap
-      - JavaScript (ES4)
-    methodologies:
-      - Scrum/Agile
+      frontend:
+        - language/JavaScript (ES4)
+        - library/Bootstrap
+      backend:
+        - language/C# (4)
+        - runtime/.NET Framework (4.X)
+      database:
+        - db/Microsoft SQL Server
+      infrastructure:
+        - os/Windows Server
+      methodologies:
+        - Scrum/Agile
 
   - label: Contract Software Developer
     entity: Rubio's Restaurants, Inc.
@@ -314,11 +319,15 @@ workHistory:
     description: |
       Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
     technologies:
-      - .NET Framework (4.X)
-      - Windows Server
-      - Microsoft SQL Server
-    methodologies:
-      - Scrum/Agile
+      backend:
+        - language/C# (4)
+        - runtime/.NET Framework (4.X)
+      database:
+        - db/Microsoft SQL Server
+      infrastructure:
+        - os/Windows Server
+      methodologies:
+        - Scrum/Agile
 
 education:
   - label: Neumont University

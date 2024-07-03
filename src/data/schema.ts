@@ -77,7 +77,7 @@ const WorkHistoryItemSchema = z.object({
     entity: z.string(),
     timeRange: TimeRangeSchema,
     description: z.string(),
-    technologies: TechnologySchema
+    technologies: TechnologiesSchema
 });
 
 export type WorkHistoryItem = z.infer<typeof WorkHistoryItemSchema>;
@@ -106,7 +106,7 @@ export const EducationSchema = z.array(
 export const TalkSchema = z.object({
     label: z.string(),
     link: LinkSchema,
-    Description: z.string(),
+    description: z.string(),
     year: PastYearSchema,
 });
 
