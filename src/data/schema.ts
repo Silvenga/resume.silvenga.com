@@ -16,17 +16,23 @@ export const TimeRangeSchema = z.object({
 
 export type TimeRange = z.infer<typeof TimeRangeSchema>;
 
-export const LinkSchema = z.string().startsWith("https://", "Links must start with https://");
+export const HttpsLinkSchema = z.string().startsWith("https://", "Links must start with https://");
+export const MailToLinkSchema = z.string().startsWith("mailto:", "Links must start with mailto:");
+
+export const HrefSchema = HttpsLinkSchema.or(MailToLinkSchema);
 
 // Subject
+
+export const LinkSchema = z.object({
+    label: z.string().min(1),
+    href: HrefSchema
+});
 
 export const SubjectSchema = z.object({
     givenName: z.string(),
     familyName: z.string(),
-    emailAddress: z.string(),
     location: z.string(),
-    links: z.record(
-        z.string(),
+    links: z.array(
         LinkSchema
     ),
 });
@@ -115,7 +121,7 @@ export const EducationSchema = z.array(
 
 export const TalkSchema = z.object({
     label: z.string(),
-    link: LinkSchema,
+    link: HrefSchema,
     description: z.string(),
     year: PastYearSchema,
 });

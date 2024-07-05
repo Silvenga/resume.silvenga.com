@@ -1,4 +1,4 @@
-import { LinkSchema, PastYearSchema, TechnologySchema, TechnologySchemaWithKind, TimeRangeSchema, YearSchema } from "../../src/data/schema";
+import { HrefSchema, PastYearSchema, TechnologySchema, TechnologySchemaWithKind, TimeRangeSchema, YearSchema } from "../../src/data/schema";
 
 describe("TechnologySchema", () => {
     test("When parsing an empty string, then parse should fail", () => {
@@ -63,9 +63,13 @@ describe("TimeRangeSchema", () => {
     });
 });
 
-describe("LinkSchema", () => {
+describe("HrefSchema", () => {
     test("When parsing a link without valid schema, then parse should fail", () => {
         const inputFake = "ftp://example.com";
-        expect(() => LinkSchema.parse(inputFake)).toThrow();
+        expect(() => HrefSchema.parse(inputFake)).toThrow();
+    });
+    test("When parsing a mailto link, then parse should succeed", () => {
+        const inputFake = "mailto:hello@example.com";
+        expect(() => HrefSchema.parse(inputFake)).not.toThrow();
     });
 });

@@ -8,9 +8,14 @@ subject:
   emailAddress: mark.lopez@silvenga.com
   location: Dallas-DFW Metroplex, Texas
   links:
-    linkedin: https://www.linkedin.com/in/silvenga/
-    blog: https://silvenga.com/
-    github: https://github.com/Silvenga
+    - label: mark.lopez@silvenga.com
+      href: mailto:mark.lopez@silvenga.com
+    - label: linkedin.com/in/silvenga/
+      href: https://www.linkedin.com/in/silvenga/
+    - label: silvenga.com
+      href: https://silvenga.com/
+    - label: github.com/Silvenga
+      href: https://github.com/Silvenga
 
 workHistory:
   - label: Co-Owner
