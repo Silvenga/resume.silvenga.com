@@ -1,0 +1,57 @@
+name: Deploy Site
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: {}
+  pull_request: {}
+
+jobs:
+  build:
+    name: Build Site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable Corepack
+        run: |
+          corepack enable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+      - name: Build
+        run: |
+          yarn install --immutable
+          yarn build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          if-no-files-found: error
+
+  deploy-rabbit-edge:
+    name: Deploy to Rabbit Edge
+    needs: build
+    if: github.ref_name == 'master'
+    concurrency: rabbit-edge
+    environment:
+      name: rabbit-edge
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - name: Deploy to Bunny Edge
+        uses: ayeressian/bunnycdn-storage-deploy@v2.2.3
+        with:
+          source: "dist"
+          destination: ""
+          storageZoneName: "${{ secrets.STORAGE_NAME }}"
+          storagePassword: "${{ secrets.STORAGE_PASSWORD }}"
+          accessKey: "${{ secrets.ACCESS_KEY }}"
+          pullZoneId: "${{ secrets.ZONE_ID }}"
+          upload: "true"
+          remove: "true"
+          purgePullZone: "true"
