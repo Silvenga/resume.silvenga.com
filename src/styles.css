@@ -23,7 +23,14 @@
 }
 
 @layer components {
+    .inline-list {
+        @apply list-none flex;
 
+        li:not(:first-child)::before {
+            @apply px-3;
+            content: "•";
+        }
+    }
 }
 
 @layer utilities {

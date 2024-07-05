@@ -2,11 +2,11 @@
 
 import "eslint-plugin-only-warn";
 
-import eslint from "@eslint/js";
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
-import stylistic from "@stylistic/eslint-plugin";
 import typeScriptEslint, { } from "typescript-eslint";
+import eslint from "@eslint/js";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default typeScriptEslint.config(
     eslint.configs.recommended,
@@ -45,7 +45,9 @@ export default typeScriptEslint.config(
         rules: {
             "default-case": "warn",
             "require-await": "warn",
-            "@stylistic/arrow-parens": "off" // No idea why customize isn't customizing this one...
+            "@stylistic/arrow-parens": "off", // No idea why customize isn't customizing this one...
+            "@stylistic/jsx-one-expression-per-line": "off", // This one is just annoying...
+            "@stylistic/jsx-closing-bracket-location": "off", // This one is just annoying...
         }
     },
 );
