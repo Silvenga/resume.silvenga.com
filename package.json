@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "parcel:start": "parcel --port 9999 --config .parcelrc src/index.html",
-    "parcel:build": "parcel build --config .prod.parcelrc src/index.html --public-url /resume",
+    "parcel:build": "parcel build --config .prod.parcelrc src/index.html --public-url /resume --no-scope-hoist",
     "sri-dist": "posthtml -u posthtml-sri --posthtml-sri.basePath=dist/ dist/**/*.html",
     "lint": "eslint --max-warnings=0 src",
     "start": "nodemon --watch package.json --exec yarn parcel:start",
