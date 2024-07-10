@@ -1,5 +1,6 @@
 import { PdfViewer } from "./pdf-viewer";
 import { ResumeDocument } from "./resume/document";
+import { ResumeContextProvider } from "./resume/use-resume";
 
 export function App() {
     return (
@@ -11,7 +12,9 @@ export function App() {
                 </header>
                 <div className="grow">
                     <PdfViewer>
-                        <ResumeDocument />
+                        <ResumeContextProvider>
+                            <ResumeDocument />
+                        </ResumeContextProvider>
                     </PdfViewer>
                 </div>
                 <footer className="text-center mt-12">

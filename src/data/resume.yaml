@@ -6,7 +6,7 @@ subject:
   givenName: Mark
   familyName: Lopez
   emailAddress: mark.lopez@silvenga.com
-  location: Dallas-DFW Metroplex, Texas
+  location: DFW-Metroplex, Texas
   links:
     - label: mark.lopez@silvenga.com
       href: mailto:mark.lopez@silvenga.com
