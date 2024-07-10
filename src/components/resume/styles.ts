@@ -1,4 +1,13 @@
+import { createTw } from "react-pdf-tailwind";
 import { Font, StyleSheet, Styles } from "@react-pdf/renderer";
+
+export const tw = createTw({
+    theme: {
+        fontFamily: {
+            sans: ["Inter"],
+        },
+    },
+});
 
 // https://tailwindcss.com/docs/customizing-colors
 export const colors = {
@@ -41,11 +50,11 @@ const theme: Styles = {
 export function getResumeStyles() {
     return StyleSheet.create({
         page: {
+            ...theme.bodyText,
             flexDirection: "column",
             backgroundColor: "white",
             fontFamily: "Inter",
-            padding: 24,
-            ...theme.bodyText
+            padding: 24
         },
         h1: {
             ...theme.headerText,

@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { Document, Link, Page, Text, View, ViewProps } from "@react-pdf/renderer";
-import { WorkHistoryItem } from "../../data/schema";
+import { Document, Link, Page, Text, View } from "@react-pdf/renderer";
 import { forceRemountOnFastRefresh } from "../../utilities/fast-refresh";
-import { colors } from "./styles";
+import { HeaderSection } from "./sections/header-section";
+import { WorkHistorySection } from "./sections/work-history-section";
 import { useResume } from "./use-resume";
 
 // Fast refresh seems really confused here.
@@ -20,7 +20,7 @@ export function ResumeDocument() {
             author={fullName}
             pageLayout="oneColumn">
             <ResumePage>
-                <Header />
+                <HeaderSection />
                 <WorkHistorySection />
             </ResumePage>
         </Document>
@@ -45,64 +45,5 @@ function ResumePage({ children }: { children: ReactNode }) {
                 )}
                 fixed />
         </Page>
-    );
-}
-
-function Header() {
-    const { styles, resume: { subject: { familyName, givenName, links, location } } } = useResume();
-    return (
-        <View style={{ marginBottom: 24 }}>
-            <Text style={styles.h1}>{givenName} {familyName}</Text>
-            <Text style={{}}>{location}</Text>
-            <View style={{ display: "flex", flexDirection: "row" }} wrap>
-
-            </View>
-        </View>
-    );
-}
-
-function WorkHistorySection() {
-    const { styles, resume: { workHistory } } = useResume();
-    return (
-        <View style={{ display: "flex", flexDirection: "column" }}>
-            <Text style={[styles.h2, { marginBottom: 12 }]}>Work Experience</Text>
-            <View>
-                {workHistory.map(x => (
-                    <WorkHistoryItemSection {...x} key={x.label} />
-                ))}
-            </View>
-        </View>
-    );
-}
-
-function WorkHistoryItemSection({ label, entity, description, technologies, timeRange }: WorkHistoryItem) {
-    const { styles } = useResume();
-    return (
-        <View style={{ marginBottom: 12, display: "flex", flexDirection: "row" }}>
-            <View style={{
-                display: "flex",
-                flexDirection: "column",
-                flexBasis: "40%",
-                borderRight: 1,
-                paddingRight: 12
-            }}>
-                <Text style={styles.h3}>
-                    {entity}
-                </Text>
-                <Text style={{}}>
-                    {label}
-                </Text>
-            </View>
-            <View style={{
-                display: "flex",
-                flexDirection: "column",
-                flexBasis: "60%",
-                paddingLeft: 12
-            }}>
-                <Text>
-                    {description}
-                </Text>
-            </View>
-        </View>
     );
 }

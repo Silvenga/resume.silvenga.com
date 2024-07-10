@@ -58,10 +58,12 @@
     "@types/jest": "^29.5.12",
     "@types/luxon": "^3.4.2",
     "@types/markdown-it": "^14.1.1",
+    "@types/mdast": "^4.0.4",
     "@types/node": "^20.14.10",
     "@types/parcel-env": "^0.0.6",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@types/unist": "^3.0.2",
     "buffer": "^6.0.3",
     "clsx": "^2.1.1",
     "eslint": "^9.6.0",
@@ -92,10 +94,13 @@
     "@react-pdf/renderer": "^3.4.4",
     "luxon": "^3.4.4",
     "markdown-it": "^14.1.0",
+    "mdast": "^3.0.0",
+    "mdast-util-from-markdown": "^2.0.1",
     "pdfjs-dist": "^4.4.168",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-pdf": "^9.1.0",
+    "react-pdf-tailwind": "^2.3.0",
     "zod": "^3.23.8"
   }
 }
