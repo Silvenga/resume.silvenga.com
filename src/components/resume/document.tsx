@@ -1,8 +1,9 @@
-import { ReactNode } from "react";
+import { PropsWithChildren, ReactNode } from "react";
 import { Document, Link, Page, Text, View } from "@react-pdf/renderer";
 import { forceRemountOnFastRefresh } from "../../utilities/fast-refresh";
 import { EducationSection } from "./sections/education-section";
 import { HeaderSection } from "./sections/header-section";
+import { TalksSection } from "./sections/talks-section";
 import { WorkHistorySection } from "./sections/work-history-section";
 import { useResume } from "./use-resume";
 
@@ -23,13 +24,14 @@ export function ResumeDocument() {
             <ResumePage>
                 <HeaderSection />
                 <WorkHistorySection />
+                <TalksSection />
                 <EducationSection />
             </ResumePage>
         </Document>
     );
 }
 
-function ResumePage({ children }: { children: ReactNode }) {
+function ResumePage({ children }: PropsWithChildren) {
     const { styles } = useResume();
     return (
         <Page size={pageSize} style={styles.page} wrap>

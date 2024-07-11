@@ -4,7 +4,8 @@ import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
 import { PdfMarkdown } from "../../markdown/pdf-markdown";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";
-import { InlineTimeRange } from "./inline-time-range";
+import { InlineTimeRange } from "./common/inline-time-range";
+import { Section } from "./common/section";
 
 // TODO
 forceRemountOnFastRefresh(module);
@@ -12,14 +13,14 @@ forceRemountOnFastRefresh(module);
 export function WorkHistorySection() {
     const { styles, resume: { workHistory } } = useResume();
     return (
-        <View style={{ display: "flex", flexDirection: "column" }}>
-            <Text style={[styles.h2, { marginBottom: 12 }]}>Work Experience</Text>
+        <Section>
+            <Text style={[styles.h2, tw("mb-3")]}>Work Experience</Text>
             <View>
                 {workHistory.map(x => (
                     <WorkHistoryItemSection {...x} key={x.label} />
                 ))}
             </View>
-        </View>
+        </Section>
     );
 }
 

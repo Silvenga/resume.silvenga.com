@@ -1,6 +1,6 @@
 import { Text, View } from "@react-pdf/renderer";
-import { TimeRange } from "../../../data/schema"
-import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
+import { TimeRange } from "../../../../data/schema";
+import { forceRemountOnFastRefresh } from "../../../../utilities/fast-refresh";
 
 // TODO
 forceRemountOnFastRefresh(module);

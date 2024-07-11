@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { ReactNode, createContext, useContext, useMemo } from "react";
+import { PropsWithChildren, createContext, useContext, useMemo } from "react";
 import { getResume } from "../../data/resume";
 import { Resume } from "../../data/schema";
 import { ResumeStyles, getResumeStyles } from "./styles";
@@ -12,7 +12,7 @@ export type ResumeContextProps = {
 
 const ResumeContext = createContext<ResumeContextProps | undefined>(undefined);
 
-export function ResumeContextProvider({ children }: { children: ReactNode }) {
+export function ResumeContextProvider({ children }: PropsWithChildren) {
     const context = useMemo(() => {
         return {
             now: DateTime.now(),
