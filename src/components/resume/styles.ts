@@ -57,7 +57,8 @@ export function getResumeStyles() {
             flexDirection: "column",
             backgroundColor: "white",
             fontFamily: "Inter",
-            padding: 24
+            padding: 24,
+            paddingBottom: 32 // Make room for the page number.
         },
         h1: {
             ...theme.headerText,
