@@ -51,7 +51,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     <PdfMarkdown markdown={description} />
                 </View>
                 {!!backendTechnologies && (
-                    <View style={tw("mt-2")}>
+                    <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
                         <Text style={tw("")}>
                             {backendTechnologies}
@@ -59,7 +59,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     </View>
                 )}
                 {!!frontendTechnologies && (
-                    <View style={tw("mt-2")}>
+                    <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Frontend Technologies</Text>
                         <Text style={tw("")}>
                             {frontendTechnologies}
@@ -67,7 +67,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     </View>
                 )}
                 {/* {!!testingTechnologies && (
-                    <View style={tw("mt-2")}>
+                    <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Testing Technologies</Text>
                         <Text style={tw("")}>
                             {testingTechnologies}
@@ -75,7 +75,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     </View>
                 )} */}
                 {!!databaseTechnologies && (
-                    <View style={tw("mt-2")}>
+                    <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Database Technologies</Text>
                         <Text style={tw("")}>
                             {databaseTechnologies}
@@ -83,7 +83,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     </View>
                 )}
                 {!!infrastructureTechnologies && (
-                    <View style={tw("mt-2")}>
+                    <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Infrastructure Technologies</Text>
                         <Text style={tw("")}>
                             {infrastructureTechnologies}
@@ -91,7 +91,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     </View>
                 )}
                 {/* {!!methodologiesTechnologies && (
-                    <View style={tw("mt-2")}>
+                    <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Methodologies</Text>
                         <Text style={tw("")}>
                             {methodologiesTechnologies}
