@@ -2,6 +2,8 @@
 # ^ Avoid incorrect match from the yaml language server.
 # https://github.com/redhat-developer/vscode-yaml/issues/245#issuecomment-1337963293
 
+permaLink: https://silvenga.com/resume/
+
 subject:
   givenName: Mark
   familyName: Lopez

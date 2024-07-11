@@ -138,7 +138,8 @@ export const ResumeSchema = z.object({
     subject: SubjectSchema,
     workHistory: WorkHistorySchema,
     education: EducationSchema,
-    talks: TalksSchema
+    talks: TalksSchema,
+    permaLink: z.string().startsWith("http")
 });
 
 export type Resume = z.infer<typeof ResumeSchema>;
