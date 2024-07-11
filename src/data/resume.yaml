@@ -352,5 +352,5 @@ education:
 talks:
   - label: MVP MIX
     link: https://www.mvpmix.com/
-    description: Gave a talk on the OIDC protocol.
+    description: Presented on the OpenID Connect (OIDC) protocol. Also Zombies.
     year: 2017

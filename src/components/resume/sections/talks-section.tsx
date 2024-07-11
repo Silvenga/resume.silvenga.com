@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link, Text, View } from "@react-pdf/renderer";
 import { Talk } from "../../../data/schema";
 import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
+import { PdfMarkdown } from "../../markdown/pdf-markdown";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";
 import { Section } from "./common/section";
@@ -41,7 +42,7 @@ function TalksItemSection({ label, description, link, year }: Talk) {
             </View>
             <View style={tw("flex flex-col basis-2/3 pl-6 py-1 border-l border-gray-300 ml-auto")}>
                 <Text style={tw("mb-1")}>
-                    {description}
+                    <PdfMarkdown markdown={description} />
                 </Text>
                 <Text>
                     <Link style={tw("text-gray-900")} href={link}>{linkLabel}</Link>
