@@ -1,9 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
 import { TimeRange } from "../../../../data/schema";
-import { forceRemountOnFastRefresh } from "../../../../utilities/fast-refresh";
-
-// TODO
-forceRemountOnFastRefresh(module);
 
 export type InlineTimeRangeProps = {
     range: TimeRange;

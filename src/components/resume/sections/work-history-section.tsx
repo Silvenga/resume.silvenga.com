@@ -6,20 +6,21 @@ import { tw } from "../styles";
 import { useResume } from "../use-resume";
 import { InlineTimeRange } from "./common/inline-time-range";
 import { Section } from "./common/section";
+import { SectionHeader } from "./common/section-header";
 
 // TODO
 forceRemountOnFastRefresh(module);
 
 export function WorkHistorySection() {
-    const { styles, resume: { workHistory } } = useResume();
+    const { resume: { workHistory } } = useResume();
     return (
         <Section>
-            <Text style={[styles.h2, tw("mb-3")]}>Work Experience</Text>
-            <View>
-                {workHistory.map(x => (
-                    <WorkHistoryItemSection {...x} key={x.label} />
-                ))}
-            </View>
+            <SectionHeader>
+                Experience
+            </SectionHeader>
+            {workHistory.map(x => (
+                <WorkHistoryItemSection {...x} key={x.label} />
+            ))}
         </Section>
     );
 }

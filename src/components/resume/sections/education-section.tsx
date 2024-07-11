@@ -5,20 +5,21 @@ import { tw } from "../styles";
 import { useResume } from "../use-resume";
 import { InlineTimeRange } from "./common/inline-time-range";
 import { Section } from "./common/section";
+import { SectionHeader } from "./common/section-header";
 
 // TODO
 forceRemountOnFastRefresh(module);
 
 export function EducationSection() {
-    const { styles, resume: { education } } = useResume();
+    const { resume: { education } } = useResume();
     return (
         <Section>
-            <Text style={[styles.h2, tw("mb-3")]}>Education</Text>
-            <View>
-                {education.map(x => (
-                    <EducationItemSection {...x} key={x.label} />
-                ))}
-            </View>
+            <SectionHeader>
+                Education
+            </SectionHeader>
+            {education.map(x => (
+                <EducationItemSection {...x} key={x.label} />
+            ))}
         </Section>
     );
 }
