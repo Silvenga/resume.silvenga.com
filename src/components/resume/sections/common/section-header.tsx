@@ -8,7 +8,7 @@ export function SectionHeader({ children }: PropsWithChildren) {
     return (
         <View style={tw("flex flex-row mb-3")}>
             <Text style={[styles.h2]}>{children}</Text>
-            <View style={tw("grow flex justify-items-center")}>
+            <View style={tw("grow flex")}>
                 <Hr />
             </View>
         </View>

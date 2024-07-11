@@ -9,6 +9,9 @@ export const tw = createTw({
     },
 });
 
+// @react-pdf/renderer hides this type...
+export type Style = ReturnType<typeof tw>;
+
 // https://tailwindcss.com/docs/customizing-colors
 export const colors = {
     gray50: "#f9fafb",
