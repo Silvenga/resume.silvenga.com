@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Document, Link, Page, Text, View } from "@react-pdf/renderer";
 import { forceRemountOnFastRefresh } from "../../utilities/fast-refresh";
+import { EducationSection } from "./sections/education-section";
 import { HeaderSection } from "./sections/header-section";
 import { WorkHistorySection } from "./sections/work-history-section";
 import { useResume } from "./use-resume";
@@ -22,6 +23,7 @@ export function ResumeDocument() {
             <ResumePage>
                 <HeaderSection />
                 <WorkHistorySection />
+                <EducationSection />
             </ResumePage>
         </Document>
     );
@@ -36,7 +38,7 @@ function ResumePage({ children }: { children: ReactNode }) {
                 style={{
                     textAlign: "center",
                     position: "absolute",
-                    bottom: 12,
+                    bottom: 10,
                     left: 0,
                     right: 0
                 }}

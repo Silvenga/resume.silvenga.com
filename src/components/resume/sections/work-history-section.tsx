@@ -25,9 +25,17 @@ export function WorkHistorySection() {
 
 function WorkHistoryItemSection({ label, entity, description, technologies, timeRange }: WorkHistoryItem) {
     const { styles } = useResume();
+
+    const backendTechnologies = technologies.backend?.map(x => x.name).join(", ");
+    const frontendTechnologies = technologies.frontend?.map(x => x.name).join(", ");
+    const databaseTechnologies = technologies.database?.map(x => x.name).join(", ");
+    const infrastructureTechnologies = technologies.infrastructure?.map(x => x.name).join(", ");
+    // const methodologiesTechnologies = technologies.methodologies?.map(x => x.name).join(", ");
+    // const testingTechnologies = technologies.testing?.map(x => x.name).join(", ");
+
     return (
         <View style={tw("flex flex-row mb-6")}>
-            <View style={tw("flex flex-col basis-1/3 pr-3 border-r border-gray-300")}>
+            <View wrap={false} style={tw("flex flex-col basis-1/3 pr-3 py-1 self-start")}>
                 <Text style={styles.h3}>
                     {entity}
                 </Text>
@@ -38,8 +46,58 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                     <InlineTimeRange range={timeRange} />
                 </Text>
             </View>
-            <View style={tw("flex flex-col basis-2/3 pl-6")}>
-                <PdfMarkdown markdown={description} />
+            <View style={tw("flex flex-col basis-2/3 pl-6 py-1 border-l border-gray-300 ml-auto")}>
+                <View style={tw("mb-2")}>
+                    <PdfMarkdown markdown={description} />
+                </View>
+                {!!backendTechnologies && (
+                    <View style={tw("mt-2")}>
+                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
+                        <Text style={tw("")}>
+                            {backendTechnologies}
+                        </Text>
+                    </View>
+                )}
+                {!!frontendTechnologies && (
+                    <View style={tw("mt-2")}>
+                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Frontend Technologies</Text>
+                        <Text style={tw("")}>
+                            {frontendTechnologies}
+                        </Text>
+                    </View>
+                )}
+                {/* {!!testingTechnologies && (
+                    <View style={tw("mt-2")}>
+                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Testing Technologies</Text>
+                        <Text style={tw("")}>
+                            {testingTechnologies}
+                        </Text>
+                    </View>
+                )} */}
+                {!!databaseTechnologies && (
+                    <View style={tw("mt-2")}>
+                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Database Technologies</Text>
+                        <Text style={tw("")}>
+                            {databaseTechnologies}
+                        </Text>
+                    </View>
+                )}
+                {!!infrastructureTechnologies && (
+                    <View style={tw("mt-2")}>
+                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Infrastructure Technologies</Text>
+                        <Text style={tw("")}>
+                            {infrastructureTechnologies}
+                        </Text>
+                    </View>
+                )}
+                {/* {!!methodologiesTechnologies && (
+                    <View style={tw("mt-2")}>
+                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Methodologies</Text>
+                        <Text style={tw("")}>
+                            {methodologiesTechnologies}
+                        </Text>
+                    </View>
+                )} */}
             </View>
         </View>
     );

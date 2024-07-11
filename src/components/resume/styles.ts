@@ -124,3 +124,5 @@ Font.register({
         },
     ]
 });
+
+Font.registerHyphenationCallback(word => [word]);
