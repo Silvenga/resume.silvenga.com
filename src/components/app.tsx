@@ -57,7 +57,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
             </a>
             <div className="flex">
                 <a
-                    className={clsx("flex items-center justify-between grow mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                    className={clsx("flex items-center justify-between grow py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
                     role="button"
                     href={pdfBlobUrl}
                     download={`Mark Lopez ${year}.pdf`}
@@ -65,7 +65,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
                     <IoCodeDownloadOutline style={{ width: 24, height: 24 }} className="me-3" /> Save PDF
                 </a>
                 <a
-                    className={clsx("ms-3 mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                    className={clsx("ms-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
                     role="button"
                     href={jsonUrl}
                     aria-label="Download Json"
@@ -74,7 +74,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
                     <TbJson style={{ width: 24, height: 24 }} />
                 </a>
             </div>
-            <div className="text-center">
+            <div className="text-center hidden sm:block">
                 <a href="https://silvenga.com" className="text-center hover:underline font-medium">
                     Back to silvenga.com
                 </a>
