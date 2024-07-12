@@ -1,10 +1,6 @@
 import QRCode from "qrcode";
 import { Image, View } from "@react-pdf/renderer";
-import { forceRemountOnFastRefresh } from "../../../../utilities/fast-refresh";
 import { Style } from "../../styles";
-
-// TODO
-forceRemountOnFastRefresh(module);
 
 export type PdfQrCodeProps = {
     value: string;
