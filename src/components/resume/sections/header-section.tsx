@@ -21,8 +21,8 @@ export function HeaderSection() {
                 </Text>
                 <Text>{location}</Text>
                 {/* Yoga is doing some odd things with flex-grow and text containers (min-width being odd?), so forcing an ideal-width */}
-                <Text wrap style={tw("grow border-l-2 mt-6 border-gray-400 px-4 pt-1 w-[300px]")}>
-                    An experienced software engineer bring joy to users through craftsmanship and deep technical knowledge of the entire stack.
+                <Text wrap style={tw("grow border-l-2 mt-6 border-gray-400 text-gray-900 font-medium px-4 py-1 w-[300px]")}>
+                    An experienced software engineer bringing joy to users through craftsmanship and deep technical knowledge of the entire stack.
                 </Text>
             </View>
             <View style={tw("flex flex-row")}>
@@ -32,10 +32,10 @@ export function HeaderSection() {
                             <Link style={tw("text-gray-900 font-medium")} href={href}>{getHrefLabel(href)}</Link>
                         </View>
                     ))}
+                    <Link style={tw("text-gray-900 font-medium")} href={permaLink}>{getHrefLabel(permaLink)}</Link>
                 </View>
                 <View style={tw("ml-auto flex flex-col")}>
                     <PdfQrCode style={tw("ml-auto")} value={permaLink} size={96} margin={0} />
-                    <Link style={tw("text-gray-700 self-center mt-2 text-sm font-medium")} href={permaLink}>{getHrefLabel(permaLink)}</Link>
                 </View>
             </View>
         </View>
