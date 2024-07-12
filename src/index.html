@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Mark's Resume</title>
-    <link href="./styles.css" type="text/css" rel="stylesheet" />
-    <link href="npm:@fontsource-variable/inter/files/inter-latin-wght-normal.woff2" rel="preload" as="font"
-        type="font/woff2" />
+    <link href="./styles.css" type="text/css" rel="preload stylesheet" as="style" />
 
     <meta property="og:type" content="profile" />
     <meta property="og:first_name" content="Mark" />
@@ -16,6 +14,9 @@
     <meta property="og:title" content="Mark's Resume" />
     <meta property="og:locale" content="en_US" />
 
+    <meta name="robots" content="noindex">
+
+    <link href="npm:pdfjs-dist/build/pdf.worker.mjs" rel="preload" as="script" />
     <script type="module" src="./main.tsx"></script>
 </head>
 
