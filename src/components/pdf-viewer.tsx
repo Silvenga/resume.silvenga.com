@@ -2,7 +2,7 @@ import "npm:react-pdf/dist/Page/TextLayer.css";
 import "npm:react-pdf/dist/Page/AnnotationLayer.css";
 
 import clsx from "clsx";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { Document as ViewDocument, Page as ViewPage } from "react-pdf";
 import useSize from "@react-hook/size";
 import { DocumentProps, usePDF } from "@react-pdf/renderer";

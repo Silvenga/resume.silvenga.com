@@ -28,7 +28,7 @@ export function WorkHistorySection() {
 function WorkHistoryItemSection({ label, entity, description, technologies, timeRange, remote }: WorkHistoryItem) {
     const { styles } = useResume();
     return (
-        <View style={tw("flex flex-row mb-6")}>
+        <View wrap={false} style={tw("flex flex-row mb-3")}>
             <View wrap={false} style={tw("flex flex-col basis-1/3 pr-3 py-1 self-start")}>
                 <Text style={styles.h3}>
                     {entity}
@@ -59,7 +59,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
     // const methodologiesTechnologies = technologies.methodologies?.map(x => x.name).join(", ");
     // const testingTechnologies = technologies.testing?.map(x => x.name).join(", ");
     return (
-        <View wrap={false}>
+        <View>
             {!!backendTechnologies && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>

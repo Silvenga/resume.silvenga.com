@@ -2,7 +2,7 @@ import { Link as AstLink } from "mdast";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { ReactElement } from "react";
 import React from "react";
-import type { Literal, Node, Parent, } from "unist";
+import type { Literal, Node, Parent } from "unist";
 import { Link, Text, View } from "@react-pdf/renderer";
 import { tw } from "../resume/styles";
 

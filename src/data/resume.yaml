@@ -10,7 +10,7 @@ subject:
   emailAddress: mark.lopez@silvenga.com
   location: DFW-Metroplex, Texas
   title: Full-Stack DevOps Engineer
-  tagLine: An experienced software engineer bringing joy to users through craftsmanship, security, and deep technical knowledge of the entire stack.
+  tagLine: An experienced software engineer bringing joy to users through craftsmanship and deep technical and security knowledge of the entire stack.
   links:
     - label: mark.lopez@silvenga.com
       href: mailto:mark.lopez@silvenga.com
@@ -41,8 +41,9 @@ workHistory:
         - language/C# (11)
         - runtime/.NET (6-8)
         - framework/ASP.NET Core
+        - framework/Entity Framework Core
         - framework/Orleans
-        - testing/XUnit
+        - testing/xUnit
         - framework/WiX (Windows Installer)
       database:
         - db/Microsoft SQL Server
@@ -105,8 +106,9 @@ workHistory:
         - language/C# (11)
         - runtime/.NET (6)
         - framework/ASP.NET Core
+        - framework/Entity Framework Core
         - library/Hangfire
-        - testing/XUnit
+        - testing/xUnit
       database:
         - db/Microsoft SQL Server
       infrastructure:
@@ -139,7 +141,8 @@ workHistory:
         - runtime/.NET Framework (4.X)
         - framework/ASP.NET Core
         - framework/ASP.NET Web API 2
-        - testing/XUnit
+        - framework/Entity Framework Core
+        - testing/xUnit
       database:
         - db/Microsoft SQL Server
         - db/Apache Kafka
@@ -183,10 +186,11 @@ workHistory:
         - framework/ASP.NET MVC
         - framework/WinForms
         - framework/ASP.NET Web Forms
+        - framework/Entity Framework Core
         - framework/WiX (Windows Installer)
         - library/ANTLR
         - library/SignalR
-        - testing/XUnit
+        - testing/xUnit
         - testing/NUnit
       database:
         - db/Microsoft SQL Server
@@ -234,10 +238,11 @@ workHistory:
         - runtime/.NET Framework (4.X)
         - framework/ASP.NET Core
         - framework/ASP.NET Web API 2
+        - framework/Entity Framework 6
         - library/SignalR
         - library/Hangfire
         - protocol/OpenID Connect (OIDC)
-        - testing/XUnit
+        - testing/xUnit
       database:
         - db/Microsoft SQL Server
         - db/MySQL
@@ -285,6 +290,7 @@ workHistory:
         - language/C# (4-6)
         - runtime/.NET Framework (4.X)
         - framework/ASP.NET/Web API
+        - framework/Entity Framework 6
         - library/SignalR
         - library/Hangfire
       database:
