@@ -47,7 +47,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
     }, []);
     const disabled = !pdfBlobUrl;
     return (
-        <aside className="md:ms-9 mb-4 md:mb-0 w-[100%] md:w-max self-start flex flex-col select-none text-center" role="banner">
+        <aside className="md:ms-9 mb-4 md:mb-0 w-[100%] md:w-min self-start flex flex-col select-none text-center whitespace-nowrap" role="banner">
             <a
                 className={clsx("flex items-center mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
                 role="button"
