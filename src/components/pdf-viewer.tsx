@@ -55,17 +55,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
 }
 
 function Loading() {
-    // Show only after 200ms of waiting.
-    const [show, setShow] = useState(false);
-    useEffect(() => {
-        const timeout = setTimeout(() => setShow(true), 200);
-        return () => clearTimeout(timeout);
-    }, []);
     return (
-        <div className="flex flex-col h-[100%]">
-            {!!show && (
-                <div className="text-center my-auto h-[100%]">Rendering...</div>
-            )}
-        </div>
+        <div className="text-center my-auto h-[100%]">Rendering...</div>
     );
 }
