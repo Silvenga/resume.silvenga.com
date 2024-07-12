@@ -35,6 +35,8 @@ export const SubjectSchema = z.object({
     links: z.array(
         LinkSchema
     ),
+    title: z.string(),
+    tagLine: z.string(),
 });
 
 export type Subject = z.infer<typeof SubjectSchema>;
@@ -139,7 +141,7 @@ export const ResumeSchema = z.object({
     workHistory: WorkHistorySchema,
     education: EducationSchema,
     talks: TalksSchema,
-    permaLink: z.string().startsWith("http")
+    permaLink: HrefSchema
 });
 
 export type Resume = z.infer<typeof ResumeSchema>;
