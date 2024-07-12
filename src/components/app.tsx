@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { DateTime } from "luxon";
 import { useMemo, useState } from "react";
-import { IoCodeDownloadOutline } from "react-icons/io5";
+import { IoArrowBackOutline, IoCodeDownloadOutline } from "react-icons/io5";
 import { TbJson } from "react-icons/tb";
 import { TbAppWindow } from "react-icons/tb";
 import { getResume } from "../data/resume";
@@ -16,19 +16,27 @@ export function App() {
     const [loadDurationMs, setLoadDurationMs] = useState<number>(0);
     const [pdfBlobUrl, setPdfBlobUrl] = useState<string>();
     return (
-        <main className="min-w-fit min-h-svh h-max container max-w-screen-xl mx-auto flex flex-col md:flex-row-reverse p-3 md:p-9">
-            <SideMenu pdfBlobUrl={pdfBlobUrl} loadDurationMs={loadDurationMs} />
-            <article className="grow">
-                <PdfViewer onLoaded={(duration, url) => {
-                    setLoadDurationMs(duration);
-                    setPdfBlobUrl(url);
-                }}>
-                    <ResumeContextProvider>
-                        <ResumeDocument />
-                    </ResumeContextProvider>
-                </PdfViewer>
-            </article>
-        </main>
+        <div className="container max-w-screen-xl mx-auto p-3 md:p-9">
+            <div className="flex items-center justify-center md:justify-start">
+                <IoArrowBackOutline className="me-2" />
+                <a href="https://silvenga.com" className="text-center hover:underline font-medium">
+                    Back to silvenga.com
+                </a>
+            </div>
+            <main className="min-w-fit min-h-svh h-max flex flex-col md:flex-row-reverse mt-3 md:mt-6">
+                <SideMenu pdfBlobUrl={pdfBlobUrl} loadDurationMs={loadDurationMs} />
+                <article className="grow">
+                    <PdfViewer onLoaded={(duration, url) => {
+                        setLoadDurationMs(duration);
+                        setPdfBlobUrl(url);
+                    }}>
+                        <ResumeContextProvider>
+                            <ResumeDocument />
+                        </ResumeContextProvider>
+                    </PdfViewer>
+                </article>
+            </main>
+        </div>
     );
 }
 
@@ -74,10 +82,6 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
                 </a>
             </div>
             <div className="text-center hidden sm:block mt-6">
-                <a href="https://silvenga.com" className="text-center hover:underline font-medium">
-                    Back to silvenga.com
-                </a>
-
                 <div className="text-center text-gray-600 text-sm">
                     <div>
                         [<a href="https://github.com/Silvenga/resume.silvenga.com" className="hover:underline" target="_blank">Source Code</a>]
