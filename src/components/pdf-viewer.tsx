@@ -56,6 +56,8 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
 
 function Loading() {
     return (
-        <div className="text-center my-auto h-[100%]">Rendering...</div>
+        <div className="my-auto h-[100%] bg-white flex flex-col justify-center rounded-lg overflow-hidden mb-4 drop-shadow border">
+            <div className="text-center">Rendering...</div>
+        </div>
     );
 }
