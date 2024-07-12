@@ -10,7 +10,7 @@ import { useResume } from "./use-resume";
 
 // Fast refresh seems really confused here.
 // So just force a remount on any child changes.
-// forceRemountOnFastRefresh(module);
+forceRemountOnFastRefresh(module);
 
 export function ResumeDocument() {
     const { now, resume: { subject } } = useResume();
@@ -35,7 +35,7 @@ function Footer() {
     const { now } = useResume();
     return (
         <View style={tw("flex flex-col grow")}>
-            <Text style={tw("mt-auto text-center text-gray-400 font-medium")}>Generated on {now.toFormat("yyyy-LL-dd")}</Text>
+            <Text style={tw("mt-auto text-center text-gray-400 font-medium")}>Generated {now.toFormat("yyyy-LL-dd")}</Text>
         </View>
     );
 }

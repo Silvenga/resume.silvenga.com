@@ -6,8 +6,8 @@ export const tw = createTw({
         fontFamily: {
             sans: ["Inter"],
         },
-    },
-});
+    }
+}, { ptPerRem: 9 });
 
 // @react-pdf/renderer hides this type...
 export type Style = ReturnType<typeof tw>;
@@ -31,19 +31,17 @@ export const colors = {
 
 const theme: Styles = {
     bodyText: {
-        fontSize: 12,
         // lineHeight: 28,
         color: colors.gray700,
-        fontWeight: 400
+        fontWeight: 400,
+        ...tw("text-base")
     },
     headerText: {
-        fontSize: 24,
         // lineHeight: 32,
         color: colors.gray900,
-        fontWeight: 600
+        fontWeight: 600,
     },
     linkText: {
-        fontSize: 16,
         // lineHeight: 32,
         color: colors.gray900,
         fontWeight: 500
@@ -57,23 +55,26 @@ export function getResumeStyles() {
             flexDirection: "column",
             backgroundColor: "white",
             fontFamily: "Inter",
-            padding: 24,
+            padding: "0.5in",
             paddingBottom: 32 // Make room for the page number.
         },
         h1: {
             ...theme.headerText,
             fontSize: 32,
             marginBottom: 4,
+            ...tw("text-5xl leading-snug")
         },
         h2: {
             ...theme.headerText,
             fontSize: 18,
             marginBottom: 4,
+            ...tw("text-2xl leading-snug")
         },
         h3: {
             ...theme.headerText,
             fontSize: 14,
             marginBottom: 2,
+            ...tw("text-xl leading-snug")
         },
         subTitle: {
             ...theme.headerText,

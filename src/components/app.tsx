@@ -15,7 +15,7 @@ export function App() {
     return (
 
         <div className="min-w-fit min-h-svh h-max overflow-auto">
-            <main className="container max-w-screen-lg mx-auto min-h-svh flex flex-col md:flex-row-reverse p-3 md:p-9">
+            <main className="container max-w-screen-xl mx-auto min-h-svh flex flex-col md:flex-row-reverse p-3 md:p-9">
                 <SideMenu pdfBlobUrl={pdfBlobUrl} loadDurationMs={loadDurationMs} />
                 <article className="grow">
                     <PdfViewer onLoaded={(duration, url) => {
