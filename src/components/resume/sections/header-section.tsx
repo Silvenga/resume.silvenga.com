@@ -14,9 +14,7 @@ export function HeaderSection() {
             <View>
                 <Text style={styles.h1}>{givenName} {familyName}</Text>
                 <Text>{location}</Text>
-            </View>
-            <View>
-
+                <Text>TODO</Text>
             </View>
             <View style={tw("ml-auto flex flex-col")}>
                 <PdfQrCode style={tw("ml-auto")} value={permaLink} size={96} margin={0} />

@@ -63,7 +63,7 @@ export function getResumeStyles() {
         h1: {
             ...theme.headerText,
             fontSize: 32,
-            marginBottom: 6,
+            marginBottom: 4,
         },
         h2: {
             ...theme.headerText,

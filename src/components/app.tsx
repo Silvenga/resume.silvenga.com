@@ -74,14 +74,14 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
                     <TbJson style={{ width: 24, height: 24 }} />
                 </a>
             </div>
-            <div className="text-center hidden sm:block">
+            <div className="text-center hidden sm:block mt-6">
                 <a href="https://silvenga.com" className="text-center hover:underline font-medium">
                     Back to silvenga.com
                 </a>
 
                 <div className="text-center text-gray-600 text-sm">
                     <div>
-                        [<a href="" className="hover:underline">Source Code</a>]
+                        [<a href="https://github.com/Silvenga/resume.silvenga.com" className="hover:underline" target="_blank">Source Code</a>]
                     </div>
                     {!!loadDurationMs && (
                         <div>
