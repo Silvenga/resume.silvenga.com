@@ -49,7 +49,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
     return (
         <aside className="md:ms-9 mb-4 md:mb-0 w-[100%] md:w-min self-start flex flex-col select-none text-center whitespace-nowrap" role="banner">
             <a
-                className={clsx("flex items-center mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                className={clsx("flex items-center justify-between mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
                 role="button"
                 href={pdfBlobUrl}
                 target="_blank">
@@ -57,12 +57,12 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
             </a>
             <div className="flex">
                 <a
-                    className={clsx("flex items-center grow mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                    className={clsx("flex items-center justify-between grow mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
                     role="button"
                     href={pdfBlobUrl}
                     download={`Mark Lopez ${year}.pdf`}
                     type="application/pdf">
-                    <IoCodeDownloadOutline style={{ width: 24, height: 24 }} className="me-auto" /> Save PDF
+                    <IoCodeDownloadOutline style={{ width: 24, height: 24 }} className="me-3" /> Save PDF
                 </a>
                 <a
                     className={clsx("ms-3 mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
