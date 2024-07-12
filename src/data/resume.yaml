@@ -10,7 +10,7 @@ subject:
   emailAddress: mark.lopez@silvenga.com
   location: DFW-Metroplex, Texas
   title: Full-Stack DevOps Engineer
-  tagLine: An experienced software engineer bringing joy to users through craftsmanship and deep technical knowledge of the entire stack.
+  tagLine: An experienced software engineer bringing joy to users through craftsmanship, security, and deep technical knowledge of the entire stack.
   links:
     - label: mark.lopez@silvenga.com
       href: mailto:mark.lopez@silvenga.com
@@ -24,11 +24,12 @@ subject:
 workHistory:
   - label: Co-Owner
     entity: Q6 Technologies, LLC
+    remote: true
     timeRange:
       fromYear: 2021
       toYear: now
     description: |
-      Specializing in consulting and bespoke software development, through this role at Q6, I've worked with dozens of technologies encompassing the full stack - from fault tolerant distributed computing of 10's-of-thousands of transactions a minute to solving layer 3 performance across high latency WAN connections with TCP stack optimizations and profiling.
+      Specializing in consulting and bespoke software development, through this role I've worked with dozens of technologies encompassing the full stack - from fault-tolerant, distributed, computing of 10's-of-thousands of transactions a minute to solving layer 3 performance across high latency WAN connections with TCP stack optimizations and profiling.
     technologies:
       frontend:
         - language/TypeScript
@@ -51,21 +52,19 @@ workHistory:
         - db/InfluxDB
         - db/Redis
       infrastructure:
+        - service/Ceph
         - service/Hashicorp Terraform
         - service/Hashicorp Consul
         - service/Hashicorp Vault
-        - service/SaltStack
-        - service/Ceph
         - service/Icinga 2
+        - service/SaltStack
         - service/Telegraf
-        - service/SNMP
         - service/GitHub
-        - service/Syncthing
         - cloud/Azure
         - cloud/BunnyCDN
         - cloud/MailGun
         - cloud/Digital Ocean
-        - cloud/Baremetal/Colo
+        - cloud/Colocation
         - cloud/Twilio
         - cloud/Stripe
         - os/Windows Server
@@ -79,7 +78,7 @@ workHistory:
         - platform/KVM/Libvirt
         - networking/OSPF
         - networking/Wireguard
-        - networking/Vyos
+        - networking/VyOS
       methodologies:
         - DevOps
         - Scrum/Agile
@@ -88,6 +87,7 @@ workHistory:
 
   - label: Sr. Software Engineer
     entity: GMR Protection Resources, Inc
+    remote: true
     timeRange:
       fromYear: 2023
       toYear: 2024
@@ -126,11 +126,12 @@ workHistory:
 
   - label: Sr. Software Engineer
     entity: Signify Health
+    remote: true
     timeRange:
       fromYear: 2023
       toYear: 2023
     description: |
-      Hired to improve the process problems plaguing the engineering department. I trained and mentored two engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
+      Hired to improve the process problems plaguing the engineering department. I trained and mentored engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
     technologies:
       backend:
         - language/C# (11)
@@ -156,27 +157,16 @@ workHistory:
 
   - label: Senior Software Engineer, .NET Agent Security Team
     entity: Contrast Security
+    remote: true
     timeRange:
       fromYear: 2018
       toYear: 2023
     description: |
-      Worked on a fully remote/distributed engineering team of seven to build the .NET Contrast Agent. The .NET Contrast Agent uses binary instrumentation to track runtime objects in realtime, and uses this information to discover data flow paths to detect vulnerabilities with industry leading precision. The agent extends this realtime analysis to production environments to block attacks without requiring code modifications by developers.
+      Built and maintained the .NET Contrast Agent. Used skills include low-level IL manipulation and generation, low-level analysis of hot paths to optimize for low latency GC, low-level internals of the CLR and CoreCLR, for both .NET Framework (3.5-4.8) and .NET (Core 2.1-3.1, 6, 7), reverse engineering of .NET assemblies for evaluation of possible vulnerable paths and low-level IL hooks.
 
-      Low-level IL manipulation and generation - including assembly metadata.
+      Architected and helped implement automatic injection of .NET/Java/NodeJS/PHP agents into existing Kubernetes workloads with a Kubernetes operator. The operator was designed to operate in large Kubernetes of over 10,000 pods though the use of techniques such as back pressure control, event stream compression, etc. This Kubernetes operator is now [Open Source](https://github.com/Contrast-Security-OSS/agent-operator).
 
-      Low-level analysis of hot paths for even the smallest allocation - to optimize for low latency GC.
-
-      Low-level internals of the CLR and CoreCLR, for both .NET Framework (3.5-4.8) and .NET (Core 2.1-3.1, 6, 7).
-
-      Reverse engineering of .NET assemblies for evaluation of possible vulnerable paths and low-level IL hooks.
-
-      Architected and helped implement automatic injection of .NET/Java/NodeJS/PHP agents into existing Kubernetes workloads with a Kubernetes operator. The operator was designed to operate in large Kubernetes of over 10,000 pods though the use of techniques such as back pressure control, event stream compression, etc. This Kubernetes operator is now Open Source.
-
-      Architected and helped implement a cross-platform/cross-language IPC communication channel to be used across Contrast agents.
-
-      Architected and helped implement a cross-platform .NET UI to aid in diagnostic and value worth tasks.
-
-      Architected and helped implement a telemetry aggregation and error reporting service to aid agent developers in building better and more robust agents. This service is currently used by all Contrast agents. The entirety of this service was designed, implemented, and deployed by the .NET agent team - including concerns such as high availability, horizontal scaling, infrastructure security, abuse detection and mitigation, time series based reporting, etc.Worked on a fully remote/distributed engineering team of seven to build the .NET Contrast Agent. The .NET Contrast Agent uses binary instrumentation to track runtime objects in realtime, and uses this information to discover data flow paths to detect vulnerabilities with industry leading precision. The agent extends this realtime analysis to production environments to block attacks without requiring code modifications by developers.
+      Architected and helped implement a telemetry aggregation and error reporting service. The entirety of this service was designed, implemented, and deployed by the .NET agent team - including concerns such as high availability, horizontal scaling, infrastructure security, abuse detection and mitigation, time series based reporting, etc.
     technologies:
       frontend:
         - framework/ReactJS
@@ -223,6 +213,7 @@ workHistory:
 
   - label: Software Architect
     entity: Axxess
+    remote: false
     timeRange:
       fromYear: 2017
       toYear: 2018
@@ -271,6 +262,7 @@ workHistory:
 
   - label: Software Engineer, RCM Team
     entity: Axxess
+    remote: false
     timeRange:
       fromYear: 2015
       toYear: 2017
@@ -308,6 +300,7 @@ workHistory:
 
   - label: Contract Software Developer
     entity: MaritzCX
+    remote: false
     timeRange:
       fromYear: 2014
       toYear: 2015
@@ -329,6 +322,7 @@ workHistory:
 
   - label: Contract Software Developer
     entity: Rubio's Restaurants, Inc.
+    remote: true
     timeRange:
       fromYear: 2014
       toYear: 2014

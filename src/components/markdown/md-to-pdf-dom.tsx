@@ -1,8 +1,9 @@
+import { Link as AstLink } from "mdast";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { ReactElement } from "react";
 import React from "react";
-import type { Literal, Node, Parent } from "unist";
-import { Text, View } from "@react-pdf/renderer";
+import type { Literal, Node, Parent, } from "unist";
+import { Link, Text, View } from "@react-pdf/renderer";
 import { tw } from "../resume/styles";
 
 export function markdownToPdfDom(md: string) {
@@ -46,22 +47,34 @@ function getContainerNode(mdAst: Node, children?: ReactElement): ReactElement {
     switch (mdAst.type) {
         case "root":
             return (
-                <View>{children}</View>
+                <>{children}</>
             );
         case "paragraph":
             return (
-                <View style={tw("mb-2")}>{children}</View>
+                <View style={tw("mb-2")}>
+                    <Text>
+                        {children}
+                    </Text>
+                </View>
             );
         case "list":
             return (
-                <View style={tw("flex flex-col my-2")}>{children}</View>
+                <Text style={tw("flex flex-col my-2")}>{children}</Text>
             );
         case "listItem":
             return (
-                <View style={tw("flex flex-row")}>
+                <Text style={tw("flex flex-row")}>
                     <Text style={tw("px-2")}>•</Text>{children}
-                </View>
+                </Text>
             );
+        case "link": {
+            const { url } = mdAst as AstLink;
+            return (
+                <Link debug style={tw("text-gray-900")} href={url}>
+                    {children}
+                </Link>
+            );
+        }
         default:
             throw new Error(`Unexpected token '${mdAst.type}' was discovered.`);
     }

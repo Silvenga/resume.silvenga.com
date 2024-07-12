@@ -21,7 +21,7 @@ export function HeaderSection() {
                 </Text>
             </View>
             <View style={tw("flex flex-row")}>
-                <View style={tw("flex flex-col items-end text-end m-6 ml-auto")}>
+                <View style={tw("flex flex-col items-end m-6 ml-auto")}>
                     {links.map(({ label, href }) => (
                         <View key={label}>
                             <Link style={tw("text-gray-900 font-medium")} href={href}>{getHrefLabel(href)}</Link>

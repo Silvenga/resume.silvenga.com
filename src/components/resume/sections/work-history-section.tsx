@@ -25,7 +25,7 @@ export function WorkHistorySection() {
     );
 }
 
-function WorkHistoryItemSection({ label, entity, description, technologies, timeRange }: WorkHistoryItem) {
+function WorkHistoryItemSection({ label, entity, description, technologies, timeRange, remote }: WorkHistoryItem) {
     const { styles } = useResume();
     return (
         <View style={tw("flex flex-row mb-6")}>
@@ -39,6 +39,9 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                 <Text>
                     <InlineTimeRange range={timeRange} />
                 </Text>
+                {!!remote && (
+                    <Text>Remote</Text>
+                )}
             </View>
             <View style={tw("flex flex-col basis-2/3 pl-6 py-1 border-l border-gray-300 ml-auto")}>
                 <PdfMarkdown markdown={description} />

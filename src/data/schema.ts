@@ -95,7 +95,8 @@ const WorkHistoryItemSchema = z.object({
     entity: z.string(),
     timeRange: TimeRangeSchema,
     description: z.string(),
-    technologies: TechnologiesSchema
+    technologies: TechnologiesSchema,
+    remote: z.boolean()
 });
 
 export type WorkHistoryItem = z.infer<typeof WorkHistoryItemSchema>;
