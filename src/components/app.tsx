@@ -5,9 +5,12 @@ import { IoCodeDownloadOutline } from "react-icons/io5";
 import { TbJson } from "react-icons/tb";
 import { TbAppWindow } from "react-icons/tb";
 import { getResume } from "../data/resume";
+import { forceRemountOnFastRefresh } from "../utilities/fast-refresh";
 import { PdfViewer } from "./pdf-viewer";
 import { ResumeDocument } from "./resume/document";
 import { ResumeContextProvider } from "./resume/use-resume";
+
+forceRemountOnFastRefresh(module);
 
 export function App() {
     const [loadDurationMs, setLoadDurationMs] = useState<number>(0);
@@ -31,10 +34,6 @@ export function App() {
         </div>
     );
 }
-
-/* <footer className="text-center mt-12">
-                    [<a href="https://github.com/Silvenga/resume.silvenga.com/" className="link link-hover" target="_blank">Source Code</a>]
-  </footer> */
 
 function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDurationMs: number }) {
     const year = useMemo(() => DateTime.now().year, []);

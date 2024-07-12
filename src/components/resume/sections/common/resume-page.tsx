@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { Page, Text } from "@react-pdf/renderer";
+import { Page, Text, View } from "@react-pdf/renderer";
 import { tw } from "../../styles";
 import { useResume } from "../../use-resume";
 
@@ -16,10 +16,12 @@ export function ResumePage({ children }: PropsWithChildren) {
 }
 
 function PageCounter() {
+    const { now, resume: { subject: { familyName, givenName } } } = useResume();
     return (
-        <Text
-            style={tw("text-center absolute bottom-[12px] left-0 right-0 text-gray-400 font-medium")}
-            render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}
-            fixed />
+        <View style={tw("absolute px-[0.5in] bottom-[0.5in] left-0 right-0 text-gray-400 text-sm font-medium flex flex-row justify-between")} fixed>
+            <Text>{givenName} {familyName}</Text>
+            <Text>Generated {now.toFormat("yyyy-LL-dd")}</Text>
+            <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}></Text>
+        </View>
     );
 }

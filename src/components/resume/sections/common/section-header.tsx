@@ -17,6 +17,6 @@ export function SectionHeader({ children }: PropsWithChildren) {
 
 function Hr() {
     return (
-        <View style={tw("border-b border-gray-400 my-auto ml-6 h-0")} />
+        <View style={tw("border-b border-gray-300 my-auto ml-6 h-0")} />
     );
 }

@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link, Text, View } from "@react-pdf/renderer";
 import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
 import { tw } from "../styles";
@@ -8,18 +9,40 @@ import { PdfQrCode } from "./common/pdf-qr-code";
 forceRemountOnFastRefresh(module);
 
 export function HeaderSection() {
-    const { styles, resume: { permaLink, subject: { familyName, givenName, links, location } } } = useResume();
+    const { resume: { permaLink, subject: { familyName, givenName, links, location } } } = useResume();
     return (
-        <View style={tw("flex flex-row")}>
-            <View>
-                <Text style={styles.h1}>{givenName} {familyName}</Text>
+        <View style={tw("flex flex-row mb-6")}>
+            <View style={tw("flex flex-col grow")}>
+                <Text style={tw("text-5xl leading-snug text-gray-900 font-semibold")}>
+                    {givenName} {familyName}
+                </Text>
+                <Text style={tw("text-xl leading-snug text-gray-600 font-semibold mt-[-4px]")}>
+                    Full-Stack DevOps Engineer
+                </Text>
                 <Text>{location}</Text>
-                <Text>TODO</Text>
+                {/* Yoga is doing some odd things with flex-grow and text containers (min-width being odd?), so forcing an ideal-width */}
+                <Text wrap style={tw("grow border-l-2 mt-6 border-gray-400 px-4 pt-1 w-[300px]")}>
+                    An experienced software engineer bring joy to users through craftsmanship and deep technical knowledge of the entire stack.
+                </Text>
             </View>
-            <View style={tw("ml-auto flex flex-col")}>
-                <PdfQrCode style={tw("ml-auto")} value={permaLink} size={96} margin={0} />
-                <Link style={tw("text-gray-900 self-center mt-2 text-sm")} href={permaLink}>Web Version</Link>
+            <View style={tw("flex flex-row")}>
+                <View style={tw("flex flex-col items-end text-end m-6 ml-auto")}>
+                    {links.map(({ label, href }) => (
+                        <View key={label}>
+                            <Link style={tw("text-gray-900 font-medium")} href={href}>{getHrefLabel(href)}</Link>
+                        </View>
+                    ))}
+                </View>
+                <View style={tw("ml-auto flex flex-col")}>
+                    <PdfQrCode style={tw("ml-auto")} value={permaLink} size={96} margin={0} />
+                    <Link style={tw("text-gray-700 self-center mt-2 text-sm font-medium")} href={permaLink}>{getHrefLabel(permaLink)}</Link>
+                </View>
             </View>
         </View>
     );
+}
+
+function getHrefLabel(href: string) {
+    const url = new URL(href);
+    return url.host + url.pathname;
 }

@@ -56,7 +56,7 @@ export function getResumeStyles() {
             backgroundColor: "white",
             fontFamily: "Inter",
             padding: "0.5in",
-            paddingBottom: 32 // Make room for the page number.
+            paddingBottom: "0.75in",
         },
         h1: {
             ...theme.headerText,

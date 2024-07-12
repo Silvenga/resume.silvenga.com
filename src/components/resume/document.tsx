@@ -1,11 +1,10 @@
-import { Document, Text, View } from "@react-pdf/renderer";
+import { Document } from "@react-pdf/renderer";
 import { forceRemountOnFastRefresh } from "../../utilities/fast-refresh";
 import { ResumePage } from "./sections/common/resume-page";
 import { EducationSection } from "./sections/education-section";
 import { HeaderSection } from "./sections/header-section";
 import { TalksSection } from "./sections/talks-section";
 import { WorkHistorySection } from "./sections/work-history-section";
-import { tw } from "./styles";
 import { useResume } from "./use-resume";
 
 // Fast refresh seems really confused here.
@@ -25,17 +24,7 @@ export function ResumeDocument() {
                 <WorkHistorySection />
                 <TalksSection />
                 <EducationSection />
-                <Footer />
             </ResumePage>
         </Document>
-    );
-}
-
-function Footer() {
-    const { now } = useResume();
-    return (
-        <View style={tw("flex flex-col grow")}>
-            <Text style={tw("mt-auto text-center text-gray-400 font-medium")}>Generated {now.toFormat("yyyy-LL-dd")}</Text>
-        </View>
     );
 }
