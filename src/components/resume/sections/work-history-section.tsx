@@ -36,7 +36,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                 <Text style={tw("mt-1")}>
                     {label}
                 </Text>
-                <Text style={tw("mt-2")}>
+                <Text>
                     <InlineTimeRange range={timeRange} />
                 </Text>
             </View>
@@ -60,7 +60,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
             {!!backendTechnologies && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
-                    <Text style={tw("")}>
+                    <Text>
                         {backendTechnologies}
                     </Text>
                 </View>
@@ -68,7 +68,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
             {!!frontendTechnologies && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Frontend Technologies</Text>
-                    <Text style={tw("")}>
+                    <Text>
                         {frontendTechnologies}
                     </Text>
                 </View>
@@ -76,7 +76,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
             {/* {!!testingTechnologies && (
                     <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Testing Technologies</Text>
-                        <Text style={tw("")}>
+                        <Text>
                             {testingTechnologies}
                         </Text>
                     </View>
@@ -84,7 +84,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
             {!!databaseTechnologies && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Database Technologies</Text>
-                    <Text style={tw("")}>
+                    <Text>
                         {databaseTechnologies}
                     </Text>
                 </View>
@@ -92,7 +92,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
             {!!infrastructureTechnologies && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Infrastructure Technologies</Text>
-                    <Text style={tw("")}>
+                    <Text>
                         {infrastructureTechnologies}
                     </Text>
                 </View>
@@ -100,7 +100,7 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
             {/* {!!methodologiesTechnologies && (
                     <View wrap={false} style={tw("mt-2")}>
                         <Text style={tw("text-gray-700 font-semibold mb-1")}>Methodologies</Text>
-                        <Text style={tw("")}>
+                        <Text>
                             {methodologiesTechnologies}
                         </Text>
                     </View>
