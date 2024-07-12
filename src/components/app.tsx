@@ -53,7 +53,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
     return (
         <aside className="md:ms-9 mb-4 md:mb-0 w-[100%] md:w-min self-start flex flex-col select-none text-center whitespace-nowrap" role="banner">
             <a
-                className={clsx("flex items-center justify-between mb-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                className={clsx("flex items-center justify-between mb-3 py-3 px-4 rounded bg-white dark:bg-gray-800 border dark:border-gray-600 drop-shadow-sm transition-all hover:bg-gray-100 dark:hover:bg-gray-600", disabled && "opacity-50 pointer-events-none cursor-default")}
                 role="button"
                 href={pdfBlobUrl}
                 target="_blank"
@@ -62,7 +62,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
             </a>
             <div className="flex">
                 <a
-                    className={clsx("flex items-center justify-between grow py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                    className={clsx("flex items-center justify-between grow py-3 px-4 rounded bg-white dark:bg-gray-800 border dark:border-gray-600 drop-shadow-sm transition-all hover:bg-gray-100 dark:hover:bg-gray-600", disabled && "opacity-50 pointer-events-none cursor-default")}
                     role="button"
                     href={pdfBlobUrl}
                     download={`Mark Lopez ${year}.pdf`}
@@ -71,7 +71,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
                     <IoCodeDownloadOutline style={{ width: 24, height: 24 }} className="me-3" /> Save PDF
                 </a>
                 <a
-                    className={clsx("ms-3 py-3 px-4 rounded bg-white border drop-shadow-sm transition-all hover:bg-gray-100 active:bg-gray-200", disabled && "opacity-50 pointer-events-none cursor-default")}
+                    className={clsx("ms-3 py-3 px-4 rounded bg-white dark:bg-gray-800 border dark:border-gray-600 drop-shadow-sm transition-all hover:bg-gray-100 dark:hover:bg-gray-600", disabled && "opacity-50 pointer-events-none cursor-default")}
                     role="button"
                     href={jsonUrl}
                     aria-label="Download Json"
@@ -82,7 +82,7 @@ function SideMenu({ pdfBlobUrl, loadDurationMs }: { pdfBlobUrl?: string; loadDur
                 </a>
             </div>
             <div className="text-center hidden sm:block mt-6">
-                <div className="text-center text-gray-600 text-sm">
+                <div className="text-center text-gray-600 dark:text-gray-400 text-sm">
                     <div>
                         [<a href="https://github.com/Silvenga/resume.silvenga.com" className="hover:underline" target="_blank">Source Code</a>]
                     </div>
