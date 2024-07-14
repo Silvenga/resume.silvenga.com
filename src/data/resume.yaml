@@ -36,6 +36,7 @@ workHistory:
         - language/SASS
         - runtime/ParcelJS
         - runtime/Webpack
+        - framework/ReactJS
         - framework/TailwindCSS
       backend:
         - language/C# (11)
@@ -175,6 +176,7 @@ workHistory:
         - framework/ReactJS
         - language/TypeScript
         - runtime/ParcelJS
+        - runtime/Webpack
       backend:
         - language/C# (8-11)
         - runtime/.NET Core (2.X, 3.X)
