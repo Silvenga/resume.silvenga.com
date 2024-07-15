@@ -7,13 +7,13 @@ permaLink: https://silvenga.com/resume/
 subject:
   givenName: Mark
   familyName: Lopez
-  emailAddress: mark.lopez@silvenga.com
+  emailAddress: mark@silvenga.com
   location: DFW-Metroplex, Texas
   title: Full-Stack DevOps Engineer
   tagLine: An experienced software engineer bringing joy to users through craftsmanship and deep technical and security knowledge of the entire stack.
   links:
-    - label: mark.lopez@silvenga.com
-      href: mailto:mark.lopez@silvenga.com
+    - label: mark@silvenga.com
+      href: mailto:mark@silvenga.com
     - label: linkedin.com/in/silvenga/
       href: https://linkedin.com/in/silvenga/
     - label: github.com/Silvenga
