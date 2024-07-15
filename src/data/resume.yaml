@@ -40,6 +40,7 @@ workHistory:
         - framework/TailwindCSS
       backend:
         - language/C# (11)
+        - language/Python
         - runtime/.NET (6-8)
         - framework/ASP.NET Core
         - framework/Entity Framework Core
