@@ -31,21 +31,22 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
     const sizingRef = useRef(null);
     const [containerWidth] = useSize(sizingRef);
 
+    const pdfContainerRef = useRef(null);
+    const [, pdfHeight] = useSize(pdfContainerRef);
+
     return (
-        <div className="w-[100%] h-[100%] flex flex-col">
+        <div className="w-[100%] flex flex-col relative" style={{ height: pdfHeight ? pdfHeight : "100vh" }} ref={sizingRef}>
             {!!isLoading && <Loading />}
-            <div className="relative" ref={sizingRef}>
-                {/* Decouple pdf rendering from flexbox calculated size. */}
-                <div className="absolute top-0 bottom-0 right-0 left-0">
-                    <ViewDocument
-                        file={instance.url}
-                        onLoadSuccess={loadedHandler}
-                        className={clsx("absolute top-0 bottom-0 right-0 left-0 flex-col items-end", isLoading && "hidden")}>
-                        {pages.map(page => (
-                            <ViewPage width={containerWidth} key={page} pageIndex={page} loading={null} className="rounded-lg overflow-hidden mb-4 drop-shadow border" />
-                        ))}
-                    </ViewDocument>
-                </div>
+            {/* Decouple pdf rendering from flexbox calculated size. */}
+            <div className="absolute top-0 right-0 left-0" ref={pdfContainerRef}>
+                <ViewDocument
+                    file={instance.url}
+                    onLoadSuccess={loadedHandler}
+                    className={clsx("flex-col items-end", isLoading && "hidden")}>
+                    {pages.map(page => (
+                        <ViewPage width={containerWidth} key={page} pageIndex={page} loading={null} className="rounded-lg overflow-hidden mb-4 drop-shadow border" />
+                    ))}
+                </ViewDocument>
             </div>
         </div>
     );
