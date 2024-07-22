@@ -92,39 +92,39 @@ Font.register({
     family: "Inter",
     fonts: [
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-100-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-100-normal.ttf", import.meta.url).pathname,
             fontWeight: 100
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-200-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-200-normal.ttf", import.meta.url).pathname,
             fontWeight: 200
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-300-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-300-normal.ttf", import.meta.url).pathname,
             fontWeight: 300
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-400-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-400-normal.ttf", import.meta.url).pathname,
             fontWeight: 400
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-500-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-500-normal.ttf", import.meta.url).pathname,
             fontWeight: 500
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-600-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-600-normal.ttf", import.meta.url).pathname,
             fontWeight: 600
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-700-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-700-normal.ttf", import.meta.url).pathname,
             fontWeight: 700
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-800-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-800-normal.ttf", import.meta.url).pathname,
             fontWeight: 800
         },
         {
-            src: new URL("../../assets/inter-ttf/inter-latin-900-normal.ttf", import.meta.url).toString(),
+            src: new URL("../../assets/inter-ttf/inter-latin-900-normal.ttf", import.meta.url).pathname,
             fontWeight: 900
         },
     ]
