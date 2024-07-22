@@ -114,7 +114,7 @@ workHistory:
       database:
         - db/Microsoft SQL Server
       infrastructure:
-        - service/Terraform
+        - service/Hashicorp Terraform
         - service/Azure DevOps
         - service/GitHub Enterprise
         - service/Sentry
@@ -149,7 +149,7 @@ workHistory:
         - db/Microsoft SQL Server
         - db/Apache Kafka
       infrastructure:
-        - service/Terraform
+        - service/Hashicorp Terraform
         - cloud/Azure
         - os/Windows Server
         - platform/Linux Containers
