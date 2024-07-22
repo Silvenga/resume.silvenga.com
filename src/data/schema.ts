@@ -1,5 +1,6 @@
 import { DateTime } from "luxon";
 import { z } from "zod";
+import { Technology, TechnologyKind, transformTechnology } from "./technologies";
 
 // Primitives
 
@@ -43,36 +44,7 @@ export type Subject = z.infer<typeof SubjectSchema>;
 
 // Technologies
 
-export const technologyKinds = [
-    "framework",
-    "runtime",
-    "protocol",
-    "library",
-    "db",
-    "service",
-    "os",
-    "platform",
-    "cloud",
-    "language",
-    "testing",
-    "networking",
-];
-
-export type TechnologyKind = typeof technologyKinds[number];
-
-export type Technology =
-    | { kind: TechnologyKind; name: string }
-    | { kind: undefined; name: string };
-
-export const TechnologySchema = z.string().min(1).transform<Technology>(x => {
-    // i.e. framework/ReactJS
-
-    const [kind, name] = x.split("/", 2);
-
-    return name && technologyKinds.includes(kind)
-        ? { kind: kind, name: name }
-        : { kind: undefined, name: x };
-});
+export const TechnologySchema = z.string().min(1).transform<Technology>(transformTechnology);
 
 export const TechnologySchemaWithKind = TechnologySchema
     .refine(x => !!x.kind, x => ({ message: `Technology '${x.name}' must have a kind` }));
@@ -86,7 +58,7 @@ export const TechnologiesSchema = z.object({
     testing: z.array(TechnologySchema),
 }).partial();
 
-export type Technologies = z.infer<typeof TechnologySchema>;
+export type Technologies = z.infer<typeof TechnologiesSchema>;
 
 // Work History
 
