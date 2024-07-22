@@ -1,6 +1,6 @@
 import { DateTime } from "luxon";
 import { z } from "zod";
-import { Technology, TechnologyKind, transformTechnology } from "./technologies";
+import { Technology, transformTechnology } from "./technologies";
 
 // Primitives
 

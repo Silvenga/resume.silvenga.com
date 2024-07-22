@@ -27,13 +27,13 @@ export function SkillsSection() {
             <SectionHeader>Skills</SectionHeader>
             <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
             <TechnologiesList technologies={technologies.backend} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-2")}>Frontend Technologies</Text>
+            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Frontend Technologies</Text>
             <TechnologiesList technologies={technologies.frontend} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-2")}>Database Technologies</Text>
+            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Database Technologies</Text>
             <TechnologiesList technologies={technologies.database} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-2")}>Infrastructure Technologies</Text>
+            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Infrastructure Technologies</Text>
             <TechnologiesList technologies={technologies.infrastructure} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-2")}>Developer-Lead Testing Experience</Text>
+            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Developer-Lead Testing Experience</Text>
             <TechnologiesList technologies={technologies.testing} />
         </Section>
     );
