@@ -39,9 +39,9 @@ workHistory:
         - framework/ReactJS
         - framework/TailwindCSS
       backend:
-        - language/C# (11)
+        - language/C# [11]
         - language/Python
-        - runtime/.NET (6-8)
+        - runtime/.NET [6, 7, 8]
         - framework/ASP.NET Core
         - framework/Entity Framework Core
         - framework/Orleans
@@ -50,7 +50,7 @@ workHistory:
       database:
         - db/Microsoft SQL Server
         - db/PostgreSQL
-        - db/Timescale
+        - db/TimescaleDB
         - db/ElasticSearch
         - db/InfluxDB
         - db/Redis
@@ -105,8 +105,8 @@ workHistory:
         - runtime/ParcelJS
         - library/D3
       backend:
-        - language/C# (11)
-        - runtime/.NET (6)
+        - language/C# [11]
+        - runtime/.NET [6]
         - framework/ASP.NET Core
         - framework/Entity Framework Core
         - library/Hangfire
@@ -138,9 +138,9 @@ workHistory:
       Hired to improve the process problems plaguing the engineering department. I trained and mentored engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
     technologies:
       backend:
-        - language/C# (11)
-        - runtime/.NET (5-7)
-        - runtime/.NET Framework (4.X)
+        - language/C# [11]
+        - runtime/.NET [5, 6, 7]
+        - runtime/.NET Framework [4.X]
         - framework/ASP.NET Core
         - framework/ASP.NET Web API 2
         - framework/Entity Framework Core
@@ -179,10 +179,10 @@ workHistory:
         - runtime/ParcelJS
         - runtime/Webpack
       backend:
-        - language/C# (8-11)
-        - runtime/.NET Core (2.X, 3.X)
-        - runtime/.NET (5-7)
-        - runtime/.NET Framework (2.X, 3.X, 4.X)
+        - language/C# [8, 9, 10, 11]
+        - runtime/.NET Core [2.X, 3.X]
+        - runtime/.NET [5, 6, 7]
+        - runtime/.NET Framework [2.X, 3.X, 4.X]
         - runtime/.NET Blazor (WebAssembly)
         - framework/ASP.NET Core
         - framework/ASP.NET Web API 2
@@ -197,7 +197,7 @@ workHistory:
         - testing/NUnit
       database:
         - db/Microsoft SQL Server
-        - db/Timescale
+        - db/TimescaleDB
         - db/PostgreSQL
         - db/Sqlite
       infrastructure:
@@ -233,12 +233,12 @@ workHistory:
       frontend:
         - framework/ReactJS
         - language/TypeScript
-        - language/JavaScript (ES6)
+        - language/JavaScript [ES6]
         - runtime/Webpack
       backend:
-        - language/C# (7.X)
-        - runtime/.NET Core (2.X)
-        - runtime/.NET Framework (4.X)
+        - language/C# [7.X]
+        - runtime/.NET Core [2.X]
+        - runtime/.NET Framework [4.X]
         - framework/ASP.NET Core
         - framework/ASP.NET Web API 2
         - framework/Entity Framework 6
@@ -285,13 +285,13 @@ workHistory:
         - framework/ReactJS
         - framework/Aurelia
         - language/TypeScript
-        - language/JavaScript (ES6)
+        - language/JavaScript [ES6]
         - language/Less
         - library/BootStrap
         - runtime/Webpack
       backend:
-        - language/C# (4-6)
-        - runtime/.NET Framework (4.X)
+        - language/C# [4, 5, 6]
+        - runtime/.NET Framework [4.X]
         - framework/ASP.NET/Web API
         - framework/Entity Framework 6
         - library/SignalR
@@ -317,11 +317,11 @@ workHistory:
       Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
     technologies:
       frontend:
-        - language/JavaScript (ES4)
+        - language/JavaScript [ES4]
         - library/Bootstrap
       backend:
-        - language/C# (4)
-        - runtime/.NET Framework (4.X)
+        - language/C# [4]
+        - runtime/.NET Framework [4.X]
       database:
         - db/Microsoft SQL Server
       infrastructure:
@@ -339,8 +339,8 @@ workHistory:
       Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
     technologies:
       backend:
-        - language/C# (4)
-        - runtime/.NET Framework (4.X)
+        - language/C# [4]
+        - runtime/.NET Framework [4.X]
       database:
         - db/Microsoft SQL Server
       infrastructure:

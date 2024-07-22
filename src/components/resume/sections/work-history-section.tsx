@@ -7,6 +7,7 @@ import { useResume } from "../use-resume";
 import { InlineTimeRange } from "./common/inline-time-range";
 import { Section } from "./common/section";
 import { SectionHeader } from "./common/section-header";
+import { TechnologiesList } from "./common/technology-list";
 
 // TODO
 forceRemountOnFastRefresh(module);
@@ -52,62 +53,32 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
 }
 
 function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
-    const backendTechnologies = technologies.backend?.map(x => x.name).join(", ");
-    const frontendTechnologies = technologies.frontend?.map(x => x.name).join(", ");
-    const databaseTechnologies = technologies.database?.map(x => x.name).join(", ");
-    const infrastructureTechnologies = technologies.infrastructure?.map(x => x.name).join(", ");
-    // const methodologiesTechnologies = technologies.methodologies?.map(x => x.name).join(", ");
-    // const testingTechnologies = technologies.testing?.map(x => x.name).join(", ");
     return (
         <View>
-            {!!backendTechnologies && (
-                <View wrap={false} style={tw("mt-2")}>
+            {!!technologies.backend && (
+                <View wrap={false}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
-                    <Text>
-                        {backendTechnologies}
-                    </Text>
+                    <TechnologiesList technologies={technologies.backend} />
                 </View>
             )}
-            {!!frontendTechnologies && (
+            {!!technologies.frontend && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Frontend Technologies</Text>
-                    <Text>
-                        {frontendTechnologies}
-                    </Text>
+                    <TechnologiesList technologies={technologies.frontend} />
                 </View>
             )}
-            {/* {!!testingTechnologies && (
-                    <View wrap={false} style={tw("mt-2")}>
-                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Testing Technologies</Text>
-                        <Text>
-                            {testingTechnologies}
-                        </Text>
-                    </View>
-                )} */}
-            {!!databaseTechnologies && (
+            {!!technologies.database && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Database Technologies</Text>
-                    <Text>
-                        {databaseTechnologies}
-                    </Text>
+                    <TechnologiesList technologies={technologies.database} />
                 </View>
             )}
-            {!!infrastructureTechnologies && (
+            {!!technologies.infrastructure && (
                 <View wrap={false} style={tw("mt-2")}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Infrastructure Technologies</Text>
-                    <Text>
-                        {infrastructureTechnologies}
-                    </Text>
+                    <TechnologiesList technologies={technologies.infrastructure} />
                 </View>
             )}
-            {/* {!!methodologiesTechnologies && (
-                    <View wrap={false} style={tw("mt-2")}>
-                        <Text style={tw("text-gray-700 font-semibold mb-1")}>Methodologies</Text>
-                        <Text>
-                            {methodologiesTechnologies}
-                        </Text>
-                    </View>
-                )} */}
         </View>
     );
 }
