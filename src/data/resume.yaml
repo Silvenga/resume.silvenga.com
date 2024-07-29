@@ -225,9 +225,8 @@ workHistory:
       fromYear: 2017
       toYear: 2018
     description: |
-      Architected, prototyped, and implemented multiple successful products and systems.
-      Implemented companywide CICD - with significant improvements in deployment speed and safety.
-      Began the journey to unit testing - significantly reducing client risk while improving deployment times.
+      Architected, prototyped, and implemented multiple successful products and systems, such as the single sign-on (SSO) system based on OpenID Connect (OIDC) servicing all products and mobile applications.
+      Implemented engineering CICD, infrastructure telemetry, and testing practices - with significant improvements in deployment speed and safety.
       Planned the upgrades, issue mitigation, and interactions between multiple legacy systems.
     technologies:
       frontend:
@@ -277,7 +276,7 @@ workHistory:
     description: |
       Worked on an engineering team of five to implement the new AxxessDDE system - a powerful, yet user friendly gateway to the heavily used Medicare DDE system.
 
-      Created AxxessBlackScreen, a modern HTML5 web emulator for the 3270 terminal standard.
+      Created AxxessBlackScreen, a modern web emulator for the 3270 terminal standard - with text color, style, and interactive rendering support.
 
       Worked on an engineering team of five to implement a fully distributed and fault-tolerant system to interact with Medicare and other private insurance providers in a currently unreleased product.
     technologies:
