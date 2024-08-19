@@ -72,4 +72,12 @@ describe("HrefSchema", () => {
         const inputFake = "mailto:hello@example.com";
         expect(() => HrefSchema.parse(inputFake)).not.toThrow();
     });
+    test("When parsing a tel link, then parse should succeed", () => {
+        const inputFake = "tel:+15555555555";
+        expect(() => HrefSchema.parse(inputFake)).not.toThrow();
+    });
+    test("When parsing a tel in an invalid format, then parse should fail", () => {
+        const inputFake = "tel:+blah";
+        expect(() => HrefSchema.parse(inputFake)).toThrow();
+    });
 });

@@ -20,7 +20,11 @@ export type TimeRange = z.infer<typeof TimeRangeSchema>;
 export const HttpsLinkSchema = z.string().startsWith("https://", "Links must start with https://");
 export const MailToLinkSchema = z.string().startsWith("mailto:", "Links must start with mailto:");
 
-export const HrefSchema = HttpsLinkSchema.or(MailToLinkSchema);
+// https://stackoverflow.com/a/23299989/2001966
+const e164Regex = /^tel:\+[1-9]\d{1,14}$/;
+export const TelLinkSchema = z.string().startsWith("tel:", "Links must start with tel: and be in E.164 format").regex(e164Regex, "Phone numbers must be in E.164 format");
+
+export const HrefSchema = HttpsLinkSchema.or(MailToLinkSchema).or(TelLinkSchema);
 
 // Subject
 
