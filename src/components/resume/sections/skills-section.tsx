@@ -1,4 +1,4 @@
-import { Text } from "@react-pdf/renderer";
+import { Text, View } from "@react-pdf/renderer";
 import { selectMany } from "../../../utilities/collections";
 import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
 import { tw } from "../styles";
@@ -23,18 +23,20 @@ export function SkillsSection() {
     };
 
     return (
-        <Section>
-            <SectionHeader>Skills</SectionHeader>
-            <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
-            <TechnologiesList technologies={technologies.backend} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Frontend Technologies</Text>
-            <TechnologiesList technologies={technologies.frontend} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Database Technologies</Text>
-            <TechnologiesList technologies={technologies.database} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Infrastructure Technologies</Text>
-            <TechnologiesList technologies={technologies.infrastructure} />
-            <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Developer-Lead Testing Experience</Text>
-            <TechnologiesList technologies={technologies.testing} />
-        </Section>
+        <View wrap={false}>
+            <Section>
+                <SectionHeader>Skills</SectionHeader>
+                <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
+                <TechnologiesList technologies={technologies.backend} />
+                <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Frontend Technologies</Text>
+                <TechnologiesList technologies={technologies.frontend} />
+                <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Database Technologies</Text>
+                <TechnologiesList technologies={technologies.database} />
+                <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Infrastructure Technologies</Text>
+                <TechnologiesList technologies={technologies.infrastructure} />
+                <Text style={tw("text-gray-700 font-semibold mb-1 mt-4")}>Developer-Lead Testing Experience</Text>
+                <TechnologiesList technologies={technologies.testing} />
+            </Section>
+        </View>
     );
 }
