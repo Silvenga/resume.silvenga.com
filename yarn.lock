@@ -2196,7 +2196,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-icons: "npm:^5.3.0"
-    react-pdf: "npm:^9.1.0"
+    react-pdf: "npm:^9.1.1"
     react-pdf-tailwind: "npm:^2.3.0"
     rimraf: "npm:^6.0.1"
     tailwindcss: "npm:^3.4.13"
@@ -8727,9 +8727,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-pdf@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "react-pdf@npm:9.1.0"
+"react-pdf@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "react-pdf@npm:9.1.1"
   dependencies:
     clsx: "npm:^2.0.0"
     dequal: "npm:^2.0.3"
@@ -8746,7 +8746,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10/b5d1e09c48f37f9efd3f23ac9b17f0bbd88e744d1fcaafdd9f9fedec6788086d095c93cebac7d084c50be118963c44eeb70c2591af294e75d7c6782c09d3c23c
+  checksum: 10/9ec41f4be1643092920ab3951af69eabbc2969a59807047bff25c9fa9e3520e41a13e56e26a5696e077ba650399e7e2efb395b4a1ff5626539eaa3265df776de
   languageName: node
   linkType: hard
 
