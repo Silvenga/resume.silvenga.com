@@ -10,7 +10,7 @@ subject:
   emailAddress: mark@silvenga.com
   location: DFW-Metroplex, Texas
   title: Full-Stack DevOps Engineer
-  tagLine: Thriving in Skunkworks projects demanding far reaching skills and knowledge, I'm an experienced software engineer, bringing joy to users through craftsmanship, and deep technical and security knowledge of the entire stack.
+  tagLine: Thriving in Skunkworks projects demanding far reaching skills and knowledge, I'm an experienced software engineer with over 10 years of experience. I love bringing joy to users through craftsmanship, and deep technical and security knowledge of the entire stack.
   links:
     - label: mark@silvenga.com
       href: mailto:mark@silvenga.com
@@ -308,46 +308,46 @@ workHistory:
         - DevOps
         - Scrum/Agile
 
-  - label: Contract Software Developer
-    entity: MaritzCX
-    remote: false
-    timeRange:
-      fromYear: 2014
-      toYear: 2015
-    description: |
-      Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
-    technologies:
-      frontend:
-        - language/JavaScript [ES4]
-        - library/Bootstrap
-      backend:
-        - language/C# [4]
-        - runtime/.NET Framework [4.X]
-      database:
-        - db/Microsoft SQL Server
-      infrastructure:
-        - os/Windows Server
-      methodologies:
-        - Scrum/Agile
+  # - label: Contract Software Developer
+  #   entity: MaritzCX
+  #   remote: false
+  #   timeRange:
+  #     fromYear: 2014
+  #     toYear: 2015
+  #   description: |
+  #     Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
+  #   technologies:
+  #     frontend:
+  #       - language/JavaScript [ES4]
+  #       - library/Bootstrap
+  #     backend:
+  #       - language/C# [4]
+  #       - runtime/.NET Framework [4.X]
+  #     database:
+  #       - db/Microsoft SQL Server
+  #     infrastructure:
+  #       - os/Windows Server
+  #     methodologies:
+  #       - Scrum/Agile
 
-  - label: Contract Software Developer
-    entity: Rubio's Restaurants, Inc.
-    remote: true
-    timeRange:
-      fromYear: 2014
-      toYear: 2014
-    description: |
-      Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
-    technologies:
-      backend:
-        - language/C# [4]
-        - runtime/.NET Framework [4.X]
-      database:
-        - db/Microsoft SQL Server
-      infrastructure:
-        - os/Windows Server
-      methodologies:
-        - Scrum/Agile
+  # - label: Contract Software Developer
+  #   entity: Rubio's Restaurants, Inc.
+  #   remote: true
+  #   timeRange:
+  #     fromYear: 2014
+  #     toYear: 2014
+  #   description: |
+  #     Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
+  #   technologies:
+  #     backend:
+  #       - language/C# [4]
+  #       - runtime/.NET Framework [4.X]
+  #     database:
+  #       - db/Microsoft SQL Server
+  #     infrastructure:
+  #       - os/Windows Server
+  #     methodologies:
+  #       - Scrum/Agile
 
 education:
   - label: Neumont University
