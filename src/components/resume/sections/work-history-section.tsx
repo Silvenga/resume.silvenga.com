@@ -29,22 +29,27 @@ export function WorkHistorySection() {
 function WorkHistoryItemSection({ label, entity, description, technologies, timeRange, remote }: WorkHistoryItem) {
     const { styles } = useResume();
     return (
-        <View wrap={false} style={tw("flex flex-row mb-3")}>
-            <View wrap={false} style={tw("flex flex-col basis-1/3 pr-3 py-1 self-start")}>
-                <Text style={styles.h3}>
+        <View wrap={false} style={tw("flex flex-col mb-3")}>
+            <View wrap={false} style={tw("flex flex-row py-1")}>
+                <Text style={{ ...styles.h3, ...tw("mr-auto") }}>
                     {entity}
-                </Text>
-                <Text style={tw("mt-1")}>
-                    {label}
                 </Text>
                 <Text>
                     <InlineTimeRange range={timeRange} />
                 </Text>
+            </View>
+            <View wrap={false} style={tw("flex flex-row py-1 pl-6 font-semibold")}>
+                <Text>
+                    {label}
+                </Text>
                 {!!remote && (
-                    <Text>Remote</Text>
+                    <>
+                        <Text>, Remote</Text>
+                    </>
                 )}
             </View>
-            <View style={tw("flex flex-col basis-2/3 pl-6 py-1 border-l border-gray-300 ml-auto")}>
+            <View style={tw("flex flex-col pl-6 py-1")}>
+
                 <PdfMarkdown markdown={description} />
                 <Technologies technologies={technologies} />
             </View>
