@@ -24,7 +24,7 @@ subject:
       href: https://silvenga.com/
 
 workHistory:
-  - label: Full-Stack DevOps Engineer, Co-Owner
+  - label: Founding Engineer
     entity: Q6 Technologies, LLC
     remote: true
     timeRange:
@@ -90,77 +90,77 @@ workHistory:
       testing:
         - Unit Tests
 
-  - label: Sr. Software Engineer
-    entity: GMR Protection Resources, Inc
-    remote: true
-    timeRange:
-      fromYear: 2023
-      toYear: 2024
-    description: |
-      Hired to improve engineering-wide processes by applying DevOps philosophies.
-      Completed a full-stack development effort comprising of multiple databases, multiple networks, across 5 microservices. The first public facing product from GMR. Mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, administration portal, search engine with custom search grammar. The development work was completed 8-months ahead of schedule. Targeted avg. response time under 20ms.
-    technologies:
-      frontend:
-        - framework/ReactJS
-        - language/TypeScript
-        - language/SASS
-        - runtime/ParcelJS
-        - library/D3
-      backend:
-        - language/C# [11]
-        - runtime/.NET [6]
-        - framework/ASP.NET Core
-        - framework/Entity Framework Core
-        - library/Hangfire
-        - testing/xUnit
-      database:
-        - db/Microsoft SQL Server
-      infrastructure:
-        - service/Hashicorp Terraform
-        - service/Azure DevOps
-        - service/GitHub Enterprise
-        - service/Sentry
-        - cloud/Azure
-        - os/Windows Server
-        - os/NixOS
-        - platform/Linux Containers
-      methodologies:
-        - DevOps
-        - Scrum/Agile
-      testing:
-        - Unit Tests
+  # - label: Sr. Software Engineer
+  #   entity: GMR Protection Resources, Inc
+  #   remote: true
+  #   timeRange:
+  #     fromYear: 2023
+  #     toYear: 2024
+  #   description: |
+  #     Hired to improve engineering-wide processes by applying DevOps philosophies.
+  #     Completed a full-stack development effort comprising of multiple databases, multiple networks, across 5 microservices. The first public facing product from GMR. Mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, administration portal, search engine with custom search grammar. The development work was completed 8-months ahead of schedule. Targeted avg. response time under 20ms.
+  #   technologies:
+  #     frontend:
+  #       - framework/ReactJS
+  #       - language/TypeScript
+  #       - language/SASS
+  #       - runtime/ParcelJS
+  #       - library/D3
+  #     backend:
+  #       - language/C# [11]
+  #       - runtime/.NET [6]
+  #       - framework/ASP.NET Core
+  #       - framework/Entity Framework Core
+  #       - library/Hangfire
+  #       - testing/xUnit
+  #     database:
+  #       - db/Microsoft SQL Server
+  #     infrastructure:
+  #       - service/Hashicorp Terraform
+  #       - service/Azure DevOps
+  #       - service/GitHub Enterprise
+  #       - service/Sentry
+  #       - cloud/Azure
+  #       - os/Windows Server
+  #       - os/NixOS
+  #       - platform/Linux Containers
+  #     methodologies:
+  #       - DevOps
+  #       - Scrum/Agile
+  #     testing:
+  #       - Unit Tests
 
-  - label: Sr. Software Engineer
-    entity: Signify Health
-    remote: true
-    timeRange:
-      fromYear: 2023
-      toYear: 2023
-    description: |
-      Hired to improve the process problems plaguing the engineering department. I trained and mentored engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
-    technologies:
-      backend:
-        - language/C# [11]
-        - runtime/.NET [5, 6, 7]
-        - runtime/.NET Framework [4.X]
-        - framework/ASP.NET Core
-        - framework/ASP.NET Web API 2
-        - framework/Entity Framework Core
-        - testing/xUnit
-      database:
-        - db/Microsoft SQL Server
-        - db/Apache Kafka
-      infrastructure:
-        - service/Hashicorp Terraform
-        - cloud/Azure
-        - os/Windows Server
-        - platform/Linux Containers
-      methodologies:
-        - DevOps
-        - Scrum/Agile
-      testing:
-        - Unit Tests
-        - Integration Tests
+  # - label: Sr. Software Engineer
+  #   entity: Signify Health
+  #   remote: true
+  #   timeRange:
+  #     fromYear: 2023
+  #     toYear: 2023
+  #   description: |
+  #     Hired to improve the process problems plaguing the engineering department. I trained and mentored engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
+  #   technologies:
+  #     backend:
+  #       - language/C# [11]
+  #       - runtime/.NET [5, 6, 7]
+  #       - runtime/.NET Framework [4.X]
+  #       - framework/ASP.NET Core
+  #       - framework/ASP.NET Web API 2
+  #       - framework/Entity Framework Core
+  #       - testing/xUnit
+  #     database:
+  #       - db/Microsoft SQL Server
+  #       - db/Apache Kafka
+  #     infrastructure:
+  #       - service/Hashicorp Terraform
+  #       - cloud/Azure
+  #       - os/Windows Server
+  #       - platform/Linux Containers
+  #     methodologies:
+  #       - DevOps
+  #       - Scrum/Agile
+  #     testing:
+  #       - Unit Tests
+  #       - Integration Tests
 
   - label: Senior Software Engineer, .NET Agent Security Team
     entity: Contrast Security

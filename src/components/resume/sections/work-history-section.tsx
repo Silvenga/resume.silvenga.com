@@ -29,7 +29,7 @@ export function WorkHistorySection() {
 function WorkHistoryItemSection({ label, entity, description, technologies, timeRange, remote }: WorkHistoryItem) {
     const { styles } = useResume();
     return (
-        <View wrap={false} style={tw("flex flex-col mb-3")}>
+        <View style={tw("flex flex-col mb-3")}>
             <View wrap={false} style={tw("flex flex-row py-1")}>
                 <Text style={{ ...styles.h3, ...tw("mr-auto") }}>
                     {entity}
@@ -49,7 +49,6 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
                 )}
             </View>
             <View style={tw("flex flex-col pl-6 py-1")}>
-
                 <PdfMarkdown markdown={description} />
                 <Technologies technologies={technologies} />
             </View>
@@ -59,7 +58,7 @@ function WorkHistoryItemSection({ label, entity, description, technologies, time
 
 function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
     return (
-        <View>
+        <View wrap={false}>
             {!!technologies.backend && (
                 <View wrap={false}>
                     <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
