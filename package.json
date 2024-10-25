@@ -41,7 +41,7 @@
     "test:watch": "yarn jest --watchAll"
   },
   "devDependencies": {
-    "@eslint/js": "^9.12.0",
+    "@eslint/js": "^9.13.0",
     "@parcel/optimizer-data-url": "2.12.0",
     "@parcel/packager-raw-url": "2.12.0",
     "@parcel/transformer-inline-string": "2.12.0",
