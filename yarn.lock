@@ -2186,7 +2186,7 @@ __metadata:
     luxon: "npm:^3.5.0"
     mdast: "npm:^3.0.0"
     mdast-util-from-markdown: "npm:^2.0.1"
-    natural-orderby: "npm:^3.0.2"
+    natural-orderby: "npm:^4.0.0"
     nodemon: "npm:^3.1.7"
     parcel: "npm:2.12.0"
     parcel-reporter-static-files-copy: "npm:^1.5.3"
@@ -7754,10 +7754,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"natural-orderby@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "natural-orderby@npm:3.0.2"
-  checksum: 10/2231a0f26e1d798aad58261779467f49d258492ae75082754dd946e23d0da7283e55605bcd185392c400d7776ecbe2b5c2af9a730c726be805e8f77bc2af6052
+"natural-orderby@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "natural-orderby@npm:4.0.0"
+  checksum: 10/b1c2f6ca40ff130b5a0b65102fb914b36da5126d79463eebf2f495bbe14a978d47e8bb502fb34d873657b4a04ce5090f2ca2c59072ca2b370f12dd152b7001a1
   languageName: node
   linkType: hard
 
