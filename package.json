@@ -86,7 +86,7 @@
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",
     "@react-hook/size": "^2.1.2",
-    "@react-pdf/renderer": "^3.4.4",
+    "@react-pdf/renderer": "^4.0.0",
     "luxon": "^3.5.0",
     "mdast": "^3.0.0",
     "mdast-util-from-markdown": "^2.0.1",
