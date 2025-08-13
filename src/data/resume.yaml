@@ -9,7 +9,7 @@ subject:
   familyName: Lopez
   emailAddress: mark@silvenga.com
   location: DFW-Metroplex, Texas
-  title: Full-Stack DevOps Engineer
+  title: Staff Software Engineer
   tagLine: Thriving in Skunkworks projects demanding far reaching skills and knowledge, I'm an experienced software engineer with over 10 years of experience. I love bringing joy to users through craftsmanship, and deep technical and security knowledge of the entire stack.
   links:
     - label: mark@silvenga.com
@@ -24,6 +24,43 @@ subject:
       href: https://silvenga.com/
 
 workHistory:
+  - label: Staff Software Engineer
+    entity: Bluefin Clinical, Inc.
+    remote: true
+    timeRange:
+      fromYear: 2024
+      toYear: now
+    description: |
+      The first hire at this early-stage, clinical software startup - I helped manage everything from securing our K8s cluster and writing database migrations, to writing Rust and building responsive UI's with React. The Bluefin platform built simulations of clinical trials in near realtime. All these complex calculations running browser on average business laptops - in an industry where competitors have traditionally relied upon on-premise servers to scale.
+    technologies:
+      frontend:
+        - language/TypeScript
+        - runtime/Vite
+        - framework/ReactJS
+        - framework/TailwindCSS
+      backend:
+        - language/Rust
+        - language/Typescript
+        - runtime/NodeJS
+        - framework/Prisma
+      database:
+        - db/PostgreSQL
+        - db/Apache Data Fusion
+      infrastructure:
+        - service/Kubernetes
+        - service/Pulumi
+        - service/GitHub
+        - service/Cloudflare
+        - service/Sentry
+        - cloud/AWS
+        - os/Ubuntu
+        - os/Debian
+      methodologies:
+        - DevOps
+      testing:
+        - Unit Tests
+        - Integration Tests
+
   - label: Founding Engineer
     entity: Q6 Technologies, LLC
     remote: true
@@ -269,44 +306,44 @@ workHistory:
         - DevOps
         - Scrum/Agile
 
-  - label: Software Engineer, RCM Team
-    entity: Axxess
-    remote: false
-    timeRange:
-      fromYear: 2015
-      toYear: 2017
-    description: |
-      Worked on an engineering team of five to implement the new AxxessDDE system - a powerful, yet user friendly gateway to the heavily used Medicare DDE system.
-
-      Created AxxessBlackScreen, a modern web emulator for the 3270 terminal standard - with text color, style, and interactive rendering support.
-
-      Worked on an engineering team of five to implement a fully distributed and fault-tolerant system to interact with Medicare and other private insurance providers in a currently unreleased product.
-    technologies:
-      frontend:
-        - framework/ReactJS
-        - framework/Aurelia
-        - language/TypeScript
-        - language/JavaScript [ES6]
-        - language/Less
-        - library/BootStrap
-        - runtime/Webpack
-      backend:
-        - language/C# [4, 5, 6]
-        - runtime/.NET Framework [4.X]
-        - framework/ASP.NET/Web API
-        - framework/Entity Framework 6
-        - library/SignalR
-        - library/Hangfire
-      database:
-        - db/MySQL
-        - db/MongoDB
-        - db/Redis
-      infrastructure:
-        - cloud/Amazon Web Services (AWS)
-        - os/Windows Server
-      methodologies:
-        - DevOps
-        - Scrum/Agile
+#  - label: Software Engineer, RCM Team
+#    entity: Axxess
+#    remote: false
+#    timeRange:
+#      fromYear: 2015
+#      toYear: 2017
+#    description: |
+#      Worked on an engineering team of five to implement the new AxxessDDE system - a powerful, yet user friendly gateway to the heavily used Medicare DDE system.
+#
+#      Created AxxessBlackScreen, a modern web emulator for the 3270 terminal standard - with text color, style, and interactive rendering support.
+#
+#      Worked on an engineering team of five to implement a fully distributed and fault-tolerant system to interact with Medicare and other private insurance providers in a currently unreleased product.
+#    technologies:
+#      frontend:
+#        - framework/ReactJS
+#        - framework/Aurelia
+#        - language/TypeScript
+#        - language/JavaScript [ES6]
+#        - language/Less
+#        - library/BootStrap
+#        - runtime/Webpack
+#      backend:
+#        - language/C# [4, 5, 6]
+#        - runtime/.NET Framework [4.X]
+#        - framework/ASP.NET/Web API
+#        - framework/Entity Framework 6
+#        - library/SignalR
+#        - library/Hangfire
+#      database:
+#        - db/MySQL
+#        - db/MongoDB
+#        - db/Redis
+#      infrastructure:
+#        - cloud/Amazon Web Services (AWS)
+#        - os/Windows Server
+#      methodologies:
+#        - DevOps
+#        - Scrum/Agile
 
   # - label: Contract Software Developer
   #   entity: MaritzCX
