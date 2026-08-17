@@ -11,6 +11,16 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/resume"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: "assets/[name]-[hash].js",
+        chunkFileNames: "assets/[name]-[hash].js",
+        assetFileNames: (assetInfo) => {
+          const ext = assetInfo.names[0]?.endsWith(".mjs") ? ".js" : "[extname]";
+          return `assets/[name]-[hash]${ext}`;
+        },
+      },
+    },
   },
   plugins: [
     yaml(),
