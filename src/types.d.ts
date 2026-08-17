@@ -1,4 +1,4 @@
 declare module "*.yaml" {
-    const obj: unknown;
-    export default obj;
+  const obj: unknown;
+  export default obj;
 }

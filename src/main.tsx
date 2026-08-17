@@ -5,15 +5,15 @@ import { App } from "./components/app";
 
 // https://github.com/wojtekmaj/react-pdf?tab=readme-ov-file#import-worker-recommended
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    "pdfjs-dist/build/pdf.worker.min.mjs",
-    import.meta.url,
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url,
 ).toString();
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
 
 root.render(
-    <StrictMode>
-        <App />
-    </StrictMode>
+  <StrictMode>
+    <App />
+  </StrictMode>,
 );

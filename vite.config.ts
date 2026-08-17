@@ -1,8 +1,8 @@
 import path from "node:path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import yaml from "@rollup/plugin-yaml";
 import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   base: "/resume/",
@@ -22,11 +22,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    yaml(),
-    tailwindcss(),
-    react(),
-  ],
+  plugins: [yaml(), tailwindcss(), react()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "./src"),

@@ -8,22 +8,22 @@ import { WorkHistorySection } from "./sections/work-history-section";
 import { useResume } from "./use-resume";
 
 export function ResumeDocument() {
-    const { now, resume: { subject } } = useResume();
-    const fullName = `${subject.givenName} ${subject.familyName}`;
-    return (
-        <Document
-            title={`${fullName} Resume ${now.year}`}
-            author={fullName}
-            pageLayout="oneColumn">
-            <ResumePage>
-                <HeaderSection />
-                <WorkHistorySection />
-                <SkillsSection />
-                <View wrap={false}>
-                    <TalksSection />
-                    <EducationSection />
-                </View>
-            </ResumePage>
-        </Document>
-    );
+  const {
+    now,
+    resume: { subject },
+  } = useResume();
+  const fullName = `${subject.givenName} ${subject.familyName}`;
+  return (
+    <Document title={`${fullName} Resume ${now.year}`} author={fullName} pageLayout="oneColumn">
+      <ResumePage>
+        <HeaderSection />
+        <WorkHistorySection />
+        <SkillsSection />
+        <View wrap={false}>
+          <TalksSection />
+          <EducationSection />
+        </View>
+      </ResumePage>
+    </Document>
+  );
 }

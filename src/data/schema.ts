@@ -8,12 +8,20 @@ export const YearSchema = z.number().int().positive();
 
 export type Year = z.infer<typeof YearSchema>;
 
-export const PastYearSchema = YearSchema.refine(x => x <= DateTime.now().year, "Year cannot be in the future");
+export const PastYearSchema = YearSchema.refine(
+  (x) => x <= DateTime.now().year,
+  "Year cannot be in the future",
+);
 
-export const TimeRangeSchema = z.object({
+export const TimeRangeSchema = z
+  .object({
     fromYear: YearSchema,
-    toYear: YearSchema.or(z.literal("now"))
-}).refine(({ fromYear, toYear }) => toYear == "now" || fromYear <= toYear, "fromYear cannot be greater than toYear");
+    toYear: YearSchema.or(z.literal("now")),
+  })
+  .refine(
+    ({ fromYear, toYear }) => toYear == "now" || fromYear <= toYear,
+    "fromYear cannot be greater than toYear",
+  );
 
 export type TimeRange = z.infer<typeof TimeRangeSchema>;
 
@@ -22,26 +30,27 @@ export const MailToLinkSchema = z.string().startsWith("mailto:", "Links must sta
 
 // https://stackoverflow.com/a/23299989/2001966
 const e164Regex = /^tel:\+[1-9]\d{1,14}$/;
-export const TelLinkSchema = z.string().startsWith("tel:", "Links must start with tel: and be in E.164 format").regex(e164Regex, "Phone numbers must be in E.164 format");
+export const TelLinkSchema = z
+  .string()
+  .startsWith("tel:", "Links must start with tel: and be in E.164 format")
+  .regex(e164Regex, "Phone numbers must be in E.164 format");
 
 export const HrefSchema = HttpsLinkSchema.or(MailToLinkSchema).or(TelLinkSchema);
 
 // Subject
 
 export const LinkSchema = z.object({
-    label: z.string().min(1),
-    href: HrefSchema
+  label: z.string().min(1),
+  href: HrefSchema,
 });
 
 export const SubjectSchema = z.object({
-    givenName: z.string(),
-    familyName: z.string(),
-    location: z.string(),
-    links: z.array(
-        LinkSchema
-    ),
-    title: z.string(),
-    tagLine: z.string(),
+  givenName: z.string(),
+  familyName: z.string(),
+  location: z.string(),
+  links: z.array(LinkSchema),
+  title: z.string(),
+  tagLine: z.string(),
 });
 
 export type Subject = z.infer<typeof SubjectSchema>;
@@ -50,79 +59,77 @@ export type Subject = z.infer<typeof SubjectSchema>;
 
 export const TechnologySchema = z.string().min(1).transform<Technology>(transformTechnology);
 
-export const TechnologySchemaWithKind = TechnologySchema
-    .refine(x => !!x.kind, x => ({ message: `Technology '${x.name}' must have a kind` }));
+export const TechnologySchemaWithKind = TechnologySchema.refine(
+  (x) => !!x.kind,
+  (x) => ({ message: `Technology '${x.name}' must have a kind` }),
+);
 
-export const TechnologiesSchema = z.object({
+export const TechnologiesSchema = z
+  .object({
     frontend: z.array(TechnologySchemaWithKind),
     backend: z.array(TechnologySchemaWithKind),
     database: z.array(TechnologySchemaWithKind),
     infrastructure: z.array(TechnologySchemaWithKind),
     methodologies: z.array(TechnologySchema),
     testing: z.array(TechnologySchema),
-}).partial();
+  })
+  .partial();
 
 export type Technologies = z.infer<typeof TechnologiesSchema>;
 
 // Work History
 
 const WorkHistoryItemSchema = z.object({
-    label: z.string(),
-    entity: z.string(),
-    timeRange: TimeRangeSchema,
-    description: z.string(),
-    technologies: TechnologiesSchema,
-    remote: z.boolean()
+  label: z.string(),
+  entity: z.string(),
+  timeRange: TimeRangeSchema,
+  description: z.string(),
+  technologies: TechnologiesSchema,
+  remote: z.boolean(),
 });
 
 export type WorkHistoryItem = z.infer<typeof WorkHistoryItemSchema>;
 
-export const WorkHistorySchema = z.array(
-    WorkHistoryItemSchema
-);
+export const WorkHistorySchema = z.array(WorkHistoryItemSchema);
 
 // Education
 
 export const EducationItemSchema = z.object({
-    label: z.string(),
-    degree: z.string(),
-    timeRange: TimeRangeSchema,
-    grade: z.string(),
+  label: z.string(),
+  degree: z.string(),
+  timeRange: TimeRangeSchema,
+  grade: z.string(),
 });
 
 export type EducationItem = z.infer<typeof EducationItemSchema>;
 
-export const EducationSchema = z.array(
-    EducationItemSchema
-);
+export const EducationSchema = z.array(EducationItemSchema);
 
 // Talks
 
 export const TalkSchema = z.object({
-    label: z.string(),
-    link: HrefSchema,
-    description: z.string(),
-    year: PastYearSchema,
+  label: z.string(),
+  link: HrefSchema,
+  description: z.string(),
+  year: PastYearSchema,
 });
 
 export type Talk = z.infer<typeof TalkSchema>;
 
-export const TalksSchema = z.array(
-    TalkSchema
-);
+export const TalksSchema = z.array(TalkSchema);
 
 // Root
 
 export const ResumeSchema = z.object({
-    subject: SubjectSchema,
-    workHistory: WorkHistorySchema,
-    education: EducationSchema,
-    talks: TalksSchema,
-    permaLink: HrefSchema
+  subject: SubjectSchema,
+  workHistory: WorkHistorySchema,
+  education: EducationSchema,
+  talks: TalksSchema,
+  permaLink: HrefSchema,
 });
 
 export type Resume = z.infer<typeof ResumeSchema>;
 
 export function parseResume(obj: unknown): Resume {
-    return ResumeSchema.parse(obj);
+  return ResumeSchema.parse(obj);
 }

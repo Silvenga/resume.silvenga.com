@@ -1,9 +1,5 @@
 {
-  "cSpell.words": [
-    "clsx",
-    "luxon",
-    "silvenga"
-  ],
+  "cSpell.words": ["clsx", "luxon", "silvenga"],
   "files.associations": {
     "*.css": "tailwindcss"
   }
