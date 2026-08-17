@@ -12,20 +12,18 @@ jobs:
     name: Build Site
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 20
+          node-version: 24.x
           cache: pnpm
-      - name: Enable Corepack
-        run: |
-          corepack enable
       - name: Build
         run: |
-          pnpm install --frozen-lockfile
+          pnpm install
           pnpm test
           pnpm build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: dist
           path: dist
@@ -40,12 +38,12 @@ jobs:
       name: rabbit-edge
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: dist
           path: dist
       - name: Deploy to Bunny Edge
-        uses: ayeressian/bunnycdn-storage-deploy@v2.2.3
+        uses: ayeressian/bunnycdn-storage-deploy@251c77f4b9e7e683ad00086de2bef5770c3386b2 # v2.4.5
         with:
           source: "dist"
           destination: ""
