@@ -1,5 +1,5 @@
 import { View } from "@react-pdf/renderer";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import { tw } from "../../styles";
 
 export function Section({ children }: PropsWithChildren) {

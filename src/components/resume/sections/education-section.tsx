@@ -1,5 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
-import { EducationItem } from "../../../data/schema";
+import type { EducationItem } from "../../../data/schema";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";
 import { InlineTimeRange } from "./common/inline-time-range";

@@ -1,6 +1,6 @@
 import { Link, Text, View } from "@react-pdf/renderer";
 import { useMemo } from "react";
-import { Talk } from "../../../data/schema";
+import type { Talk } from "../../../data/schema";
 import { PdfMarkdown } from "../../markdown/pdf-markdown";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";

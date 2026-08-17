@@ -1,4 +1,4 @@
-import { Font, StyleSheet, Styles } from "@react-pdf/renderer";
+import { Font, StyleSheet, type Styles } from "@react-pdf/renderer";
 import { createTw } from "react-pdf-tailwind";
 
 export const tw = createTw(

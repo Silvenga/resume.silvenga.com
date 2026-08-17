@@ -1,6 +1,6 @@
 import { Image, View } from "@react-pdf/renderer";
 import QRCode from "qrcode";
-import { Style } from "../../styles";
+import type { Style } from "../../styles";
 
 export type PdfQrCodeProps = {
   value: string;

@@ -1,4 +1,4 @@
-import { DocumentProps, usePDF } from "@react-pdf/renderer";
+import { type DocumentProps, usePDF } from "@react-pdf/renderer";
 import clsx from "clsx";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { Document as ViewDocument, Page as ViewPage } from "react-pdf";

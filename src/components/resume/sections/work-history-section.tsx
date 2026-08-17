@@ -1,5 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
-import { WorkHistoryItem } from "../../../data/schema";
+import type { WorkHistoryItem } from "../../../data/schema";
 import { PdfMarkdown } from "../../markdown/pdf-markdown";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";

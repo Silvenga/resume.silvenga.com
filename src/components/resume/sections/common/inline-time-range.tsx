@@ -1,5 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
-import { TimeRange } from "../../../../data/schema";
+import type { TimeRange } from "../../../../data/schema";
 
 export type InlineTimeRangeProps = {
   range: TimeRange;

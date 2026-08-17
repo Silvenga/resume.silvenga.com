@@ -1,6 +1,6 @@
 import { Text } from "@react-pdf/renderer";
 import { orderBy } from "natural-orderby";
-import { Technology } from "../../../../data/technologies";
+import type { Technology } from "../../../../data/technologies";
 import { selectMany } from "../../../../utilities/collections";
 
 export function TechnologiesList({ technologies }: { technologies: Technology[] }) {

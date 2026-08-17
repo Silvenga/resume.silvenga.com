@@ -1,8 +1,8 @@
 import { DateTime } from "luxon";
-import { PropsWithChildren, createContext, useContext, useMemo } from "react";
+import { type PropsWithChildren, createContext, useContext, useMemo } from "react";
 import { getResume } from "../../data/resume";
-import { Resume } from "../../data/schema";
-import { ResumeStyles, getResumeStyles } from "./styles";
+import type { Resume } from "../../data/schema";
+import { type ResumeStyles, getResumeStyles } from "./styles";
 
 export type ResumeContextProps = {
   now: DateTime;
