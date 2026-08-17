@@ -2,11 +2,9 @@ import { createTw } from "react-pdf-tailwind";
 import { Font, StyleSheet, Styles } from "@react-pdf/renderer";
 
 export const tw = createTw({
-    theme: {
-        fontFamily: {
-            sans: ["Inter"],
-        },
-    }
+    fontFamily: {
+        sans: ["Inter"],
+    },
 }, { ptPerRem: 9 });
 
 // @react-pdf/renderer hides this type...

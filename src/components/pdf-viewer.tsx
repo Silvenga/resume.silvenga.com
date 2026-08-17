@@ -44,7 +44,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
                     onLoadSuccess={loadedHandler}
                     className={clsx("flex-col items-end", isLoading && "hidden")}>
                     {pages.map(page => (
-                        <ViewPage width={containerWidth} key={page} pageIndex={page} loading={null} className="rounded-lg overflow-hidden mb-4 drop-shadow border" />
+                        <ViewPage width={containerWidth} key={page} pageIndex={page} loading={null} className="rounded-lg overflow-hidden mb-4 drop-shadow border border-slate-200" />
                     ))}
                 </ViewDocument>
             </div>
