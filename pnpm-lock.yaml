@@ -90,12 +90,6 @@ importers:
       posthtml-cli:
         specifier: ^0.10.0
         version: 0.10.0
-      posthtml-doctype:
-        specifier: ^1.1.1
-        version: 1.1.1
-      posthtml-external-link:
-        specifier: ^0.1.2
-        version: 0.1.2(posthtml@0.16.7)
       posthtml-sri:
         specifier: ^2.0.1
         version: 2.0.1
@@ -1926,14 +1920,6 @@ packages:
     resolution: {integrity: sha512-m3YuLjJqnMsibMsiofybcsGS0sgHHX6AqdkKIgocI5hOGXFgvqTl0f4DXVOvMLGpFsRYg79q7zl44eK7qqBgmQ==}
     engines: {node: '>=10'}
     hasBin: true
-
-  posthtml-doctype@1.1.1:
-    resolution: {integrity: sha512-G5Flc83qRhN9mSls93C/djIbElynPzqZ3sPpVISNr3/9uXuByILHhSh8yXODeCwIxggB65szy1tnY8xOWT8lyw==}
-
-  posthtml-external-link@0.1.2:
-    resolution: {integrity: sha512-fW5R6MGgIMrWmMkamrBpmRHNOszjL6mzddaOw3ZXpgwETGOn8hMeAlp2H1UHxmAGUvd+/6QlTPhrQbYYYt9E/g==}
-    peerDependencies:
-      posthtml: ^0.16.1
 
   posthtml-parser@0.11.0:
     resolution: {integrity: sha512-QecJtfLekJbWVo/dMAA+OSwY79wpRmbqS5TeXvXSX+f0c6pW4/SE6inzZ2qkU7oAMCPqIDkZDvd/bQsSFUnKyw==}
@@ -3991,12 +3977,6 @@ snapshots:
       posthtml: 0.16.7
       to-camel-case: 1.0.0
       update-notifier: 5.1.0
-
-  posthtml-doctype@1.1.1: {}
-
-  posthtml-external-link@0.1.2(posthtml@0.16.7):
-    dependencies:
-      posthtml: 0.16.7
 
   posthtml-parser@0.11.0:
     dependencies:

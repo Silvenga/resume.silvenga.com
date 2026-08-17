@@ -1,8 +1,7 @@
 import { Link, Text, View } from "@react-pdf/renderer";
 import { Link as AstLink } from "mdast";
 import { fromMarkdown } from "mdast-util-from-markdown";
-import { ReactElement } from "react";
-import React from "react";
+import { Fragment, ReactElement } from "react";
 import type { Literal, Node, Parent } from "unist";
 import { tw } from "../resume/styles";
 
@@ -32,7 +31,7 @@ function walkParent(mdAst: Parent, prefix: string) {
     const childId = `${prefix}:${i}`;
     const child = mdAst.children[i];
     const childTree = walkAst(child, childId);
-    childTrees.push(<React.Fragment key={childId}>{childTree}</React.Fragment>);
+    childTrees.push(<Fragment key={childId}>{childTree}</Fragment>);
   }
   const children = <>{childTrees}</>;
   const container = getContainerNode(mdAst, children);
