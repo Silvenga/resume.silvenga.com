@@ -35,8 +35,8 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
     const [, pdfHeight] = useSize(pdfContainerRef);
 
     return (
-        <div className="w-[100%] flex flex-col relative" style={{ height: pdfHeight ? pdfHeight : "100vh" }} ref={sizingRef}>
-            {!!isLoading && <Loading />}
+        <div className="w-full flex flex-col relative" style={{ height: pdfHeight ? pdfHeight : "100vh" }} ref={sizingRef}>
+            {isLoading && <Loading />}
             {/* Decouple pdf rendering from flexbox calculated size. */}
             <div className="absolute top-0 right-0 left-0" ref={pdfContainerRef}>
                 <ViewDocument
@@ -44,7 +44,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
                     onLoadSuccess={loadedHandler}
                     className={clsx("flex-col items-end", isLoading && "hidden")}>
                     {pages.map(page => (
-                        <ViewPage width={containerWidth} key={page} pageIndex={page} loading={null} className="rounded-lg overflow-hidden mb-4 drop-shadow border border-slate-200" />
+                        <ViewPage width={containerWidth} key={page} pageIndex={page} loading={null} className="rounded-lg overflow-hidden mb-4 drop-shadow border border-gray-200" />
                     ))}
                 </ViewDocument>
             </div>
@@ -54,7 +54,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
 
 function Loading() {
     return (
-        <div className="my-auto h-[100%] bg-white flex flex-col justify-center rounded-lg overflow-hidden mb-4 drop-shadow border">
+        <div className="my-auto h-full bg-white flex flex-col justify-center rounded-lg overflow-hidden mb-4 drop-shadow border border-gray-200">
             <div className="text-center">Rendering...</div>
         </div>
     );
