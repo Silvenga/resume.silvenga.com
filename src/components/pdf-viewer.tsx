@@ -26,7 +26,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
         onLoaded(Math.abs(new Date().getMilliseconds() - mountTimeMs), instance.url!);
       }
     },
-    [instance],
+    [instance, onLoaded, mountTimeMs],
   );
 
   const pages = useMemo(() => Array.from(Array(pdfPageCount).keys()), [pdfPageCount]);
