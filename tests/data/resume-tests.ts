@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { getResume } from "../../src/data/resume";
 
 describe("getResume()", () => {

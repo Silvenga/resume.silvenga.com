@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { transformTechnology } from "../../src/data/technologies";
 
 describe("transformTechnology()", () => {

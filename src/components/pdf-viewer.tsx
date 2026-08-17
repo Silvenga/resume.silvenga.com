@@ -1,8 +1,8 @@
-import useSize from "@react-hook/size";
 import { DocumentProps, usePDF } from "@react-pdf/renderer";
 import clsx from "clsx";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { Document as ViewDocument, Page as ViewPage } from "react-pdf";
+import { useResizeObserver } from "usehooks-ts";
 
 export type PdfViewerProps = {
   children: React.ReactElement<DocumentProps>;
@@ -31,11 +31,11 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
 
   const pages = useMemo(() => Array.from(Array(pdfPageCount).keys()), [pdfPageCount]);
 
-  const sizingRef = useRef(null);
-  const [containerWidth] = useSize(sizingRef);
+  const sizingRef = useRef<HTMLDivElement>(null!);
+  const { width: containerWidth = 0 } = useResizeObserver({ ref: sizingRef });
 
-  const pdfContainerRef = useRef(null);
-  const [, pdfHeight] = useSize(pdfContainerRef);
+  const pdfContainerRef = useRef<HTMLDivElement>(null!);
+  const { height: pdfHeight = 0 } = useResizeObserver({ ref: pdfContainerRef });
 
   return (
     <div

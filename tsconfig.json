@@ -10,6 +10,7 @@
     "target": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "isolatedModules": true
+    "isolatedModules": true,
+    "skipLibCheck": true
   }
 }
