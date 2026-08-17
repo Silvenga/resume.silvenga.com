@@ -39,17 +39,13 @@ function SideMenu({ pdfBlobUrl }: { pdfBlobUrl?: string }) {
   const year = useMemo(() => DateTime.now().year, []);
   const disabled = !pdfBlobUrl;
   return (
-    <aside
-      className="mb-4 h-full w-full max-w-full text-center whitespace-nowrap select-none md:ms-9 md:mb-0 md:w-60"
-      role="banner"
-    >
+    <header className="mb-4 h-full w-full max-w-full text-center whitespace-nowrap select-none md:ms-9 md:mb-0 md:w-60">
       <div className="flex flex-col md:fixed md:h-[calc(100vh-8rem)] md:w-60">
         <a
           className={clsx(
             "flex items-center justify-center py-3 px-4 rounded bg-gray-900 text-white transition-all hover:bg-gray-600",
             disabled && "opacity-50 pointer-events-none cursor-default",
           )}
-          role="button"
           href={pdfBlobUrl}
           download={`Mark Lopez ${year}.pdf`}
           type="application/pdf"
@@ -68,6 +64,6 @@ function SideMenu({ pdfBlobUrl }: { pdfBlobUrl?: string }) {
           </a>
         </div>
       </div>
-    </aside>
+    </header>
   );
 }
