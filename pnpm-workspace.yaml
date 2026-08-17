@@ -2,8 +2,3 @@ publicHoistPattern:
   - pdfjs-dist
 allowBuilds:
   tailwindcss: true
-  "@parcel/watcher": false
-  "@swc/core": false
-  canvas: false
-  lmdb: false
-  msgpackr-extract: false
