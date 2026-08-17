@@ -1,6 +1,5 @@
 import { Text, View } from "@react-pdf/renderer";
 import { WorkHistoryItem } from "../../../data/schema";
-import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
 import { PdfMarkdown } from "../../markdown/pdf-markdown";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";
@@ -8,9 +7,6 @@ import { InlineTimeRange } from "./common/inline-time-range";
 import { Section } from "./common/section";
 import { SectionHeader } from "./common/section-header";
 import { TechnologiesList } from "./common/technology-list";
-
-// TODO
-forceRemountOnFastRefresh(module);
 
 export function WorkHistorySection() {
     const { resume: { workHistory } } = useResume();

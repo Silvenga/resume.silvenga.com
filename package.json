@@ -6,48 +6,22 @@
   "repository": "git@github.com:Silvenga/resume.silvenga.com",
   "author": "Mark Lopez <m@silvenga.com>",
   "publicUrl": "/resume",
-  "packageManager": "yarn@4.5.1",
+  "packageManager": "pnpm@11.22.0+sha512.1ff870c4c6133dfd88fb2afc46dd13d47f09c9794b438c6fdb47ca98caf3bc16381ee0be93a091b8e3824cf01f889f46d7d9e20910fb0be1ab0fb5baa80dd621",
   "type": "module",
   "browserslist": ">0.5%, last 2 versions, Firefox ESR, not dead, not op_mini all",
-  "importSort": {
-    ".ts,.tsx": {
-      "style": "import-sort-style-module-compact",
-      "options": {}
-    }
-  },
-  "targets": {
-    "default": {
-      "distDir": "./dist/resume"
-    }
-  },
-  "@parcel/resolver-default": {
-    "packageExports": true
-  },
-  "staticFiles": [
-    {
-      "staticPath": "./src/static/robots.txt",
-      "staticOutPath": ""
-    }
-  ],
   "scripts": {
-    "parcel:start": "parcel --port 9999 --config .parcelrc src/index.html",
-    "parcel:build": "parcel build --config .prod.parcelrc src/index.html --public-url /resume --no-scope-hoist",
     "sri-dist": "posthtml -u posthtml-sri --posthtml-sri.basePath=dist/ dist/**/*.html",
     "lint": "eslint --max-warnings=0 src",
-    "start": "nodemon --watch package.json --exec yarn parcel:start",
-    "clean": "rimraf ./dist && rimraf ./.parcel-cache",
-    "build": "yarn clean && yarn parcel:build && yarn sri-dist",
-    "test": "yarn jest",
-    "test:watch": "yarn jest --watchAll"
+    "start": "vite --port 9999",
+    "clean": "rimraf ./dist",
+    "build": "pnpm clean && vite build && pnpm sri-dist",
+    "test": "pnpm jest",
+    "test:watch": "pnpm jest --watchAll"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
-    "@parcel/optimizer-data-url": "2.12.0",
-    "@parcel/packager-raw-url": "2.12.0",
-    "@parcel/transformer-inline-string": "2.12.0",
-    "@parcel/transformer-yaml": "^2.12.0",
+    "@rollup/plugin-yaml": "^5.0.0",
     "@stylistic/eslint-plugin": "^2.9.0",
-    "@tailwindcss/typography": "^0.5.15",
     "@types/eslint__js": "^8.42.3",
     "@types/jest": "^29.5.14",
     "@types/luxon": "^3.4.2",
@@ -55,22 +29,19 @@
     "@types/node": "^22.7.9",
     "@types/parcel-env": "^0.0.6",
     "@types/qrcode": "^1.5.5",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "@types/unist": "^3.0.3",
+    "@vitejs/plugin-react": "^6.0.5",
     "buffer": "^6.0.3",
     "clsx": "^2.1.1",
     "eslint": "^9.13.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-react": "^7.37.2",
+    "events": "^3.3.0",
     "jest": "^29.7.0",
     "jest-transform-yaml": "^1.1.2",
-    "nodemon": "^3.1.7",
-    "parcel": "2.12.0",
-    "parcel-reporter-static-files-copy": "^1.5.3",
-    "parcel-resolver-ignore": "^2.2.0",
     "postcss": "^8.4.47",
-    "posthtml": "^0.16.6",
     "posthtml-cli": "^0.10.0",
     "posthtml-doctype": "^1.1.1",
     "posthtml-external-link": "^0.1.2",
@@ -81,23 +52,23 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
-    "typescript-eslint": "8.11.0"
+    "typescript-eslint": "8.11.0",
+    "vite": "^8.2.1"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",
     "@react-hook/size": "^2.1.2",
-    "@react-pdf/renderer": "^3.4.4",
+    "@react-pdf/renderer": "^4.6.1",
     "luxon": "^3.5.0",
     "mdast": "^3.0.0",
     "mdast-util-from-markdown": "^2.0.1",
     "natural-orderby": "^3.0.2",
-    "pdfjs-dist": "4.4.168",
     "qrcode": "^1.5.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-icons": "^5.3.0",
-    "react-pdf": "^9.1.1",
-    "react-pdf-tailwind": "^2.3.0",
-    "zod": "^3.23.8"
+    "react-pdf": "^10.4.1",
+    "react-pdf-tailwind": "^3.0.0",
+    "zod": "3.23.8"
   }
 }

@@ -1,15 +1,11 @@
 import { useMemo } from "react";
 import { Link, Text, View } from "@react-pdf/renderer";
 import { Talk } from "../../../data/schema";
-import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
 import { PdfMarkdown } from "../../markdown/pdf-markdown";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";
 import { Section } from "./common/section";
 import { SectionHeader } from "./common/section-header";
-
-// TODO
-forceRemountOnFastRefresh(module);
 
 export function TalksSection() {
     const { resume: { talks } } = useResume();

@@ -1,7 +1,0 @@
-{
-  "extends": "./.parcelrc",
-  "reporters": [
-    "...",
-    "parcel-reporter-static-files-copy"
-  ]
-}

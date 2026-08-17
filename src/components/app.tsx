@@ -3,12 +3,9 @@ import { DateTime } from "luxon";
 import { useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoArrowBackOutline, IoCodeDownloadOutline } from "react-icons/io5";
-import { forceRemountOnFastRefresh } from "../utilities/fast-refresh";
 import { PdfViewer } from "./pdf-viewer";
 import { ResumeDocument } from "./resume/document";
 import { ResumeContextProvider } from "./resume/use-resume";
-
-forceRemountOnFastRefresh(module);
 
 export function App() {
     const [pdfBlobUrl, setPdfBlobUrl] = useState<string>();

@@ -1,11 +1,7 @@
 import { Link, Text, View } from "@react-pdf/renderer";
-import { forceRemountOnFastRefresh } from "../../../utilities/fast-refresh";
 import { tw } from "../styles";
 import { useResume } from "../use-resume";
 import { PdfQrCode } from "./common/pdf-qr-code";
-
-// TODO
-forceRemountOnFastRefresh(module);
 
 export function HeaderSection() {
     const { resume: { permaLink, subject: { familyName, givenName, links, location, title, tagLine } } } = useResume();
