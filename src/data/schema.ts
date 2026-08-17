@@ -59,10 +59,11 @@ export type Subject = z.infer<typeof SubjectSchema>;
 
 export const TechnologySchema = z.string().min(1).transform<Technology>(transformTechnology);
 
-export const TechnologySchemaWithKind = TechnologySchema.refine(
-  (x) => !!x.kind,
-  (x) => ({ message: `Technology '${x.name}' must have a kind` }),
-);
+export const TechnologySchemaWithKind = TechnologySchema.superRefine((x, ctx) => {
+  if (!x.kind) {
+    ctx.addIssue(`Technology '${x.name}' must have a kind`);
+  }
+});
 
 export const TechnologiesSchema = z
   .object({
