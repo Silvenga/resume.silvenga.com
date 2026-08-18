@@ -8,10 +8,10 @@ subject:
   givenName: Mark
   familyName: Lopez
   emailAddress: mark@silvenga.com
-  location: DFW-Metroplex, Texas
+  location: Dallas, Texas
   title: Staff Software Engineer
   tagLine: |
-    Thriving in Skunkworks projects demanding far reaching skills and knowledge, I'm an experienced software engineer with over 10 years of experience. I love bringing joy to users through craftsmanship, and deep technical and security knowledge of the entire stack.
+    Whole-stack Rust engineer. 10+ years of UI, infrastructure, and everything between. Specializing in performance under hard runtime constraints.
   links:
     - label: mark@silvenga.com
       href: mailto:mark@silvenga.com
