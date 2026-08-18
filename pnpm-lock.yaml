@@ -79,9 +79,6 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^6.0.5
         version: 6.0.5(vite@8.2.1(@types/node@26.2.0)(jiti@2.7.0))
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       oxfmt:
         specifier: ^0.63.0
         version: 0.63.0
