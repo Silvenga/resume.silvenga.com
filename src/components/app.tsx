@@ -1,11 +1,11 @@
-import clsx from "clsx";
-import { lazy, Suspense, useMemo, useState } from "react";
-import { FaGithub } from "react-icons/fa";
-import { IoArrowBackOutline, IoCodeDownloadOutline } from "react-icons/io5";
+import { lazy, Suspense, useState } from "react";
+import { IoArrowBackOutline } from "react-icons/io5";
+import { SideMenu } from "./side-menu.tsx";
 
 const ResumeView = lazy(() => import("./resume-view").then((m) => ({ default: m.ResumeView })));
 
 export function App() {
+  const [renderTimeMs, setRenderTimeMs] = useState<number>();
   const [pdfBlobUrl, setPdfBlobUrl] = useState<string>();
   return (
     <div className="container mx-auto max-w-7xl p-3 md:p-9">
@@ -16,11 +16,12 @@ export function App() {
         </a>
       </div>
       <main className="mt-3 flex h-max min-h-svh min-w-fit flex-col md:mt-6 md:flex-row-reverse">
-        <SideMenu pdfBlobUrl={pdfBlobUrl} />
+        <SideMenu renderTimeMs={renderTimeMs} pdfBlobUrl={pdfBlobUrl} />
         <article className="grow">
           <Suspense>
             <ResumeView
-              onLoaded={(_, url) => {
+              onLoaded={(durationMs, url) => {
+                setRenderTimeMs(durationMs);
                 setPdfBlobUrl(url);
               }}
             />
@@ -29,41 +30,4 @@ export function App() {
       </main>
     </div>
   );
-}
-
-function SideMenu({ pdfBlobUrl }: { pdfBlobUrl?: string }) {
-  const disabled = !pdfBlobUrl;
-  const year = useYear();
-  return (
-    <header className="mb-4 h-full w-full max-w-full text-center whitespace-nowrap select-none md:ms-9 md:mb-0 md:w-60">
-      <div className="flex flex-col md:fixed md:h-[calc(100vh-8rem)] md:w-60">
-        <a
-          className={clsx(
-            "flex items-center justify-center py-3 px-4 rounded bg-gray-900 text-white transition-all hover:bg-gray-600",
-            disabled && "opacity-50 pointer-events-none cursor-default",
-          )}
-          href={pdfBlobUrl}
-          download={`Mark Lopez ${year}.pdf`}
-          type="application/pdf"
-          rel="nofollow"
-        >
-          <IoCodeDownloadOutline className="me-3 h-6 w-6" />
-          Download PDF
-        </a>
-        <div className="mt-auto hidden flex-col items-center space-y-3 text-center text-sm md:flex">
-          <a
-            href="https://github.com/Silvenga/resume.silvenga.com"
-            className="hover:underline"
-            target="_blank"
-          >
-            <FaGithub className="h-6 w-6" />
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function useYear() {
-  return useMemo(() => new Date().getFullYear(), []);
 }

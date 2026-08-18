@@ -10,7 +10,7 @@ export type PdfViewerProps = {
 };
 
 export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
-  const mountTimeMs = useMemo(() => new Date().getMilliseconds(), []);
+  const mountTimeMs = useMemo(() => Date.now(), []);
   const [isLoading, setIsLoading] = useState(true);
   const [pdfPageCount, setPdfPageCount] = useState<number>(0);
   const [instance] = usePDF({ document: children });
@@ -22,7 +22,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
       if (onLoaded) {
         // Firefox appears to be changing the clock ever so slightly to avoid fingerprinting.
         // So this value can be negative if done too fast.
-        onLoaded(Math.abs(new Date().getMilliseconds() - mountTimeMs), instance.url!);
+        onLoaded(Math.abs(Date.now() - mountTimeMs), instance.url!);
       }
     },
     [instance, onLoaded, mountTimeMs],
