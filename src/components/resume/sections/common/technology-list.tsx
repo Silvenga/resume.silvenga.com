@@ -8,7 +8,13 @@ export function TechnologiesList({ technologies }: { technologies: Technology[] 
   const list = Object.keys(groups).map((name) => {
     const values = groups[name]!;
     const versions = orderBy(selectMany(values, (x) => x.versions)).toReversed();
-    return versions.length ? `${name} (${versions.join(", ")})` : name;
+    if (versions.length === 0) {
+      return name;
+    }
+    if (versions.length === 1) {
+      return `${name} ${versions[0]}`;
+    }
+    return `${name} (${versions.join(", ")})`;
   });
   return <Text>{list.join(", ")}</Text>;
 }
