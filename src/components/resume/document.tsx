@@ -4,6 +4,7 @@ import { EducationSection } from "./sections/education-section";
 import { HeaderSection } from "./sections/header-section";
 import { SkillsSection } from "./sections/skills-section";
 import { TalksSection } from "./sections/talks-section";
+import { IndependentWorkSection } from "./sections/work-history-section";
 import { WorkHistorySection } from "./sections/work-history-section";
 import { useResume } from "./use-resume";
 
@@ -14,10 +15,15 @@ export function ResumeDocument() {
   } = useResume();
   const fullName = `${subject.givenName} ${subject.familyName}`;
   return (
-    <Document title={`${fullName} Resume ${now.getFullYear()}`} author={fullName} pageLayout="oneColumn">
+    <Document
+      title={`${fullName} Resume ${now.getFullYear()}`}
+      author={fullName}
+      pageLayout="oneColumn"
+    >
       <ResumePage>
         <HeaderSection />
         <WorkHistorySection />
+        <IndependentWorkSection />
         <SkillsSection />
         <View wrap={false}>
           <TalksSection />

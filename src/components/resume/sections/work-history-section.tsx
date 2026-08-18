@@ -12,14 +12,31 @@ export function WorkHistorySection() {
   const {
     resume: { workHistory },
   } = useResume();
+  const items = workHistory.filter((x) => !x.hidden && !x.independent);
   return (
     <Section>
       <SectionHeader>Experience</SectionHeader>
-      {workHistory
-        .filter((x) => !x.hidden)
-        .map((x) => (
-          <WorkHistoryItemSection {...x} key={x.label} />
-        ))}
+      {items.map((x) => (
+        <WorkHistoryItemSection {...x} key={x.label} />
+      ))}
+    </Section>
+  );
+}
+
+export function IndependentWorkSection() {
+  const {
+    resume: { workHistory },
+  } = useResume();
+  const items = workHistory.filter((x) => !x.hidden && x.independent);
+  if (items.length === 0) {
+    return null;
+  }
+  return (
+    <Section>
+      <SectionHeader>Independent Work</SectionHeader>
+      {items.map((x) => (
+        <WorkHistoryItemSection {...x} key={x.label} />
+      ))}
     </Section>
   );
 }

@@ -1,7 +1,7 @@
 import { type DocumentProps, usePDF } from "@react-pdf/renderer";
-import { twMerge } from "tailwind-merge";
 import { type ReactElement, useCallback, useMemo, useRef, useState } from "react";
 import { Document as ViewDocument, Page as ViewPage } from "react-pdf";
+import { twMerge } from "tailwind-merge";
 import { useResizeObserver } from "usehooks-ts";
 
 export type PdfViewerProps = {

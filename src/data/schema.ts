@@ -88,6 +88,7 @@ const WorkHistoryItemSchema = z.object({
   technologies: TechnologiesSchema,
   remote: z.boolean(),
   hidden: z.boolean().default(false),
+  independent: z.boolean().default(false),
 });
 
 export type WorkHistoryItem = z.infer<typeof WorkHistoryItemSchema>;
