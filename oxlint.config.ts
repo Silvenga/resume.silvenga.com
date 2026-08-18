@@ -10,4 +10,7 @@ export default defineConfig({
   categories: {
     correctness: "warn",
   },
+  rules: {
+    curly: ["warn", "all", "consistent"],
+  },
 });

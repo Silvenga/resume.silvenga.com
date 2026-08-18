@@ -2,7 +2,7 @@ import path from "node:path";
 import yaml from "@rollup/plugin-yaml";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig, type PluginOption } from "vite";
 
 export default defineConfig({
   base: "/resume/",
@@ -22,10 +22,36 @@ export default defineConfig({
       },
     },
   },
-  plugins: [yaml(), tailwindcss(), react()],
+  plugins: [yaml(), tailwindcss(), react(), injectWorkerPreload()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
 });
+
+function injectWorkerPreload(): PluginOption {
+  return {
+    name: "inject-worker-preload",
+    apply: "build",
+    transformIndexHtml: {
+      order: "post",
+      handler(html, ctx) {
+        if (!ctx.bundle) {
+          return html;
+        }
+        const worker = Object.values(ctx.bundle).find(
+          (chunk) => chunk.type === "asset" && chunk.names[0]?.startsWith("pdf.worker.min"),
+        );
+        if (!worker || !("fileName" in worker)) {
+          return html;
+        }
+        const href = `${ctx.bundle ? "/resume/" : ""}${worker.fileName}`;
+        return html.replace(
+          "</head>",
+          `  <link rel="preload" href="${href}" as="script" />\n</head>`,
+        );
+      },
+    },
+  };
+}
