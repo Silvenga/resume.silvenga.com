@@ -24,5 +24,11 @@
     @apply bg-white dark:bg-gray-900;
     @apply text-black dark:text-white;
     @apply antialiased;
+    @apply select-none;
+
+    ::selection {
+      @apply bg-gray-500;
+      @apply text-white;
+    }
   }
 }

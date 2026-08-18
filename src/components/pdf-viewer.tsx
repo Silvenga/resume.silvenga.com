@@ -38,7 +38,7 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
 
   return (
     <div
-      className="relative flex w-full flex-col"
+      className="relative flex w-full flex-col select-text"
       style={{ height: pdfHeight ? pdfHeight : "100vh" }}
       ref={sizingRef}
     >
