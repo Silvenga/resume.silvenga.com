@@ -57,7 +57,6 @@ export function getResumeStyles() {
       backgroundColor: "white",
       fontFamily: "Inter",
       padding: "0.5in",
-      paddingBottom: "0.75in",
     },
     h1: {
       ...theme.headerText,

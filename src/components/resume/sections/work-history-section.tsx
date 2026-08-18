@@ -32,7 +32,7 @@ function WorkHistoryItemSection({
 }: WorkHistoryItem) {
   const { styles } = useResume();
   return (
-    <View style={tw("flex flex-col mb-3")}>
+    <View style={tw("flex flex-col mb-3")} wrap={false}>
       <View wrap={false} style={tw("flex flex-row py-1")}>
         <Text style={{ ...styles.h3, ...tw("mr-auto") }}>{entity}</Text>
         <Text>
@@ -41,7 +41,7 @@ function WorkHistoryItemSection({
       </View>
       <View wrap={false} style={tw("flex flex-row py-1 pl-6 font-semibold")}>
         <Text>{label}</Text>
-        {!!remote && (
+        {remote && (
           <>
             <Text>, Remote</Text>
           </>
