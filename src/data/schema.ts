@@ -1,4 +1,3 @@
-import { DateTime } from "luxon";
 import { z } from "zod";
 import type { Technology } from "./technologies";
 import { transformTechnology } from "./technologies";
@@ -10,7 +9,7 @@ export const YearSchema = z.number().int().positive();
 export type Year = z.infer<typeof YearSchema>;
 
 export const PastYearSchema = YearSchema.refine(
-  (x) => x <= DateTime.now().year,
+  (x) => x <= new Date().getFullYear(),
   "Year cannot be in the future",
 );
 

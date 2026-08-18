@@ -5,6 +5,13 @@ import { useResume } from "../../use-resume";
 
 const pageSize = "LETTER";
 
+function formatDate(date: Date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
 export function ResumePage({ children }: PropsWithChildren) {
   const { styles } = useResume();
   return (
@@ -32,7 +39,7 @@ function PageCounter() {
       <Text>
         {givenName} {familyName}
       </Text>
-      <Text>Generated {now.toFormat("yyyy-LL-dd")}</Text>
+      <Text>Generated {formatDate(now)}</Text>
       <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}></Text>
     </View>
   );

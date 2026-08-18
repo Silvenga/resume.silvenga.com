@@ -1,11 +1,13 @@
 import clsx from "clsx";
-import { DateTime } from "luxon";
-import { useMemo, useState } from "react";
+import { lazy, Suspense, useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoArrowBackOutline, IoCodeDownloadOutline } from "react-icons/io5";
-import { PdfViewer } from "./pdf-viewer";
-import { ResumeDocument } from "./resume/document";
-import { ResumeContextProvider } from "./resume/use-resume";
+
+const ResumeView = lazy(() => import("./resume-view").then((m) => ({ default: m.ResumeView })));
+
+function getYear() {
+  return new Date().getFullYear();
+}
 
 export function App() {
   const [pdfBlobUrl, setPdfBlobUrl] = useState<string>();
@@ -20,15 +22,13 @@ export function App() {
       <main className="mt-3 flex h-max min-h-svh min-w-fit flex-col md:mt-6 md:flex-row-reverse">
         <SideMenu pdfBlobUrl={pdfBlobUrl} />
         <article className="grow">
-          <PdfViewer
-            onLoaded={(_, url) => {
-              setPdfBlobUrl(url);
-            }}
-          >
-            <ResumeContextProvider>
-              <ResumeDocument />
-            </ResumeContextProvider>
-          </PdfViewer>
+          <Suspense>
+            <ResumeView
+              onLoaded={(_, url) => {
+                setPdfBlobUrl(url);
+              }}
+            />
+          </Suspense>
         </article>
       </main>
     </div>
@@ -36,7 +36,7 @@ export function App() {
 }
 
 function SideMenu({ pdfBlobUrl }: { pdfBlobUrl?: string }) {
-  const year = useMemo(() => DateTime.now().year, []);
+  const year = useMemo(() => getYear(), []);
   const disabled = !pdfBlobUrl;
   return (
     <header className="mb-4 h-full w-full max-w-full text-center whitespace-nowrap select-none md:ms-9 md:mb-0 md:w-60">

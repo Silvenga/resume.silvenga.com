@@ -19,6 +19,22 @@ export default defineConfig({
           const ext = assetInfo.names[0]?.endsWith(".mjs") ? ".js" : "[extname]";
           return `assets/[name]-[hash]${ext}`;
         },
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("react-pdf") || id.includes("pdfjs-dist")) {
+              return "pdf-viewer";
+            }
+            if (
+              id.includes("@react-pdf") ||
+              id.includes("fontkit") ||
+              id.includes("yoga-layout") ||
+              id.includes("hyphen") ||
+              id.includes("brotli")
+            ) {
+              return "pdf-renderer";
+            }
+          }
+        },
       },
     },
   },
@@ -47,10 +63,7 @@ function injectWorkerPreload(): PluginOption {
           return html;
         }
         const href = `${ctx.bundle ? "/resume/" : ""}${worker.fileName}`;
-        return html.replace(
-          "</head>",
-          `  <link rel="preload" href="${href}" as="script" />\n</head>`,
-        );
+        return html.replace("</head>", `  <link rel="modulepreload" href="${href}" />\n</head>`);
       },
     },
   };
