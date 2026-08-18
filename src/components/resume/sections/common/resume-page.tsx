@@ -31,16 +31,14 @@ function PageCounter() {
   } = useResume();
   return (
     <View
-      style={tw(
-        "absolute px-[0.5in] bottom-[0.5in] left-0 right-0 text-gray-400 text-sm font-medium flex flex-row justify-between",
-      )}
+      style={tw("text-gray-400 text-sm font-medium flex flex-row justify-between mt-auto")}
       fixed
     >
       <Text>
         {givenName} {familyName}
       </Text>
       <Text>Generated {formatDate(now)}</Text>
-      <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}></Text>
+      <Text render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} />
     </View>
   );
 }

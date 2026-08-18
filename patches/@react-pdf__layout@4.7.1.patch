@@ -1,0 +1,13 @@
+diff --git a/lib/index.js b/lib/index.js
+index 4ae209014c75224645a84e92ef01cccac7c8c8a9..80a9529648787f5a31030e55879100419cf33e99 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -1697,7 +1697,7 @@ const getFragments = (fontStore, instance, parentLink = null, level = 0) => {
+         color,
+         opacity,
+         fontSize,
+-        lineHeight,
++        lineHeight: parseFloat$1(lineHeight),
+         direction,
+         verticalAlign,
+         backgroundColor,

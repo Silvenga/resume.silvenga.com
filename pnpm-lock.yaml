@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@react-pdf/layout@4.7.1': bc0203df1ea19f3c23c8d65214d887e9a57600ce01b91b7561dff03829173df0
+  '@react-pdf/stylesheet@6.2.3': ca52229187954748cf88551264f1b2f38f2edccf0ea7f0a90616dd95688a627b
+
 importers:
 
   .:
@@ -16,7 +20,7 @@ importers:
         version: 4.6.1(react@19.2.8)
       mdast-util-from-markdown:
         specifier: ^2.0.3
-        version: 2.0.3(supports-color@8.1.1)
+        version: 2.0.3(supports-color@7.2.0)
       natural-orderby:
         specifier: ^5.0.0
         version: 5.0.0
@@ -764,9 +768,6 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@22.20.1':
-    resolution: {integrity: sha512-EANqOCF9QFyra+4pfxUcX9STKJpCLjMbObVzljIJomAWSnuSIEAvyzEU53GaajbXJEgdh0iEcPL+DGvpUd4k1Q==}
-
   '@types/node@26.2.0':
     resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
 
@@ -1189,8 +1190,8 @@ packages:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
 
-  es-module-lexer@2.3.1:
-    resolution: {integrity: sha512-shc1dbU90Yl/xq1QrC7QRtfcwURZuVRfPhZbDoldJ1cn1gzDvBaBWlv0eFolj5+0znnPJz5TXLxsN77X/12KTA==}
+  es-module-lexer@2.3.2:
+    resolution: {integrity: sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==}
 
   escape-goat@2.1.1:
     resolution: {integrity: sha512-8/uIhbG12Csjy2JEW7D9pHbreaVaS/OpN3ycnyvElTdwM5n6GY6W6e2IPemfvGZeUMqZ9A/3GqIZMgKnBhAw/Q==}
@@ -2134,10 +2135,6 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
-  supports-color@8.1.1:
-    resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
-    engines: {node: '>=10'}
-
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
@@ -2228,9 +2225,6 @@ packages:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
     hasBin: true
-
-  undici-types@6.21.0:
-    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
@@ -2638,12 +2632,12 @@ snapshots:
       jay-peg: 1.1.1
       png-js: 2.0.0
 
-  '@react-pdf/layout@4.7.1':
+  '@react-pdf/layout@4.7.1(patch_hash=bc0203df1ea19f3c23c8d65214d887e9a57600ce01b91b7561dff03829173df0)':
     dependencies:
       '@react-pdf/fns': 3.1.3
       '@react-pdf/image': 3.1.1
       '@react-pdf/primitives': 4.3.0
-      '@react-pdf/stylesheet': 6.2.3
+      '@react-pdf/stylesheet': 6.2.3(patch_hash=ca52229187954748cf88551264f1b2f38f2edccf0ea7f0a90616dd95688a627b)
       '@react-pdf/textkit': 6.4.1
       '@react-pdf/types': 2.11.3
       emoji-regex-xs: 1.0.0
@@ -2688,7 +2682,7 @@ snapshots:
       '@babel/runtime': 7.29.7
       '@react-pdf/fns': 3.1.3
       '@react-pdf/font': 4.0.10
-      '@react-pdf/layout': 4.7.1
+      '@react-pdf/layout': 4.7.1(patch_hash=bc0203df1ea19f3c23c8d65214d887e9a57600ce01b91b7561dff03829173df0)
       '@react-pdf/pdfkit': 6.0.1
       '@react-pdf/primitives': 4.3.0
       '@react-pdf/reconciler': 2.0.0(react@19.2.8)
@@ -2700,7 +2694,7 @@ snapshots:
       queue: 6.0.2
       react: 19.2.8
 
-  '@react-pdf/stylesheet@6.2.3':
+  '@react-pdf/stylesheet@6.2.3(patch_hash=ca52229187954748cf88551264f1b2f38f2edccf0ea7f0a90616dd95688a627b)':
     dependencies:
       '@react-pdf/fns': 3.1.3
       '@react-pdf/types': 2.11.3
@@ -2724,7 +2718,7 @@ snapshots:
     dependencies:
       '@react-pdf/font': 4.0.10
       '@react-pdf/primitives': 4.3.0
-      '@react-pdf/stylesheet': 6.2.3
+      '@react-pdf/stylesheet': 6.2.3(patch_hash=ca52229187954748cf88551264f1b2f38f2edccf0ea7f0a90616dd95688a627b)
 
   '@rolldown/binding-android-arm64@1.2.4':
     optional: true
@@ -2887,10 +2881,6 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@22.20.1':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@26.2.0':
     dependencies:
       undici-types: 8.3.0
@@ -2901,7 +2891,7 @@ snapshots:
 
   '@types/qrcode@1.5.6':
     dependencies:
-      '@types/node': 22.20.1
+      '@types/node': 26.2.0
 
   '@types/react-dom@19.2.4(@types/react@19.2.18)':
     dependencies:
@@ -3158,11 +3148,11 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  debug@4.4.3(supports-color@8.1.1):
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
     optionalDependencies:
-      supports-color: 8.1.1
+      supports-color: 7.2.0
 
   decamelize-keys@1.1.1:
     dependencies:
@@ -3242,7 +3232,7 @@ snapshots:
 
   es-errors@1.3.0: {}
 
-  es-module-lexer@2.3.1: {}
+  es-module-lexer@2.3.2: {}
 
   escape-goat@2.1.1: {}
 
@@ -3598,14 +3588,14 @@ snapshots:
 
   map-obj@4.3.0: {}
 
-  mdast-util-from-markdown@2.0.3(supports-color@8.1.1):
+  mdast-util-from-markdown@2.0.3(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
-      micromark: 4.0.2(supports-color@8.1.1)
+      micromark: 4.0.2(supports-color@7.2.0)
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-decode-string: 2.0.1
       micromark-util-normalize-identifier: 2.0.1
@@ -3756,10 +3746,10 @@ snapshots:
 
   micromark-util-types@2.0.2: {}
 
-  micromark@4.0.2(supports-color@8.1.1):
+  micromark@4.0.2(supports-color@7.2.0):
     dependencies:
       '@types/debug': 4.1.13
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3(supports-color@7.2.0)
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.3
@@ -4200,11 +4190,6 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  supports-color@8.1.1:
-    dependencies:
-      has-flag: 4.0.0
-    optional: true
-
   supports-preserve-symlinks-flag@1.0.0: {}
 
   svg-arc-to-cubic-bezier@3.2.0: {}
@@ -4287,8 +4272,6 @@ snapshots:
       '@typescript/typescript-win32-arm64': 7.0.2
       '@typescript/typescript-win32-x64': 7.0.2
 
-  undici-types@6.21.0: {}
-
   undici-types@8.3.0: {}
 
   unicode-properties@1.4.1:
@@ -4369,7 +4352,7 @@ snapshots:
       '@vitest/snapshot': 4.1.10
       '@vitest/spy': 4.1.10
       '@vitest/utils': 4.1.10
-      es-module-lexer: 2.3.1
+      es-module-lexer: 2.3.2
       expect-type: 1.4.0
       magic-string: 0.30.21
       obug: 2.1.4

@@ -1,0 +1,21 @@
+diff --git a/lib/index.js b/lib/index.js
+index 5a18b411c09c168fb61a5fb5cc16dff977622343..959663c5b02fc42bccf57fbe4e201f5ba66125ed 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -600,12 +600,12 @@ const transformLineHeight = (value, styles, container) => {
+         return value;
+     const fontSize = transformUnit(container, styles.fontSize || DEFAULT_FONT_SIZE);
+     const lineHeight = transformUnit(container, value);
+-    // Percent values: use this number multiplied by the element's font size
+     const { percent } = matchPercent(lineHeight) || {};
+     if (percent)
+-        return percent * fontSize;
+-    // Unitless values: use this number multiplied by the element's font size
+-    return isNaN(Number(value)) ? lineHeight : lineHeight * fontSize;
++        return `${percent * fontSize}pt`;
++    if (isNaN(Number(value)))
++        return typeof lineHeight === 'number' ? `${lineHeight}pt` : lineHeight;
++    return `${lineHeight * fontSize}pt`;
+ };
+ const processLineHeight = (key, value, container, styles) => {
+     return {

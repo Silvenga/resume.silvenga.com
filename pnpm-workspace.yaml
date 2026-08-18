@@ -2,3 +2,6 @@ publicHoistPattern:
   - pdfjs-dist
 allowBuilds:
   tailwindcss: true
+patchedDependencies:
+  "@react-pdf/layout@4.7.1": patches/@react-pdf__layout@4.7.1.patch
+  "@react-pdf/stylesheet@6.2.3": patches/@react-pdf__stylesheet@6.2.3.patch
