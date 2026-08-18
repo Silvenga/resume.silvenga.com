@@ -15,9 +15,11 @@ export function WorkHistorySection() {
   return (
     <Section>
       <SectionHeader>Experience</SectionHeader>
-      {workHistory.map((x) => (
-        <WorkHistoryItemSection {...x} key={x.label} />
-      ))}
+      {workHistory
+        .filter((x) => !x.hidden)
+        .map((x) => (
+          <WorkHistoryItemSection {...x} key={x.label} />
+        ))}
     </Section>
   );
 }

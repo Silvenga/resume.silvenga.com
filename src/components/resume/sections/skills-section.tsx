@@ -11,6 +11,7 @@ export function SkillsSection() {
     resume: { workHistory },
   } = useResume();
 
+  // This explicitly ignores the hidden flag.
   const technologies = {
     backend: selectMany(workHistory, (x) => x.technologies.backend),
     frontend: selectMany(workHistory, (x) => x.technologies.frontend),

@@ -13,9 +13,11 @@ export function EducationSection() {
   return (
     <Section>
       <SectionHeader>Education</SectionHeader>
-      {education.map((x) => (
-        <EducationItemSection {...x} key={x.label} />
-      ))}
+      {education
+        .filter((x) => !x.hidden)
+        .map((x) => (
+          <EducationItemSection {...x} key={x.label} />
+        ))}
     </Section>
   );
 }

@@ -87,6 +87,7 @@ const WorkHistoryItemSchema = z.object({
   description: z.string(),
   technologies: TechnologiesSchema,
   remote: z.boolean(),
+  hidden: z.boolean().default(false),
 });
 
 export type WorkHistoryItem = z.infer<typeof WorkHistoryItemSchema>;
@@ -100,6 +101,7 @@ export const EducationItemSchema = z.object({
   degree: z.string(),
   timeRange: TimeRangeSchema,
   grade: z.string(),
+  hidden: z.boolean().default(false),
 });
 
 export type EducationItem = z.infer<typeof EducationItemSchema>;
@@ -113,6 +115,7 @@ export const TalkSchema = z.object({
   link: HrefSchema,
   description: z.string(),
   year: PastYearSchema,
+  hidden: z.boolean().default(false),
 });
 
 export type Talk = z.infer<typeof TalkSchema>;

@@ -14,9 +14,11 @@ export function TalksSection() {
   return (
     <Section>
       <SectionHeader>Talks</SectionHeader>
-      {talks.map((x) => (
-        <TalksItemSection {...x} key={x.label} />
-      ))}
+      {talks
+        .filter((x) => !x.hidden)
+        .map((x) => (
+          <TalksItemSection {...x} key={x.label} />
+        ))}
     </Section>
   );
 }
