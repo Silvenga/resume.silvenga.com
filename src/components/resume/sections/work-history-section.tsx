@@ -12,32 +12,23 @@ export function WorkHistorySection() {
   const {
     resume: { workHistory },
   } = useResume();
-  const items = workHistory.filter((x) => !x.hidden && !x.independent);
+  const workItems = workHistory.filter((x) => !x.hidden && !x.independent);
+  const independentWorkItems = workHistory.filter((x) => !x.hidden && x.independent);
   return (
-    <Section>
-      <SectionHeader>Experience</SectionHeader>
-      {items.map((x) => (
-        <WorkHistoryItemSection {...x} key={x.label} />
-      ))}
-    </Section>
-  );
-}
-
-export function IndependentWorkSection() {
-  const {
-    resume: { workHistory },
-  } = useResume();
-  const items = workHistory.filter((x) => !x.hidden && x.independent);
-  if (items.length === 0) {
-    return null;
-  }
-  return (
-    <Section>
-      <SectionHeader>Independent Work</SectionHeader>
-      {items.map((x) => (
-        <WorkHistoryItemSection {...x} key={x.label} />
-      ))}
-    </Section>
+    <>
+      <Section>
+        <SectionHeader>Experience</SectionHeader>
+        {workItems.map((x) => (
+          <WorkHistoryItemSection {...x} key={x.label} />
+        ))}
+      </Section>
+      <Section wrap={false}>
+        <SectionHeader>Independent Work</SectionHeader>
+        {independentWorkItems.map((x) => (
+          <WorkHistoryItemSection {...x} key={x.label} />
+        ))}
+      </Section>
+    </>
   );
 }
 
@@ -75,24 +66,19 @@ function WorkHistoryItemSection({
 }
 
 function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
+  const backendAndDatabase = combine(technologies.backend, technologies.database);
   return (
     <View wrap={false}>
-      {!!technologies.backend && (
+      {!!backendAndDatabase && (
         <View wrap={false}>
           <Text style={tw("text-gray-700 font-semibold mb-1")}>Backend Technologies</Text>
-          <TechnologiesList technologies={technologies.backend} />
+          <TechnologiesList technologies={backendAndDatabase} />
         </View>
       )}
       {!!technologies.frontend && (
         <View wrap={false} style={tw("mt-2")}>
           <Text style={tw("text-gray-700 font-semibold mb-1")}>Frontend Technologies</Text>
           <TechnologiesList technologies={technologies.frontend} />
-        </View>
-      )}
-      {!!technologies.database && (
-        <View wrap={false} style={tw("mt-2")}>
-          <Text style={tw("text-gray-700 font-semibold mb-1")}>Database Technologies</Text>
-          <TechnologiesList technologies={technologies.database} />
         </View>
       )}
       {!!technologies.infrastructure && (
@@ -103,4 +89,11 @@ function Technologies({ technologies }: Pick<WorkHistoryItem, "technologies">) {
       )}
     </View>
   );
+}
+
+function combine<T>(left: T[] | undefined, right: T[] | undefined): T[] | undefined {
+  if (left && right) {
+    return [...left, ...right];
+  }
+  return left || right;
 }

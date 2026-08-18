@@ -4,9 +4,10 @@ import { EducationSection } from "./sections/education-section";
 import { HeaderSection } from "./sections/header-section";
 import { SkillsSection } from "./sections/skills-section";
 import { TalksSection } from "./sections/talks-section";
-import { IndependentWorkSection } from "./sections/work-history-section";
 import { WorkHistorySection } from "./sections/work-history-section";
 import { useResume } from "./use-resume";
+
+const HIDE_SKILLS_SECTION = true;
 
 export function ResumeDocument() {
   const {
@@ -23,8 +24,7 @@ export function ResumeDocument() {
       <ResumePage>
         <HeaderSection />
         <WorkHistorySection />
-        <IndependentWorkSection />
-        <SkillsSection />
+        {!HIDE_SKILLS_SECTION && <SkillsSection />}
         <View wrap={false}>
           <TalksSection />
           <EducationSection />
