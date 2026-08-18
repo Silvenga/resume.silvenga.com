@@ -22,9 +22,7 @@ export function HeaderSection() {
         <Text>{location}</Text>
         <Text
           wrap
-          style={tw(
-            "border-l-2 mt-2 border-gray-700 text-gray-900 font-medium pl-4 w-[320px]",
-          )}
+          style={tw("border-l-2 mt-2 border-gray-700 text-gray-900 font-medium pl-4 w-[320px]")}
         >
           {tagLine}
         </Text>
@@ -34,23 +32,17 @@ export function HeaderSection() {
           {links.map(({ label, href }) => (
             <View key={label}>
               <Link style={tw("text-gray-900 font-medium")} href={href}>
-                {getHrefLabel(href)}
+                {label}
               </Link>
             </View>
           ))}
-          <Link style={tw("text-gray-900 font-medium")} href={permaLink}>
-            {getHrefLabel(permaLink)}
-          </Link>
         </View>
         <View style={tw("ml-auto flex flex-col")}>
-          <PdfQrCode style={tw("ml-auto")} value={permaLink} size={102} margin={0} />
+          <Link href={permaLink}>
+            <PdfQrCode style={tw("ml-auto")} value={permaLink} size={102} margin={0} />
+          </Link>
         </View>
       </View>
     </View>
   );
-}
-
-function getHrefLabel(href: string) {
-  const url = new URL(href);
-  return url.host + url.pathname;
 }

@@ -11,7 +11,7 @@ subject:
   location: Dallas, Texas
   title: Staff Software Engineer
   tagLine: |
-    Whole-stack Rust engineer. 10+ years of UI, infrastructure, and everything between. Specializing in performance under hard runtime constraints.
+    Whole-stack Rust engineer. 10+ years of UI, infrastructure, and everything between. Specializing in performance under hard runtime constraints. Trunk-based native.
   links:
     - label: mark@silvenga.com
       href: mailto:mark@silvenga.com
@@ -32,18 +32,32 @@ workHistory:
       fromYear: 2024
       toYear: now
     description: |
-      The first hire at this early-stage startup, owning architecture and product decisions alongside the founders - from securing the K8s cluster and writing database migrations to writing the Rust simulation core and building responsive UIs with React. The Bluefin platform simulates clinical trials in near realtime using a digital-twin model rather than Monte Carlo: enrollment, dosing, supply chain, and supply acquisition across thousands of patients and hundreds of sites, a problem recursive in nature since supply and demand drive each other. The engine runs entirely in the browser on average business laptops - Rust compiled to WASM on a single core, in under 200MB of memory - hitting sub-second latency with a 200ms target, in an industry where competitors rely on on-prem server fleets to scale. Led the platform through SOC 2 Type II compliance with multi-region, highly-available infrastructure on AWS and Kubernetes. Currently driving an independent mirror of the AWS production infrastructure into Azure. The platform is in production use by two of the world's 50 largest pharmaceutical companies.
+      The first hire at this early-stage startup, owning architecture and product decisions alongside the founders - from securing the K8s cluster and writing database migrations to writing the Rust simulation core and building responsive UIs with React.
+
+      The Bluefin platform simulates clinical trials in near realtime using a digital-twin model rather than Monte Carlo: enrollment, dosing, supply chain, and supply acquisition across thousands of patients and hundreds of sites, a problem recursive in nature since supply and demand drive each other.
+
+      The Rust engine runs entirely in the browser on average business laptops - via WASM, on a single core, in under 200MiB of memory - hitting sub-second latency with a 200ms target, in an industry where competitors rely on on-prem server fleets to scale.
+
+      Worked the platform through SOC 2 Type II compliance with multi-region, highly-available infrastructure on AWS and Kubernetes. Currently driving an independent mirror of the AWS production infrastructure into Azure. The platform is in production use by two of the world's 50 largest pharmaceutical companies.
+
+      Currently directs open-weight coding agents on custom harnesses for most implementation, focusing on architecture, product, and the problems agents can't solve.
     technologies:
       frontend:
-        - language/TypeScript
+        - language/TypeScript [5, 6, 7]
         - runtime/Vite
-        - framework/ReactJS
+        - framework/ReactJS [16, 17, 18, 19]
         - framework/TailwindCSS
+        - framework/AG Grid
+        - testing/Vitest
       backend:
         - language/Rust
-        - language/TypeScript
+        - language/TypeScript [5, 6, 7]
+        - language/C# [14]
         - runtime/NodeJS
+        - runtime/.NET [10]
         - framework/Prisma
+        - framework/tRPC
+        - testing/Vitest
       database:
         - db/PostgreSQL
         - db/Apache Data Fusion
@@ -54,15 +68,17 @@ workHistory:
         - service/Cloudflare
         - service/Sentry
         - cloud/Amazon Web Services (AWS)
+        - cloud/Azure
         - os/Ubuntu
         - os/Debian
+        - platform/Linux Containers
       methodologies:
         - DevOps
       testing:
         - Unit Tests
         - Integration Tests
 
-  - label: Founding Engineer (part-time since 2024)
+  - label: Founding Engineer (Part-time since 2024)
     entity: Q6 Technologies, LLC
     independent: true
     remote: true
@@ -73,7 +89,7 @@ workHistory:
       Co-founded a consultancy for bespoke software development, delivering for two clients while incubating internal products. Built the backend of a distributed health-checking platform - benchmarked at 10,000 checks per second across a highly-available cluster, tolerant of node loss, with satellite nodes joining dynamically, on $28/month of core infrastructure (Orleans on Flatcar Linux + K8s). Independent work includes managing a 70-server fleet spanning three physical sites, operated to enterprise HA standards. Broader experience spans fault-tolerant distributed computing and layer-3 performance across high-latency WAN links.
     technologies:
       frontend:
-        - language/TypeScript
+        - language/TypeScript [5, 6, 7]
         - language/SASS
         - runtime/ParcelJS
         - runtime/Webpack
@@ -92,14 +108,14 @@ workHistory:
         - db/Microsoft SQL Server
         - db/PostgreSQL
         - db/TimescaleDB
-        - db/ElasticSearch
+        - db/Elasticsearch
         - db/InfluxDB
         - db/Redis
       infrastructure:
         - service/Ceph
-        - service/Hashicorp Terraform
-        - service/Hashicorp Consul
-        - service/Hashicorp Vault
+        - service/HashiCorp Terraform
+        - service/HashiCorp Consul
+        - service/HashiCorp Vault
         - service/Icinga 2
         - service/SaltStack
         - service/Telegraf
@@ -136,17 +152,16 @@ workHistory:
       fromYear: 2023
       toYear: 2024
     description: |
-      Hired to improve engineering-wide processes by applying DevOps philosophies.
-      Completed a full-stack development effort comprising of multiple databases, multiple networks, across 5 microservices. The first public facing product from GMR. Mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, administration portal, search engine with custom search grammar. The development work was completed 8-months ahead of schedule. Targeted avg. response time under 20ms.
+      Hired to improve engineering-wide processes by applying DevOps philosophies. Completed a full-stack development effort comprising multiple databases and networks across 5 microservices - the first public-facing product from GMR: mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, an administration portal, and a search engine with a custom search grammar. Completed 8 months ahead of schedule, targeting an average response time under 20ms.
     technologies:
       frontend:
         - framework/ReactJS
-        - language/TypeScript
+        - language/TypeScript [5]
         - language/SASS
         - runtime/ParcelJS
         - library/D3
       backend:
-        - language/C# [11]
+        - language/C# [10]
         - runtime/.NET [6]
         - framework/ASP.NET Core
         - framework/Entity Framework Core
@@ -155,7 +170,7 @@ workHistory:
       database:
         - db/Microsoft SQL Server
       infrastructure:
-        - service/Hashicorp Terraform
+        - service/HashiCorp Terraform
         - service/Azure DevOps
         - service/GitHub Enterprise
         - service/Sentry
@@ -191,7 +206,7 @@ workHistory:
         - db/Microsoft SQL Server
         - db/Apache Kafka
       infrastructure:
-        - service/Hashicorp Terraform
+        - service/HashiCorp Terraform
         - cloud/Azure
         - os/Windows Server
         - platform/Linux Containers
@@ -209,11 +224,11 @@ workHistory:
       fromYear: 2018
       toYear: 2023
     description: |
-      Built and maintained the .NET Contrast Agent. Used skills include low-level IL manipulation and generation, low-level analysis of hot paths to optimize for low latency GC, low-level internals of the CLR and CoreCLR, for both .NET Framework (3.5-4.8) and .NET (Core 2.1-3.1, 6, 7), reverse engineering of .NET assemblies for evaluation of possible vulnerable paths and low-level IL hooks.
+      Built and maintained the .NET Contrast Agent - deep runtime work: IL manipulation and generation, hot-path analysis optimizing for low-latency GC, CLR and CoreCLR internals across .NET Framework (3.5-4.8) and .NET (Core 2.1-3.1, 6, 7), and reverse engineering of .NET assemblies for vulnerability evaluation and IL hooks.
 
-      Architected and helped implement automatic injection of .NET/Java/NodeJS/PHP agents into existing Kubernetes workloads with a Kubernetes operator. The operator was designed to operate in large Kubernetes of over 10,000 pods though the use of techniques such as back pressure control, event stream compression, etc. This Kubernetes operator is now [Open Source](https://github.com/Contrast-Security-OSS/agent-operator).
+      Architected and helped implement automatic injection of .NET/Java/NodeJS/PHP agents into existing Kubernetes workloads with a Kubernetes operator. The operator was designed to operate in large Kubernetes clusters of over 10,000 pods through the use of techniques such as back pressure control, event stream compression, etc. The Kubernetes operator is now [Open Source](https://github.com/Contrast-Security-OSS/agent-operator).
 
-      Architected and helped implement a telemetry aggregation and error reporting service. The entirety of this service was designed, implemented, and deployed by the .NET agent team - including concerns such as high availability, horizontal scaling, infrastructure security, abuse detection and mitigation, time series based reporting, etc.
+      Architected and implemented a telemetry aggregation and error reporting service cluster. The entirety of this service was designed, implemented, and deployed by the .NET agent team - including concerns such as high availability, horizontal scaling, infrastructure security, abuse detection and mitigation, time series based reporting, etc.
     technologies:
       frontend:
         - framework/ReactJS
@@ -264,20 +279,27 @@ workHistory:
     entity: Axxess
     remote: false
     timeRange:
-      fromYear: 2017
+      fromYear: 2015
       toYear: 2018
     description: |
-      Architected, prototyped, and implemented multiple successful products and systems, such as the single sign-on (SSO) system based on OpenID Connect (OIDC) servicing all products and mobile applications.
-      Implemented engineering CICD, infrastructure telemetry, and testing practices - with significant improvements in deployment speed and safety.
-      Planned the upgrades, issue mitigation, and interactions between multiple legacy systems.
+      Joined as a software engineer, promoted to software architect. Built the .NET abstraction over the 3270 mainframe protocol from IBM documentation - powering both AxxessBlackScreen, a modern web emulator for the 3270 terminal, and the Medicare DDE scraping system. Scaled that scraper - built to survive Medicare's monthly breaking changes - to over 1 million managed patients, until a formal letter from Medicare mandated a throttle after our traffic visibly slowed the DDE mainframe on weekday mornings.
+
+      Led the team to trunk-based development and daily releases as an early adopter: the highest feature output and fastest defect-to-resolution time in the organization, and the only team running without QA - later the organization's engineering template.
+
+      Pioneered engineering telemetry, CI/CD, and testing practices. Architected the single sign-on (SSO) system on OpenID Connect (OIDC) servicing all products and mobile applications.
+
+      Modernized on-prem infrastructure: Hyper-V for density, Consul with deployment-integrated service discovery, and Windows Docker container experiments. Owned the ELK log cluster for all teams, ingesting 10 billion documents per month, with the JVM GC tuning that required.
     technologies:
       frontend:
         - framework/ReactJS
+        - framework/Aurelia
         - language/TypeScript
         - language/JavaScript [ES6]
+        - language/Less
+        - library/Bootstrap
         - runtime/Webpack
       backend:
-        - language/C# [7.X]
+        - language/C# [4, 5, 6, 7.X]
         - runtime/.NET Core [2.X]
         - runtime/.NET Framework [4.X]
         - framework/ASP.NET Core
@@ -291,106 +313,45 @@ workHistory:
         - db/Microsoft SQL Server
         - db/MySQL
         - db/MongoDB
-        - db/ElasticSearch
+        - db/Elasticsearch
         - db/Redis
         - db/InfluxDB
       infrastructure:
         - service/Octopus Deploy
         - service/JetBrains TeamCity
-        - service/Hashicorp Consul
+        - service/HashiCorp Consul
         - cloud/Amazon Web Services (AWS)
         - os/Windows Server
         - os/CentOS
         - platform/SaltStack
         - platform/Hyper-V
-        - platform/Docker/Containers
-        - platform/Kubernetes
-      methodologies:
-        - DevOps
-        - Scrum/Agile
-
-  - label: Software Engineer, RCM Team
-    entity: Axxess
-    hidden: true
-    remote: false
-    timeRange:
-      fromYear: 2015
-      toYear: 2017
-    description: |
-      Worked on an engineering team of five to implement the new AxxessDDE  system - a powerful, yet user friendly gateway to the heavily used  Medicare DDE system.
-
-      Created AxxessBlackScreen, a modern web emulator for the 3270 terminal  standard - with text color, style, and interactive rendering support.
-
-      Worked on an engineering team of five to implement a fully distributed and  fault-tolerant system to interact with Medicare and other private  insurance providers in a currently unreleased product.
-    technologies:
-      frontend:
-        - framework/ReactJS
-        - framework/Aurelia
-        - language/TypeScript
-        - language/JavaScript [ES6]
-        - language/Less
-        - library/BootStrap
-        - runtime/Webpack
-      backend:
-        - language/C# [4, 5, 6]
-        - runtime/.NET Framework [4.X]
-        - framework/ASP.NET/Web API
-        - framework/Entity Framework 6
-        - library/SignalR
-        - library/Hangfire
-      database:
-        - db/MySQL
-        - db/MongoDB
-        - db/Redis
-      infrastructure:
-        - cloud/Amazon Web Services (AWS)
-        - os/Windows Server
+        - platform/Linux Containers
+        - platform/Windows Containers
       methodologies:
         - DevOps
         - Scrum/Agile
 
   - label: Contract Software Developer
     entity: MaritzCX
-    hidden: true
+    independent: true
     remote: false
     timeRange:
       fromYear: 2014
       toYear: 2015
     description: |
-      Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
-    technologies:
-      frontend:
-        - language/JavaScript [ES4]
-        - library/Bootstrap
-      backend:
-        - language/C# [4]
-        - runtime/.NET Framework [4.X]
-      database:
-        - db/Microsoft SQL Server
-      infrastructure:
-        - os/Windows Server
-      methodologies:
-        - Scrum/Agile
+      Worked in an Agile team of five to discover and fix mission critical issues in an application driving multi-million-dollar revenue.
+    technologies: {}
 
   - label: Contract Software Developer
     entity: Rubio's Restaurants, Inc.
-    hidden: true
+    independent: true
     remote: true
     timeRange:
       fromYear: 2014
       toYear: 2014
     description: |
-      Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
-    technologies:
-      backend:
-        - language/C# [4]
-        - runtime/.NET Framework [4.X]
-      database:
-        - db/Microsoft SQL Server
-      infrastructure:
-        - os/Windows Server
-      methodologies:
-        - Scrum/Agile
+      Worked in a team of four to upgrade existing and antiquated architectures to modern specifications.
+    technologies: {}
 
 education:
   - label: Neumont University
