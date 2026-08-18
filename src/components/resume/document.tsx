@@ -14,7 +14,7 @@ export function ResumeDocument() {
   } = useResume();
   const fullName = `${subject.givenName} ${subject.familyName}`;
   return (
-    <Document title={`${fullName} Resume ${now.year}`} author={fullName} pageLayout="oneColumn">
+    <Document title={`${fullName} Resume ${now.getFullYear()}`} author={fullName} pageLayout="oneColumn">
       <ResumePage>
         <HeaderSection />
         <WorkHistorySection />
