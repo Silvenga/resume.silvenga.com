@@ -5,8 +5,7 @@ import { selectMany } from "../../../../utilities/collections";
 
 export function TechnologiesList({ technologies }: { technologies: Technology[] }) {
   const groups = Object.groupBy(technologies, (x) => x.name);
-  const keys = orderBy(Object.keys(groups));
-  const list = keys.map((name) => {
+  const list = Object.keys(groups).map((name) => {
     const values = groups[name]!;
     const versions = orderBy(selectMany(values, (x) => x.versions)).toReversed();
     return versions.length ? `${name} (${versions.join(", ")})` : name;
