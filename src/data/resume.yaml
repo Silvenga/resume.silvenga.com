@@ -64,6 +64,7 @@ workHistory:
 
   - label: Founding Engineer (part-time since 2024)
     entity: Q6 Technologies, LLC
+    independent: true
     remote: true
     timeRange:
       fromYear: 2021
@@ -128,77 +129,78 @@ workHistory:
       testing:
         - Unit Tests
 
-  # - label: Sr. Software Engineer
-  #   entity: GMR Protection Resources, Inc
-  #   remote: true
-  #   timeRange:
-  #     fromYear: 2023
-  #     toYear: 2024
-  #   description: |
-  #     Hired to improve engineering-wide processes by applying DevOps philosophies.
-  #     Completed a full-stack development effort comprising of multiple databases, multiple networks, across 5 microservices. The first public facing product from GMR. Mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, administration portal, search engine with custom search grammar. The development work was completed 8-months ahead of schedule. Targeted avg. response time under 20ms.
-  #   technologies:
-  #     frontend:
-  #       - framework/ReactJS
-  #       - language/TypeScript
-  #       - language/SASS
-  #       - runtime/ParcelJS
-  #       - library/D3
-  #     backend:
-  #       - language/C# [11]
-  #       - runtime/.NET [6]
-  #       - framework/ASP.NET Core
-  #       - framework/Entity Framework Core
-  #       - library/Hangfire
-  #       - testing/xUnit
-  #     database:
-  #       - db/Microsoft SQL Server
-  #     infrastructure:
-  #       - service/Hashicorp Terraform
-  #       - service/Azure DevOps
-  #       - service/GitHub Enterprise
-  #       - service/Sentry
-  #       - cloud/Azure
-  #       - os/Windows Server
-  #       - os/NixOS
-  #       - platform/Linux Containers
-  #     methodologies:
-  #       - DevOps
-  #       - Scrum/Agile
-  #     testing:
-  #       - Unit Tests
+  - label: Sr. Software Engineer
+    entity: GMR Protection Resources, Inc
+    remote: true
+    timeRange:
+      fromYear: 2023
+      toYear: 2024
+    description: |
+      Hired to improve engineering-wide processes by applying DevOps philosophies.
+      Completed a full-stack development effort comprising of multiple databases, multiple networks, across 5 microservices. The first public facing product from GMR. Mobile friendliness, custom data visualizations, interactive diagrams, customer notifications, administration portal, search engine with custom search grammar. The development work was completed 8-months ahead of schedule. Targeted avg. response time under 20ms.
+    technologies:
+      frontend:
+        - framework/ReactJS
+        - language/TypeScript
+        - language/SASS
+        - runtime/ParcelJS
+        - library/D3
+      backend:
+        - language/C# [11]
+        - runtime/.NET [6]
+        - framework/ASP.NET Core
+        - framework/Entity Framework Core
+        - library/Hangfire
+        - testing/xUnit
+      database:
+        - db/Microsoft SQL Server
+      infrastructure:
+        - service/Hashicorp Terraform
+        - service/Azure DevOps
+        - service/GitHub Enterprise
+        - service/Sentry
+        - cloud/Azure
+        - os/Windows Server
+        - os/NixOS
+        - platform/Linux Containers
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+      testing:
+        - Unit Tests
 
-  # - label: Sr. Software Engineer
-  #   entity: Signify Health
-  #   remote: true
-  #   timeRange:
-  #     fromYear: 2023
-  #     toYear: 2023
-  #   description: |
-  #     Hired to improve the process problems plaguing the engineering department. I trained and mentored engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
-  #   technologies:
-  #     backend:
-  #       - language/C# [11]
-  #       - runtime/.NET [5, 6, 7]
-  #       - runtime/.NET Framework [4.X]
-  #       - framework/ASP.NET Core
-  #       - framework/ASP.NET Web API 2
-  #       - framework/Entity Framework Core
-  #       - testing/xUnit
-  #     database:
-  #       - db/Microsoft SQL Server
-  #       - db/Apache Kafka
-  #     infrastructure:
-  #       - service/Hashicorp Terraform
-  #       - cloud/Azure
-  #       - os/Windows Server
-  #       - platform/Linux Containers
-  #     methodologies:
-  #       - DevOps
-  #       - Scrum/Agile
-  #     testing:
-  #       - Unit Tests
-  #       - Integration Tests
+  - label: Sr. Software Engineer
+    entity: Signify Health
+    remote: true
+    hidden: true
+    timeRange:
+      fromYear: 2023
+      toYear: 2023
+    description: |
+      Hired to improve the process problems plaguing the engineering department. I trained and mentored engineers and worked with different stakeholders to begin the shift to self-managed, organically created teams and processes. My team worked on migrating legacy systems to a modern stack with a high level of quality and performance, while gathering metrics to demonstrate the benefits of modern development styles and principles on speed and quality of development.
+    technologies:
+      backend:
+        - language/C# [11]
+        - runtime/.NET [5, 6, 7]
+        - runtime/.NET Framework [4.X]
+        - framework/ASP.NET Core
+        - framework/ASP.NET Web API 2
+        - framework/Entity Framework Core
+        - testing/xUnit
+      database:
+        - db/Microsoft SQL Server
+        - db/Apache Kafka
+      infrastructure:
+        - service/Hashicorp Terraform
+        - cloud/Azure
+        - os/Windows Server
+        - platform/Linux Containers
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+      testing:
+        - Unit Tests
+        - Integration Tests
 
   - label: Senior Software Engineer, .NET Agent Security Team
     entity: Contrast Security
@@ -307,85 +309,88 @@ workHistory:
         - DevOps
         - Scrum/Agile
 
-#  - label: Software Engineer, RCM Team
-#    entity: Axxess
-#    remote: false
-#    timeRange:
-#      fromYear: 2015
-#      toYear: 2017
-#    description: |
-#      Worked on an engineering team of five to implement the new AxxessDDE system - a powerful, yet user friendly gateway to the heavily used Medicare DDE system.
-#
-#      Created AxxessBlackScreen, a modern web emulator for the 3270 terminal standard - with text color, style, and interactive rendering support.
-#
-#      Worked on an engineering team of five to implement a fully distributed and fault-tolerant system to interact with Medicare and other private insurance providers in a currently unreleased product.
-#    technologies:
-#      frontend:
-#        - framework/ReactJS
-#        - framework/Aurelia
-#        - language/TypeScript
-#        - language/JavaScript [ES6]
-#        - language/Less
-#        - library/BootStrap
-#        - runtime/Webpack
-#      backend:
-#        - language/C# [4, 5, 6]
-#        - runtime/.NET Framework [4.X]
-#        - framework/ASP.NET/Web API
-#        - framework/Entity Framework 6
-#        - library/SignalR
-#        - library/Hangfire
-#      database:
-#        - db/MySQL
-#        - db/MongoDB
-#        - db/Redis
-#      infrastructure:
-#        - cloud/Amazon Web Services (AWS)
-#        - os/Windows Server
-#      methodologies:
-#        - DevOps
-#        - Scrum/Agile
+  - label: Software Engineer, RCM Team
+    entity: Axxess
+    hidden: true
+    remote: false
+    timeRange:
+      fromYear: 2015
+      toYear: 2017
+    description: |
+      Worked on an engineering team of five to implement the new AxxessDDE  system - a powerful, yet user friendly gateway to the heavily used  Medicare DDE system.
 
-# - label: Contract Software Developer
-#   entity: MaritzCX
-#   remote: false
-#   timeRange:
-#     fromYear: 2014
-#     toYear: 2015
-#   description: |
-#     Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
-#   technologies:
-#     frontend:
-#       - language/JavaScript [ES4]
-#       - library/Bootstrap
-#     backend:
-#       - language/C# [4]
-#       - runtime/.NET Framework [4.X]
-#     database:
-#       - db/Microsoft SQL Server
-#     infrastructure:
-#       - os/Windows Server
-#     methodologies:
-#       - Scrum/Agile
+      Created AxxessBlackScreen, a modern web emulator for the 3270 terminal  standard - with text color, style, and interactive rendering support.
 
-# - label: Contract Software Developer
-#   entity: Rubio's Restaurants, Inc.
-#   remote: true
-#   timeRange:
-#     fromYear: 2014
-#     toYear: 2014
-#   description: |
-#     Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
-#   technologies:
-#     backend:
-#       - language/C# [4]
-#       - runtime/.NET Framework [4.X]
-#     database:
-#       - db/Microsoft SQL Server
-#     infrastructure:
-#       - os/Windows Server
-#     methodologies:
-#       - Scrum/Agile
+      Worked on an engineering team of five to implement a fully distributed and  fault-tolerant system to interact with Medicare and other private  insurance providers in a currently unreleased product.
+    technologies:
+      frontend:
+        - framework/ReactJS
+        - framework/Aurelia
+        - language/TypeScript
+        - language/JavaScript [ES6]
+        - language/Less
+        - library/BootStrap
+        - runtime/Webpack
+      backend:
+        - language/C# [4, 5, 6]
+        - runtime/.NET Framework [4.X]
+        - framework/ASP.NET/Web API
+        - framework/Entity Framework 6
+        - library/SignalR
+        - library/Hangfire
+      database:
+        - db/MySQL
+        - db/MongoDB
+        - db/Redis
+      infrastructure:
+        - cloud/Amazon Web Services (AWS)
+        - os/Windows Server
+      methodologies:
+        - DevOps
+        - Scrum/Agile
+
+  - label: Contract Software Developer
+    entity: MaritzCX
+    hidden: true
+    remote: false
+    timeRange:
+      fromYear: 2014
+      toYear: 2015
+    description: |
+      Worked in an Agile team of five to discover and fix mission critical issues in an application that results in a multi-million dollar revenue.
+    technologies:
+      frontend:
+        - language/JavaScript [ES4]
+        - library/Bootstrap
+      backend:
+        - language/C# [4]
+        - runtime/.NET Framework [4.X]
+      database:
+        - db/Microsoft SQL Server
+      infrastructure:
+        - os/Windows Server
+      methodologies:
+        - Scrum/Agile
+
+  - label: Contract Software Developer
+    entity: Rubio's Restaurants, Inc.
+    hidden: true
+    remote: true
+    timeRange:
+      fromYear: 2014
+      toYear: 2014
+    description: |
+      Worked in a team of four to upgraded existing and antiquated architectures to modern specifications.
+    technologies:
+      backend:
+        - language/C# [4]
+        - runtime/.NET Framework [4.X]
+      database:
+        - db/Microsoft SQL Server
+      infrastructure:
+        - os/Windows Server
+      methodologies:
+        - Scrum/Agile
 
 education:
   - label: Neumont University
