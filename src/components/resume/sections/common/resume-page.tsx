@@ -3,8 +3,6 @@ import type { PropsWithChildren } from "react";
 import { tw } from "../../styles";
 import { useResume } from "../../use-resume";
 
-const pageSize = "LETTER";
-
 function formatDate(date: Date) {
   const y = date.getFullYear();
   const m = String(date.getMonth() + 1).padStart(2, "0");
@@ -15,7 +13,7 @@ function formatDate(date: Date) {
 export function ResumePage({ children }: PropsWithChildren) {
   const { styles } = useResume();
   return (
-    <Page size={pageSize} style={styles.page} wrap>
+    <Page size="LETTER" style={styles.page} wrap>
       {children}
       <PageCounter />
     </Page>

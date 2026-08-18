@@ -1,7 +1,6 @@
-import { type PropsWithChildren, createContext, useContext, useMemo } from "react";
-import { getResume } from "../../data/resume";
+import { createContext, useContext } from "react";
 import type { Resume } from "../../data/schema";
-import { type ResumeStyles, getResumeStyles } from "./styles";
+import { type ResumeStyles } from "./styles";
 
 export type ResumeContextProps = {
   now: Date;
@@ -9,18 +8,7 @@ export type ResumeContextProps = {
   resume: Resume;
 };
 
-const ResumeContext = createContext<ResumeContextProps | undefined>(undefined);
-
-export function ResumeContextProvider({ children }: PropsWithChildren) {
-  const context = useMemo(() => {
-    return {
-      now: new Date(),
-      styles: getResumeStyles(),
-      resume: getResume(),
-    };
-  }, []);
-  return <ResumeContext.Provider value={context}>{children}</ResumeContext.Provider>;
-}
+export const ResumeContext = createContext<ResumeContextProps | undefined>(undefined);
 
 export function useResume(): ResumeContextProps {
   const context = useContext(ResumeContext);

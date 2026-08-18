@@ -5,14 +5,10 @@ import { IoArrowBackOutline, IoCodeDownloadOutline } from "react-icons/io5";
 
 const ResumeView = lazy(() => import("./resume-view").then((m) => ({ default: m.ResumeView })));
 
-function getYear() {
-  return new Date().getFullYear();
-}
-
 export function App() {
   const [pdfBlobUrl, setPdfBlobUrl] = useState<string>();
   return (
-    <div className="container mx-auto max-w-screen-xl p-3 md:p-9">
+    <div className="container mx-auto max-w-7xl p-3 md:p-9">
       <div className="flex items-center justify-center md:justify-start">
         <IoArrowBackOutline className="me-2" />
         <a href="https://silvenga.com" className="text-center font-medium hover:underline">
@@ -36,8 +32,8 @@ export function App() {
 }
 
 function SideMenu({ pdfBlobUrl }: { pdfBlobUrl?: string }) {
-  const year = useMemo(() => getYear(), []);
   const disabled = !pdfBlobUrl;
+  const year = useYear();
   return (
     <header className="mb-4 h-full w-full max-w-full text-center whitespace-nowrap select-none md:ms-9 md:mb-0 md:w-60">
       <div className="flex flex-col md:fixed md:h-[calc(100vh-8rem)] md:w-60">
@@ -66,4 +62,8 @@ function SideMenu({ pdfBlobUrl }: { pdfBlobUrl?: string }) {
       </div>
     </header>
   );
+}
+
+function useYear() {
+  return useMemo(() => new Date().getFullYear(), []);
 }

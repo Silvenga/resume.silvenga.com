@@ -1,11 +1,11 @@
 import { type DocumentProps, usePDF } from "@react-pdf/renderer";
 import clsx from "clsx";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { type ReactElement, useCallback, useMemo, useRef, useState } from "react";
 import { Document as ViewDocument, Page as ViewPage } from "react-pdf";
 import { useResizeObserver } from "usehooks-ts";
 
 export type PdfViewerProps = {
-  children: React.ReactElement<DocumentProps>;
+  children: ReactElement<DocumentProps>;
   onLoaded?: (durationMs: number, url: string) => void;
 };
 
@@ -17,7 +17,6 @@ export function PdfViewer({ children, onLoaded }: PdfViewerProps) {
 
   const loadedHandler = useCallback(
     (document: { numPages: number }) => {
-      // Types for OnDocumentLoadSuccess aren't exposed.
       setPdfPageCount(document.numPages);
       setIsLoading(false);
       if (onLoaded) {
