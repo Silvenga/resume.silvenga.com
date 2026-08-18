@@ -10,7 +10,8 @@ subject:
   emailAddress: mark@silvenga.com
   location: DFW-Metroplex, Texas
   title: Staff Software Engineer
-  tagLine: Thriving in Skunkworks projects demanding far reaching skills and knowledge, I'm an experienced software engineer with over 10 years of experience. I love bringing joy to users through craftsmanship, and deep technical and security knowledge of the entire stack.
+  tagLine: |
+    Thriving in Skunkworks projects demanding far reaching skills and knowledge, I'm an experienced software engineer with over 10 years of experience. I love bringing joy to users through craftsmanship, and deep technical and security knowledge of the entire stack.
   links:
     - label: mark@silvenga.com
       href: mailto:mark@silvenga.com
@@ -31,7 +32,7 @@ workHistory:
       fromYear: 2024
       toYear: now
     description: |
-      The first hire at this early-stage, clinical software startup - I helped manage everything from securing our K8s cluster and writing database migrations, to writing Rust and building responsive UI's with React. The Bluefin platform built simulations of clinical trials in near realtime. All these complex calculations running browser on average business laptops - in an industry where competitors have traditionally relied upon on-premise servers to scale.
+      The first hire at this early-stage startup, owning architecture and product decisions alongside the founders - from securing the K8s cluster and writing database migrations to writing the Rust simulation core and building responsive UIs with React. The Bluefin platform simulates clinical trials in near realtime using a digital-twin model rather than Monte Carlo: enrollment, dosing, supply chain, and supply acquisition across thousands of patients and hundreds of sites, a problem recursive in nature since supply and demand drive each other. The engine runs entirely in the browser on average business laptops - Rust compiled to WASM on a single core, in under 200MB of memory - hitting sub-second latency with a 200ms target, in an industry where competitors rely on on-prem server fleets to scale. Led the platform through SOC 2 Type II compliance with multi-region, highly-available infrastructure on AWS and Kubernetes. Currently driving an independent mirror of the AWS production infrastructure into Azure. The platform is in production use by two of the world's 50 largest pharmaceutical companies.
     technologies:
       frontend:
         - language/TypeScript
@@ -40,7 +41,7 @@ workHistory:
         - framework/TailwindCSS
       backend:
         - language/Rust
-        - language/Typescript
+        - language/TypeScript
         - runtime/NodeJS
         - framework/Prisma
       database:
@@ -52,7 +53,7 @@ workHistory:
         - service/GitHub
         - service/Cloudflare
         - service/Sentry
-        - cloud/AWS
+        - cloud/Amazon Web Services (AWS)
         - os/Ubuntu
         - os/Debian
       methodologies:
@@ -61,14 +62,14 @@ workHistory:
         - Unit Tests
         - Integration Tests
 
-  - label: Founding Engineer
+  - label: Founding Engineer (part-time since 2024)
     entity: Q6 Technologies, LLC
     remote: true
     timeRange:
       fromYear: 2021
       toYear: now
     description: |
-      Specializing in consulting and bespoke software development, through this role I've worked with dozens of technologies encompassing the full stack - from fault-tolerant, distributed, computing of 10's-of-thousands of transactions a minute to solving layer 3 performance across high latency WAN connections with TCP stack optimizations and profiling.
+      Co-founded a consultancy for bespoke software development, delivering for two clients while incubating internal products. Built the backend of a distributed health-checking platform - benchmarked at 10,000 checks per second across a highly-available cluster, tolerant of node loss, with satellite nodes joining dynamically, on $28/month of core infrastructure (Orleans on Flatcar Linux + K8s). Independent work includes managing a 70-server fleet spanning three physical sites, operated to enterprise HA standards. Broader experience spans fault-tolerant distributed computing and layer-3 performance across high-latency WAN links.
     technologies:
       frontend:
         - language/TypeScript
