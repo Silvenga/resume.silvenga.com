@@ -7,14 +7,13 @@ permaLink: https://silvenga.com/resume/
 subject:
   givenName: Mark
   familyName: Lopez
-  emailAddress: mark@silvenga.com
   location: Dallas, Texas
-  title: Staff Software Engineer
+  title: Principal Software Engineer
   tagLine: |
     Whole-stack Rust engineer. 10+ years of UI, infrastructure, and everything between. Specializing in performance under hard runtime constraints. Trunk-based native.
   links:
-    - label: mark@silvenga.com
-      href: mailto:mark@silvenga.com
+    - label: mark@slvn.me
+      href: mailto:mark@slvn.me
     - label: +1 858-225-7388
       href: tel:+18582257388
     - label: linkedin.com/in/silvenga/
@@ -25,22 +24,14 @@ subject:
       href: https://silvenga.com/
 
 workHistory:
-  - label: Staff Software Engineer
-    entity: Bluefin Clinical, Inc.
+  - label: Principal Software Engineer
+    entity: Endpoint Clinical L.P.
     remote: true
     timeRange:
-      fromYear: 2024
+      fromYear: 2026
       toYear: now
     description: |
-      The first hire at this early-stage startup, owning architecture and product decisions alongside the founders - from securing the K8s cluster and writing database migrations to writing the Rust simulation core and building responsive UIs with React.
-
-      The Bluefin platform simulates clinical trials in near realtime using a digital-twin model rather than Monte Carlo: enrollment, dosing, supply chain, and supply acquisition across thousands of patients and hundreds of sites, a problem recursive in nature since supply and demand drive each other.
-
-      The Rust engine runs entirely in the browser on average business laptops - via WASM, on a single core, in under 200MiB of memory - hitting sub-second latency with a 200ms target, in an industry where competitors rely on on-prem server fleets to scale.
-
-      Worked the platform through SOC 2 Type II compliance with multi-region, highly-available infrastructure on AWS and Kubernetes. Currently driving an independent mirror of the AWS production infrastructure into Azure. The platform is in production use by two of the world's 50 largest pharmaceutical companies.
-
-      Currently directs open-weight coding agents on custom harnesses for most implementation, focusing on architecture, product, and the problems agents can't solve.
+      Joined Endpoint following its acquisition of the Bluefin platform, continuing technical ownership across the Rust simulation engine, application architecture, and production infrastructure.
     technologies:
       frontend:
         - language/TypeScript [5, 6, 7]
@@ -69,7 +60,55 @@ workHistory:
         - service/Sentry
         - cloud/Amazon Web Services (AWS)
         - cloud/Azure
-        - os/Ubuntu
+        - os/Debian
+        - platform/Linux Containers
+      methodologies:
+        - DevOps
+      testing:
+        - Unit Tests
+        - Integration Tests
+
+  - label: Staff Software Engineer
+    entity: Bluefin Clinical, Inc.
+    remote: true
+    timeRange:
+      fromYear: 2024
+      toYear: 2026
+    description: |
+      First employee at this early-stage startup, owning architecture and product decisions alongside the founders - from securing the K8s cluster and writing database migrations to writing the Rust simulation core and building responsive UIs with React.
+
+      The Bluefin platform simulates clinical trials in near realtime using a digital-twin model rather than Monte Carlo: enrollment, dosing, supply chain, and supply acquisition across thousands of patients and hundreds of sites, a problem recursive in nature since supply and demand drive each other.
+
+      The Rust engine runs entirely in the browser on average business laptops - via WASM, on a single core, in under 200MiB of memory - hitting sub-second latency with a 200ms target, in an industry where competitors rely on on-prem server fleets to scale.
+
+      Worked the platform through SOC 2 Type II compliance with multi-region, highly-available infrastructure on AWS and Kubernetes. Migrated the AWS production infrastructure into Azure. The platform is in production use by two of the world's 50 largest pharmaceutical companies.
+
+      Operated open-weight coding agents on custom harnesses for most implementation, focusing on architecture, product, and the problems agents can't solve.
+    technologies:
+      frontend:
+        - language/TypeScript [5, 6, 7]
+        - runtime/Vite
+        - framework/ReactJS [16, 17, 18, 19]
+        - framework/TailwindCSS
+        - framework/AG Grid
+        - testing/Vitest
+      backend:
+        - language/Rust
+        - language/TypeScript [5, 6, 7]
+        - runtime/NodeJS
+        - framework/Prisma
+        - framework/tRPC
+        - testing/Vitest
+      database:
+        - db/PostgreSQL
+        - db/Apache Data Fusion
+      infrastructure:
+        - service/Kubernetes
+        - service/Pulumi
+        - service/GitHub
+        - service/Cloudflare
+        - service/Sentry
+        - cloud/Amazon Web Services (AWS)
         - os/Debian
         - platform/Linux Containers
       methodologies:
@@ -277,6 +316,7 @@ workHistory:
 
   - label: Software Architect
     entity: Axxess
+    hidden: true
     remote: false
     timeRange:
       fromYear: 2015
